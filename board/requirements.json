@@ -25,6 +25,7 @@
   "derivation": {
     "method": "BRIEF.md was read and split; no design decision was taken. Every fixed_requirements entry, and every spec-table row sourced from the brief, carries a quotation that was checked by literal substring match against the brief bytes digested above. The build refuses to emit this file if any quotation is not found.",
     "quotations_verified": 20,
+    "where_the_quotations_are": "Every one of them is in this file: fixed_requirements[].brief_evidence and brief_spec_rows[].brief_evidence. The count above is the sum of those two lists, so it is recomputable from this repository alone - re-read BRIEF.md and check each string is a substring of it. brief_spec_rows carries the quotations behind the README's spec table, which would otherwise cite the brief with the evidence left in a build script.",
     "review": "two rounds of adversarial review against the brief, looking for invented requirements, lost requirements, evidence supporting a weaker claim than the one made beside it, and worksheet questions that presuppose their own answer"
   },
   "fixed_requirements": [
@@ -82,6 +83,53 @@
       "id": "REQ-11",
       "requirement": "Choices the brief leaves open must be made and documented as engineering decisions, not written up as if they were user requirements.",
       "brief_evidence": "where the brief leaves choices open, make and document reasonable engineering decisions rather than inventing hidden user requirements."
+    }
+  ],
+  "brief_spec_rows": [
+    {
+      "aspect": "Function",
+      "value": "Compact I²C sensor pod measuring temperature, humidity, pressure and ambient light",
+      "brief_evidence": "Create a compact 3.3 V I²C sensor pod measuring temperature, humidity, pressure, and ambient light."
+    },
+    {
+      "aspect": "Supply rail",
+      "value": "3.3 V",
+      "brief_evidence": "Create a compact 3.3 V I²C sensor pod measuring"
+    },
+    {
+      "aspect": "Host interface",
+      "value": "I²C (SDA/SCL) to a host",
+      "brief_evidence": "Create a compact 3.3 V I²C sensor pod measuring temperature, humidity, pressure, and ambient light. Use a 4-pin host connector carrying 3V3, GND, SDA, and SCL"
+    },
+    {
+      "aspect": "Host connector",
+      "value": "4-pin, carrying 3V3, GND, SDA and SCL; connector type/part/pitch not fixed",
+      "brief_evidence": "Use a 4-pin host connector carrying 3V3, GND, SDA, and SCL"
+    },
+    {
+      "aspect": "Bus coexistence",
+      "value": "Address-selection or isolation included where needed so the sensors can coexist",
+      "brief_evidence": "include address-selection or isolation where needed so the sensors can coexist."
+    },
+    {
+      "aspect": "Thermal placement",
+      "value": "Heat-generating parts kept away from the temperature/humidity sensor",
+      "brief_evidence": "Keep heat-generating parts away from the temperature/humidity sensor"
+    },
+    {
+      "aspect": "Sensing-element exposure",
+      "value": "Sensing elements reasonably exposed to ambient air",
+      "brief_evidence": "make the sensing elements reasonably exposed to ambient air."
+    },
+    {
+      "aspect": "Cost and part availability",
+      "value": "Low-cost assembly using readily available parts",
+      "brief_evidence": "a low-cost two-layer assembly using readily available parts."
+    },
+    {
+      "aspect": "Assembly target",
+      "value": "Two-layer assembly, stated by the brief as the target",
+      "brief_evidence": "Target a low-cost two-layer assembly using readily available parts."
     }
   ],
   "open_decisions": [
