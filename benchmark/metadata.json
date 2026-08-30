@@ -1,0 +1,16 @@
+{
+  "repo": "PCBA_I2C_EnvSensor",
+  "title": "I\u00b2C Environmental Sensor Pod",
+  "category": "sensor",
+  "difficulty": 1,
+  "detail": 2,
+  "layers": "2",
+  "stress": [
+    "sensor placement",
+    "I2C pullups",
+    "low-power",
+    "connector/pinout"
+  ],
+  "benchmark_id": 2,
+  "brief_file": "BRIEF.md"
+}
