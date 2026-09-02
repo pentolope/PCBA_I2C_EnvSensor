@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/erc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-02T09:54:33",
+  "date": "2026-09-02T10:38:08",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -18,5 +18,5 @@
   ],
   "source": "i2c_env_sensor.kicad_sch",
   "source_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
-  "source_closure_sha256": "0db2ab4b4a032d46b63239a6d7f8d6b8fed59fead7d69aaa07aef6dd802d25d0"
+  "source_closure_sha256": "b3ea9fdb88a1cd14fd2bfa5e19d21b56ed9c303f13ee11bad7d7f00a3bdf6a68"
 }
