@@ -3,15 +3,15 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-02T07:37:53.095425+00:00",
-  "source_closure_sha256": "ac50e9147df7ec3d1f51fad689b62899e9e8b9d314de49e41b89ceb174b36e1b",
+  "generated_utc": "2026-09-02T08:28:47.720952+00:00",
+  "source_closure_sha256": "2feb8c354bf6edcbca3d9527a8e7111ebd408bac7e274147a2d8487446dd9647",
   "source_closure_files": 17,
   "tools": {
     "kicad": "10.0.5",
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "9528bfa3466b95f2e48b989d0b71fff8350865ad",
+    "commit": "c7efa05e007872a76f14601ac8b0f93c5e930aa5",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -25,22 +25,22 @@
     "zip i2c_env_sensor-fabrication.zip"
   ],
   "artifacts": {
-    "bom.csv": "ff57556003bdde069ecffaf2e9d3fa3b1cfc69bad9ff40711c76fcdb1b2d96cf",
-    "cpl.csv": "8c74c74089ea83e5cf443c4d959c60d6c53b7f50dfe5b9b5e74d3713ecd7de41",
-    "gerbers/i2c_env_sensor-B_Cu.gbr": "354a18dffbfbce54518c4b110ed44ed214334e773bddc56c3827cfff2545db23",
-    "gerbers/i2c_env_sensor-B_Mask.gbr": "51b5db4fd781343617b1b08b8d4fe8bfc3dcff27cd34cc2d21c330c272c4f825",
-    "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "e407b1dc69305814ce743d2a4a76307e81bab5c9321285ebb934a8775508b442",
-    "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "fe40ad4f309965c09851f6f4af3b161b2455a7565fef0ca85cc38263d44e57b7",
-    "gerbers/i2c_env_sensor-F_Cu.gbr": "75da134b487c495aa0e500570c81dcebeec46e5cc41899ff1cb7e695682017c2",
-    "gerbers/i2c_env_sensor-F_Mask.gbr": "76a21f4310f04904f96ade938e6b1470477745d04e30bcb6a3d2e7433795858e",
-    "gerbers/i2c_env_sensor-F_Paste.gbr": "4677c0906f7cc38af7c8ef91b5f07e4d64c050091fa6b4d2a6f1782fb6ff06bf",
-    "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "559298ea24ce8058ac624243320d6815331bfab566aa5299af32aa347c05f390",
-    "gerbers/i2c_env_sensor-NPTH.drl": "a0a8fd77b682b982984f125a456dfb62b61b23449df52faa38f95b976db425ba",
-    "gerbers/i2c_env_sensor-PTH.drl": "1b42737b904b5677330fe65ad77b541724833317e82851b0dad74b5277c1c159",
-    "gerbers/i2c_env_sensor-job.gbrjob": "621e46c64386ed3ea8a304f06cde5241d83740b586f876a4cfa41fa9fa77ad2a",
-    "i2c_env_sensor-fabrication.zip": "11b155e2420cdabdd450298f2bca7ad2d5bb7e106b42aab3358b6bbeb43f8a0c",
-    "reports/drc.json": "02d305d95e4ab3892ee78e950776770a174d1693efdd276fbd984a18b0b3894b",
-    "reports/erc.json": "553cc1ee78831e4a8235836657192dc2e209944e18b707adc7705c8f51f3ec96"
+    "bom.csv": "67a9764146aa580649ff3c58b1c56f70d97075b61c6c1ac87aa4d4be00642aea",
+    "cpl.csv": "6f171cfc9910fab4e4451f6308ec8c8dbd883894e8d046c2faacaf22d61fdca6",
+    "gerbers/i2c_env_sensor-B_Cu.gbr": "db9a451b0307ab48005e9b2397b13cee92f1adf20002a7f7be9945b8bb12a6f6",
+    "gerbers/i2c_env_sensor-B_Mask.gbr": "1bdd618a1f59a1d0d395ec4aac8fcb51183c0071bb5424232912b0a177b35f10",
+    "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "2c7d07a1ed31b035614f56aeef8c24234921f62775ea8b0038d77fcb676ed42c",
+    "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "076b456988a92c1e95cc7f84a0b67d68ac90cd2292a249e1827d460e482bb16e",
+    "gerbers/i2c_env_sensor-F_Cu.gbr": "c7d6d083b5a9ae432de27235558593b455a624045bbe4d5cfc73603491dd0824",
+    "gerbers/i2c_env_sensor-F_Mask.gbr": "ad8db1dfcb4259f836e92a9949fd2ae301da874d288cd5653d02e590633563c3",
+    "gerbers/i2c_env_sensor-F_Paste.gbr": "83a831510b723bbf337677430326d22a69509851f71b5a4121d75c003e006be6",
+    "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "f9cdf2f3a83b3c5df95632e203d124b997228b2a3d8e6b8e018a46b3e25f7f3b",
+    "gerbers/i2c_env_sensor-NPTH.drl": "a3cc78cd5f32117b21bd8db62e8756c586508aa291a009fcf3173b8ff8ec80a9",
+    "gerbers/i2c_env_sensor-PTH.drl": "1f8215c2bf55927c72d27677495608841b913df3230012a4d94c4db6315e33e6",
+    "gerbers/i2c_env_sensor-job.gbrjob": "e473a29e8bfaa4607700700bab5695c0ff53cff5fec9832087fa6982827918bd",
+    "i2c_env_sensor-fabrication.zip": "b296cd24b062287c16cd217a028d2091a47ba68fe4446567285b8ce8a83ec589",
+    "reports/drc.json": "bfe3d9f9b1062b591c0d10901532dcd60b01976e087d75c996a592fb8ee4e91e",
+    "reports/erc.json": "fcea0a433ecf7981e3528ccc86e706b4be291b7223b5e23b694c9d51e81aae1c"
   },
   "excluded_layers": []
 }

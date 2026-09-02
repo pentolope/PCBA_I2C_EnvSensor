@@ -50,8 +50,9 @@ PARTS = {
         "Power_Protection:TPD2E2U06DRL", "Package_TO_SOT_SMD:SOT-553",
         "TPD2E2U06DRLR", "TPD2E2U06DRLR", "Texas Instruments", "C1972959"),
     "D2": _part(
-        "Device:D_TVS", "Diode_SMD:D_SOD-523",
-        "TPD1E10B06DYAR", "TPD1E10B06DYAR", "Texas Instruments", "C3712135"),
+        "EnvSensorPod:TPD1E10B06",
+        "EnvSensorPod:Texas_X1SON-2_1.1x0.7mm_P0.7mm",
+        "TPD1E10B06DPYR", "TPD1E10B06DPYR", "Texas Instruments", "C48260"),
     "R1": _part("Device:R", "Resistor_SMD:R_0402_1005Metric", "2.7k",
                 "0402WGF2701TCE", "UNI-ROYAL(Uniroyal Elec)", "C25885"),
     "R2": _part("Device:R", "Resistor_SMD:R_0402_1005Metric", "2.7k",

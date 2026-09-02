@@ -106,7 +106,9 @@ def opt3001_symbol_text():
     for index, (number, name, kind, _side) in enumerate(right):
         lines.append(_pin_text(kind, 10.16, half - 2.54 * index, 180,
                                name, number))
-    lines.extend(['\t\t)', '\t)', ')'])
+    lines.extend(['\t\t)', '\t)'])
+    lines.append(tvs_symbol_text())
+    lines.append(')')
     return "\n".join(lines) + "\n"
 
 
@@ -173,6 +175,109 @@ def opt3001_footprint_text():
     return "\n".join(parts) + "\n"
 
 
+TVS_SYMBOL_NAME = "TPD1E10B06"
+TVS_DATASHEET = "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
+
+X1SON_FOOTPRINT_NAME = "Texas_X1SON-2_1.1x0.7mm_P0.7mm"
+
+#: DPY0002A: two 0.3 x 0.5 mm lands on a 0.7 mm centre-to-centre spacing,
+#: inside a 1.1 x 0.7 mm body 0.45 mm tall.
+X1SON_PAD_SIZE_MM = (0.30, 0.50)
+X1SON_PAD_PITCH_MM = 0.70
+X1SON_PAD_RADIUS_MM = 0.05
+X1SON_BODY_MM = (1.1, 0.7)
+X1SON_COURTYARD_MARGIN_MM = 0.15
+
+
+def x1son_pads():
+    offset = X1SON_PAD_PITCH_MM / 2.0
+    return [("1", -offset, 0.0) + X1SON_PAD_SIZE_MM,
+            ("2", offset, 0.0) + X1SON_PAD_SIZE_MM]
+
+
+def x1son_footprint_text():
+    body_x, body_y = (value / 2.0 for value in X1SON_BODY_MM)
+    court_x = body_x + X1SON_COURTYARD_MARGIN_MM
+    court_y = body_y + X1SON_COURTYARD_MARGIN_MM
+    parts = [
+        '(footprint "%s"' % X1SON_FOOTPRINT_NAME,
+        '\t(version %s)' % FOOTPRINT_VERSION,
+        '\t(generator "%s")' % GENERATOR,
+        '\t(generator_version "10.0")',
+        '\t(layer "F.Cu")',
+        '\t(descr "Texas Instruments DPY0002A land pattern, SLLSEB1 '
+        'drawing 4224561")',
+        '\t(tags "X1SON DPY TVS")',
+        '\t(attr smd)',
+        '\t(property "Reference" "REF**"\n\t\t(at 0 -1.2 0)\n'
+        '\t\t(layer "F.SilkS")\n\t\t(uuid "00000000-0000-0000-0000-'
+        '000000000021")\n\t\t(effects\n\t\t\t(font\n\t\t\t\t'
+        '(size 0.6 0.6)\n\t\t\t\t(thickness 0.1)\n\t\t\t)\n\t\t)\n\t)',
+        '\t(property "Value" "%s"\n\t\t(at 0 1.2 0)\n'
+        '\t\t(layer "F.Fab")\n\t\t(uuid "00000000-0000-0000-0000-'
+        '000000000022")\n\t\t(effects\n\t\t\t(font\n\t\t\t\t'
+        '(size 0.6 0.6)\n\t\t\t\t(thickness 0.1)\n\t\t\t)\n\t\t)\n\t)'
+        % X1SON_FOOTPRINT_NAME,
+    ]
+    for layer, half_x, half_y, thickness in (
+            ("F.CrtYd", court_x, court_y, 0.05),
+            ("F.Fab", body_x, body_y, 0.1)):
+        parts.append(
+            '\t(fp_rect\n\t\t(start %.3f %.3f)\n\t\t(end %.3f %.3f)\n'
+            '\t\t(stroke\n\t\t\t(width %.2f)\n\t\t\t(type default)\n'
+            '\t\t)\n\t\t(fill none)\n\t\t(layer "%s")\n\t)'
+            % (-half_x, -half_y, half_x, half_y, thickness, layer))
+    for number, x, y, size_x, size_y in x1son_pads():
+        parts.append(
+            '\t(pad "%s" smd roundrect\n\t\t(at %.3f %.3f)\n'
+            '\t\t(size %.3f %.3f)\n'
+            '\t\t(layers "F.Cu" "F.Paste" "F.Mask")\n'
+            '\t\t(roundrect_rratio %.4f)\n\t)'
+            % (number, x, y, size_x, size_y,
+               X1SON_PAD_RADIUS_MM / min(size_x, size_y)))
+    parts.append(')')
+    return "\n".join(parts) + "\n"
+
+
+def tvs_symbol_text():
+    """A bidirectional two-terminal TVS that names its own footprint.
+
+    The generic library symbol carries footprint filters written for
+    through-hole diode packages, so pairing it with this land pattern
+    reads as a mismatch. A symbol for the part states which footprint it
+    is for, and carries the datasheet with it.
+    """
+    return "\n".join([
+        '\t(symbol "%s"' % TVS_SYMBOL_NAME,
+        '\t\t(pin_numbers\n\t\t\t(hide yes)\n\t\t)',
+        '\t\t(pin_names\n\t\t\t(offset 1.016)\n\t\t\t(hide yes)\n\t\t)',
+        '\t\t(exclude_from_sim no)',
+        '\t\t(in_bom yes)',
+        '\t\t(on_board yes)',
+        _symbol_property("Reference", "D", 0, False),
+        _symbol_property("Value", TVS_SYMBOL_NAME, 1, False),
+        _symbol_property("Footprint",
+                         "%s:%s" % (LIBRARY_NAME, X1SON_FOOTPRINT_NAME),
+                         2, True),
+        _symbol_property("Datasheet", TVS_DATASHEET, 3, True),
+        _symbol_property("ki_fp_filters", X1SON_FOOTPRINT_NAME, 4, True),
+        '\t\t(symbol "%s_0_1"' % TVS_SYMBOL_NAME,
+        '\t\t\t(rectangle',
+        '\t\t\t\t(start -1.27 1.27)',
+        '\t\t\t\t(end 1.27 -1.27)',
+        '\t\t\t\t(stroke\n\t\t\t\t\t(width 0.254)\n'
+        '\t\t\t\t\t(type default)\n\t\t\t\t)',
+        '\t\t\t\t(fill\n\t\t\t\t\t(type background)\n\t\t\t\t)',
+        '\t\t\t)',
+        '\t\t)',
+        '\t\t(symbol "%s_1_1"' % TVS_SYMBOL_NAME,
+        _pin_text("passive", 0.0, -3.81, 90, "A1", "1"),
+        _pin_text("passive", 0.0, 3.81, 270, "A2", "2"),
+        '\t\t)',
+        '\t)',
+    ])
+
+
 def sym_lib_table_text():
     return ('(sym_lib_table\n\t(version 7)\n'
             '\t(lib (name "%s")(type "KiCad")'
@@ -192,6 +297,8 @@ def artifacts():
         SYMBOL_LIB_PATH: opt3001_symbol_text(),
         os.path.join(FOOTPRINT_DIR, OPT3001_FOOTPRINT_NAME + ".kicad_mod"):
             opt3001_footprint_text(),
+        os.path.join(FOOTPRINT_DIR, X1SON_FOOTPRINT_NAME + ".kicad_mod"):
+            x1son_footprint_text(),
         SYM_LIB_TABLE: sym_lib_table_text(),
         FP_LIB_TABLE: fp_lib_table_text(),
     }

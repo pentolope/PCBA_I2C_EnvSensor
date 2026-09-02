@@ -2,7 +2,7 @@
 "1","C1","1uF","Capacitor_SMD:C_0603_1608Metric","C15849"
 "3","C2,C3,C4","100nF","Capacitor_SMD:C_0402_1005Metric","C1525"
 "1","D1","TPD2E2U06DRLR","Package_TO_SOT_SMD:SOT-553","C1972959"
-"1","D2","TPD1E10B06DYAR","Diode_SMD:D_SOD-523","C3712135"
+"1","D2","TPD1E10B06DPYR","EnvSensorPod:Texas_X1SON-2_1.1x0.7mm_P0.7mm","C48260"
 "1","J1","PH_4P_Header_3V3_I2C","Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal","C157926"
 "2","R1,R2","2.7k","Resistor_SMD:R_0402_1005Metric","C25885"
 "1","R3","4R7","Resistor_SMD:R_0402_1005Metric","C25121"

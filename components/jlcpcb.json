@@ -274,44 +274,44 @@
       ],
       "stock": 13622
     },
-    "C3712135": {
+    "C48260": {
       "library_type": "expand",
       "manufacturer": "Texas Instruments",
-      "mpn": "TPD1E10B06DYAR",
-      "package": "SOT-5X3",
+      "mpn": "TPD1E10B06DPYR",
+      "package": "X1-SON-2(0.6x1)",
       "price_breaks": [
         {
-          "max_qty": 49,
+          "max_qty": 199,
           "min_qty": 1,
-          "unit_usd": 0.116
+          "unit_usd": 0.0421
         },
         {
-          "max_qty": 149,
-          "min_qty": 50,
-          "unit_usd": 0.0946
+          "max_qty": 599,
+          "min_qty": 200,
+          "unit_usd": 0.0336
         },
         {
-          "max_qty": 499,
-          "min_qty": 150,
-          "unit_usd": 0.0834
+          "max_qty": 1999,
+          "min_qty": 600,
+          "unit_usd": 0.0299
         },
         {
-          "max_qty": 2999,
-          "min_qty": 500,
-          "unit_usd": 0.0743
+          "max_qty": 9999,
+          "min_qty": 2000,
+          "unit_usd": 0.0271
         },
         {
-          "max_qty": 5999,
-          "min_qty": 3000,
-          "unit_usd": 0.0711
+          "max_qty": 19999,
+          "min_qty": 10000,
+          "unit_usd": 0.026
         },
         {
           "max_qty": null,
-          "min_qty": 6000,
-          "unit_usd": 0.069
+          "min_qty": 20000,
+          "unit_usd": 0.0252
         }
       ],
-      "stock": 11696
+      "stock": 95921
     },
     "C90462": {
       "library_type": "expand",
@@ -392,7 +392,7 @@
       "stock": 5157
     }
   },
-  "retrieved": "2026-09-01",
+  "retrieved": "2026-09-02",
   "schema_version": 1,
   "source": "jlcpcb.com parts library"
 }

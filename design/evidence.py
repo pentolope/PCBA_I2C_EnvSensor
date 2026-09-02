@@ -45,7 +45,7 @@ SOURCES = {
         "url": "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf",
         "retrieved": "2026-09-01",
         "document_id": "SLLSEB1",
-        "applies_to": ["TPD1E10B06DYAR"],
+        "applies_to": ["TPD1E10B06DPYR"],
     },
     "ph_series_jst": {
         "file": "datasheets/ph_series_jst.pdf",

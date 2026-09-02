@@ -1270,7 +1270,7 @@
         }
       }
     },
-    "TPD1E10B06DYAR": {
+    "TPD1E10B06DPYR": {
       "ground_pins": [],
       "iec61000_4_2_contact_v": {
         "basis": "direct",
@@ -1279,21 +1279,36 @@
       },
       "land_pattern": {
         "document": "tpd1e10b06_ti",
-        "recommended": null,
-        "terminal_basis": "derived",
-        "terminals": [
+        "recommended": [
           {
-            "h": 0.7,
+            "h": 0.5,
             "number": "1",
             "w": 0.3,
-            "x": -0.7,
+            "x": -0.35,
             "y": 0.0
           },
           {
-            "h": 0.7,
+            "h": 0.5,
             "number": "2",
             "w": 0.3,
-            "x": 0.7,
+            "x": 0.35,
+            "y": 0.0
+          }
+        ],
+        "terminal_basis": "derived",
+        "terminals": [
+          {
+            "h": 0.5,
+            "number": "1",
+            "w": 0.3,
+            "x": -0.35,
+            "y": 0.0
+          },
+          {
+            "h": 0.5,
+            "number": "2",
+            "w": 0.3,
+            "x": 0.35,
             "y": 0.0
           }
         ]
@@ -1313,14 +1328,14 @@
           "basis": "direct",
           "document": "tpd1e10b06_ti",
           "value": [
-            1.7,
-            0.85
+            1.1,
+            0.7
           ]
         },
         "height_max_mm": {
           "basis": "direct",
           "document": "tpd1e10b06_ti",
-          "value": 0.77
+          "value": 0.45
         }
       },
       "protected_pins": [

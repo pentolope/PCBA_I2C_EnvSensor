@@ -194,4 +194,110 @@
 			)
 		)
 	)
+	(symbol "TPD1E10B06"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 12.70 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD1E10B06"
+			(at 0 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "EnvSensorPod:Texas_X1SON-2_1.1x0.7mm_P0.7mm"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
+			(at 0 5.08 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Texas_X1SON-2_1.1x0.7mm_P0.7mm"
+			(at 0 2.54 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TPD1E10B06_0_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -1.27)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "TPD1E10B06_1_1"
+			(pin passive line
+				(at 0.00 -3.81 90)
+				(length 2.54)
+				(name "A1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 0.00 3.81 270)
+				(length 2.54)
+				(name "A2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
 )
