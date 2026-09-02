@@ -1,7 +1,18 @@
 {
   "relative_permittivity_max": {
-    "applicability": "the highest core permittivity the approved fabricator catalog publishes; used only where a larger permittivity is the conservative choice",
-    "digest": "f7cd05e75e1f9d6d015276986a43c13f2e2162ded30eea61f0362f999a97918c",
+    "applicability": "the largest permittivity the approved fabricator catalog states for any laminate a 2-layer board can be built from; used only where a larger permittivity is the conservative choice",
+    "considered": {
+      "core": 4.6,
+      "core 2-layer (capabilities)": 4.5,
+      "prepreg 1080": 3.91,
+      "prepreg 2116": 4.16,
+      "prepreg 2116 (capabilities)": 4.16,
+      "prepreg 3313": 4.1,
+      "prepreg 3313 (capabilities)": 4.1,
+      "prepreg 7628": 4.4,
+      "prepreg 7628 (capabilities)": 4.4
+    },
+    "digest": "953f02eab19f914ef0017b2ebb614de43d16ebc857a424d6cce2afdc09e5da65",
     "source": "core",
     "source_type": "approved-evidence",
     "units": "1",

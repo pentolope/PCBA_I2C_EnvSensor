@@ -502,6 +502,44 @@ class FabricationInputs(unittest.TestCase):
             self.assertEqual(json.load(handle),
                              physical.highest_dielectric_constant())
 
+    def test_the_permittivity_bound_covers_this_boards_own_laminate(self):
+        """A maximum bounds only the set it ranges over. The fabricator
+        states a permittivity for a two-layer laminate specifically, so a
+        bound that could not see it would be a bound over other builds'
+        materials that happened to sit higher."""
+        with open(physical.DIELECTRIC_PATH, encoding="utf-8") as handle:
+            frozen = json.load(handle)["relative_permittivity_max"]
+        considered = frozen["considered"]
+        with open(os.path.join(REPO_ROOT, "fab", "requirements.json"),
+                  encoding="utf-8") as handle:
+            layers = json.load(handle)["copper_layers"]
+        stated = [dk for identity, dk in considered.items()
+                  if "%d-layer" % layers in identity]
+        self.assertTrue(stated, considered)
+        for dk in considered.values():
+            self.assertLessEqual(dk, frozen["value"])
+        self.assertGreaterEqual(frozen["value"], max(stated))
+
+    def test_the_bound_ignores_laminates_this_board_cannot_be_built_from(
+            self):
+        """Records the catalog scopes to other layer counts describe other
+        builds; a bound taken over them would be a bound over nothing this
+        board is made of."""
+        approved = physical._approved()
+        materials = approved["normalized"]["materials"]
+        considered = physical.applicable_dielectric_records(materials, 2)
+        excluded = {identity for identity in materials
+                    if identity not in considered}
+        self.assertTrue(excluded)
+        for identity in excluded:
+            record = materials[identity]
+            if record.get("kind") not in physical.DIELECTRIC_KINDS:
+                continue
+            applies = record.get("applies") or {}
+            self.assertTrue(
+                applies.get("min_layers", 0) > 2
+                or (applies.get("max_layers") or 2) < 2, identity)
+
     def test_the_layer_count_matches_the_declared_stackup(self):
         with open(os.path.join(REPO_ROOT, "fab", "requirements.json"),
                   encoding="utf-8") as handle:

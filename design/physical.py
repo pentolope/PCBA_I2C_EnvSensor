@@ -30,6 +30,11 @@ def _approved():
     return approved
 
 
+def _requirements():
+    with open(REQUIREMENTS_PATH, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
 def resolve():
     """Finished copper and board thickness, from the approved catalog.
 
@@ -77,35 +82,73 @@ def verify(document=None):
     return problems
 
 
-def highest_dielectric_constant():
-    """The largest Dk the approved catalog publishes for a core.
+DIELECTRIC_KINDS = ("core", "prepreg")
 
-    Capacitance rises with permittivity, so the highest published value
-    is the conservative one for a bus-capacitance budget.
+
+def applicable_dielectric_records(materials, layers):
+    """Every stated Dk that could describe the laminate this board is built
+    from, keyed by the catalog identity it was stated under.
+
+    A record whose stated scope excludes this layer count describes some
+    other build and is not a bound on this one. A record that states no
+    scope is the source's general statement and is kept: leaving it out
+    could only lower the maximum, and the maximum is what the capacitance
+    claim leans on.
+    """
+    applicable = {}
+    for identity, record in sorted(materials.items()):
+        if not isinstance(record, dict):
+            continue
+        if record.get("kind") not in DIELECTRIC_KINDS:
+            continue
+        if not isinstance(record.get("dk"), (int, float)):
+            continue
+        applies = record.get("applies") or {}
+        low, high = applies.get("min_layers"), applies.get("max_layers")
+        if low is not None and layers < low:
+            continue
+        if high is not None and layers > high:
+            continue
+        applicable[identity] = record["dk"]
+    return applicable
+
+
+def highest_dielectric_constant():
+    """The largest Dk the approved catalog states for a laminate this board
+    could be built from.
+
+    Capacitance rises with permittivity, so the largest applicable value is
+    the conservative one for a bus-capacitance budget, and taking it as a
+    maximum is what lets the capacitance claim be an upper bound rather
+    than an estimate.
+
+    The maximum is only a bound over the set it ranges across, so the set
+    has to be the records that can describe this board. The fabricator
+    states a dielectric constant for a two-layer laminate specifically; a
+    maximum that could not see it would be a bound over other people's
+    materials that happened to sit above this board's.
     """
     approved = _approved()
-    materials = approved["normalized"]["materials"]
-    values = []
-    for group in ("core", "prepreg"):
-        for name, record in sorted(materials.get(group, {}).items()):
-            if isinstance(record, dict) and isinstance(record.get("dk"),
-                                                       (int, float)):
-                values.append((record["dk"], "%s %s" % (group, name)))
-            elif name == "dk" and isinstance(record, (int, float)):
-                values.append((record, group))
-    if not values:
-        raise RuntimeError("the approved catalog publishes no dielectric "
-                           "constant, so none can be frozen from evidence")
-    value, source = max(values)
+    layers = _requirements()["copper_layers"]
+    applicable = applicable_dielectric_records(
+        approved["normalized"]["materials"], layers)
+    if not applicable:
+        raise RuntimeError(
+            "the approved catalog states no dielectric constant for a "
+            "%d-layer build, so none can be frozen from evidence" % layers)
+    source = max(applicable, key=lambda identity: (applicable[identity],
+                                                   identity))
     return {"relative_permittivity_max": {
-        "value": value,
+        "value": applicable[source],
         "units": "1",
         "source": source,
         "source_type": "approved-evidence",
         "digest": approved["normalized_sha256"],
-        "applicability": "the highest core permittivity the approved "
-                         "fabricator catalog publishes; used only where a "
-                         "larger permittivity is the conservative choice",
+        "considered": dict(sorted(applicable.items())),
+        "applicability": "the largest permittivity the approved fabricator "
+                         "catalog states for any laminate a %d-layer board "
+                         "can be built from; used only where a larger "
+                         "permittivity is the conservative choice" % layers,
     }}
 
 
