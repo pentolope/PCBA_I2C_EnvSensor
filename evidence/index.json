@@ -1,0 +1,119 @@
+{
+  "documents": {
+    "i2c_um10204_nxp": {
+      "applies_to": [
+        "SHT40-AD1B-R3",
+        "LPS22HBTR",
+        "OPT3001DNPR"
+      ],
+      "bytes": 750958,
+      "document_id": "NXP UM10204 Rev. 7.0, 1 October 2021",
+      "file": "datasheets/i2c_um10204_nxp.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "dc91f00f65584e06ef36e26c93bf9d91a95fb3c8a1830a9223e53caf678b36af",
+      "url": "https://www.pololu.com/file/0J435/UM10204.pdf"
+    },
+    "lps22hb_st": {
+      "applies_to": [
+        "LPS22HBTR"
+      ],
+      "bytes": 1527385,
+      "document_id": "STMicroelectronics LPS22HB DocID027083 Rev 6",
+      "file": "datasheets/lps22hb_st.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "b64e342cb6f703926efaba1a6924fa3312a5b4d8ef811f54bc2d98b72e80d4fa",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1810121116_STMicroelectronics-LPS22HBTR_C94049.pdf"
+    },
+    "opt3001_ti": {
+      "applies_to": [
+        "OPT3001DNPR"
+      ],
+      "bytes": 904533,
+      "document_id": "SBOS681C",
+      "file": "datasheets/opt3001_ti.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "f2ab3d4822cbd4e6b702b09c4c22144f6d0583931e0cfc168394de9ab942ca11",
+      "url": "https://www.ti.com/lit/ds/symlink/opt3001.pdf"
+    },
+    "ph_series_jst": {
+      "applies_to": [
+        "S4B-PH-K-S(LF)(SN)"
+      ],
+      "bytes": 103369,
+      "document_id": "JST PH connector series catalogue",
+      "file": "datasheets/ph_series_jst.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "447624f4f2f7d37c58c1eaa7ee314ad757fe7aff48f6186491ef6f69fbc00b96",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+    },
+    "s4b_ph_k_s_jst": {
+      "applies_to": [
+        "S4B-PH-K-S(LF)(SN)"
+      ],
+      "bytes": 118956,
+      "document_id": "JST PH catalogue page for S4B-PH-K-S",
+      "file": "datasheets/s4b_ph_k_s_jst.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "4e41351f09263b950a29282923e6f6ef7c5bc95b538fe8db9d1d1e4a8c082918",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_JST-S4B-PH-K-S-LF-SN_C157926.pdf"
+    },
+    "samsung_mlcc_cl_series": {
+      "applies_to": [
+        "CL05B104KO5NNNC",
+        "CL10A105KB8NNNC"
+      ],
+      "bytes": 7856403,
+      "document_id": "Samsung Electro-Mechanics MLCC CL series specification",
+      "file": "datasheets/samsung_mlcc_cl_series.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf"
+    },
+    "sht40_sensirion": {
+      "applies_to": [
+        "SHT40-AD1B-R3"
+      ],
+      "bytes": 1172247,
+      "document_id": "Sensirion SHT4x datasheet Version 1, October 2020",
+      "file": "datasheets/sht40_sensirion.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "1e488c7fdea67cd4f6ebfdc068a2c8a3da61a914abc56a3514cdc8a4838f5065",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Sensirion-SHT40-AD1B-R3_C2848306.pdf"
+    },
+    "tpd1e10b06_ti": {
+      "applies_to": [
+        "TPD1E10B06DYAR"
+      ],
+      "bytes": 2371535,
+      "document_id": "SLLSEB1",
+      "file": "datasheets/tpd1e10b06_ti.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "6ffe72cb5f5e607fcafd05eef9809632402241eb44cd859a3652f43a35323da9",
+      "url": "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
+    },
+    "tpd2e2u06_ti": {
+      "applies_to": [
+        "TPD2E2U06DRLR"
+      ],
+      "bytes": 785929,
+      "document_id": "SLLSEG9C",
+      "file": "datasheets/tpd2e2u06_ti.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "a133b86ea3d3c3d34667339b92d3b5e98d541d10e9775d63e7cdfa153794f4ed",
+      "url": "https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf"
+    },
+    "uniroyal_0402wgf": {
+      "applies_to": [
+        "0402WGF2701TCE",
+        "0402WGF470KTCE"
+      ],
+      "bytes": 467557,
+      "document_id": "Uniroyal thick film chip resistor specification",
+      "file": "datasheets/uniroyal_0402wgf.pdf",
+      "retrieved": "2026-09-01",
+      "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF2201TCE_C25879.pdf"
+    }
+  },
+  "schema_version": 1
+}

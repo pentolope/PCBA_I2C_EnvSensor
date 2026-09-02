@@ -1,0 +1,120 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 2.5e-09,
+      "stop_s": 5e-05
+    }
+  ],
+  "assumptions": {
+    "CBULK": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "every rail capacitor as one ideal capacitance at its worst-case low value, with no ESR and no DC bias derating; less capacitance is the less damped case"
+    },
+    "LCABLE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "one metre of ordinary four-way cable as a single lumped inductance"
+    },
+    "MATE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the connector's supply contact closing on a live host, as an ideal step; a slower contact can only reduce the transient this measures"
+    },
+    "RCABLE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the cable conductors and the mated contacts as one lumped resistance"
+    },
+    "RDAMP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the rail damping resistor at its nominal value"
+    },
+    "RLOAD": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the whole board's supply current as a fixed resistance"
+    }
+  },
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "MATE",
+      "nodes": [
+        "host",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 5e-07,
+        "fall_s": 1e-09,
+        "period_s": 0.001,
+        "rise_s": 1e-09,
+        "v1": 0.0,
+        "v2": 3.465,
+        "width_s": 0.0005
+      }
+    },
+    {
+      "kind": "inductor",
+      "name": "LCABLE",
+      "nodes": [
+        "host",
+        "cable"
+      ],
+      "value": 1e-06
+    },
+    {
+      "kind": "resistor",
+      "name": "RCABLE",
+      "nodes": [
+        "cable",
+        "conn"
+      ],
+      "value": 0.2
+    },
+    {
+      "kind": "resistor",
+      "name": "RDAMP",
+      "nodes": [
+        "conn",
+        "rail"
+      ],
+      "value": 4.7
+    },
+    {
+      "kind": "capacitor",
+      "name": "CBULK",
+      "nodes": [
+        "rail",
+        "0"
+      ],
+      "value": 1.17e-06
+    },
+    {
+      "kind": "resistor",
+      "name": "RLOAD",
+      "nodes": [
+        "rail",
+        "0"
+      ],
+      "value": 1182.0787984302629
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 4.8
+      },
+      "kind": "tran_max_voltage",
+      "name": "rail_peak_on_mating",
+      "node": "rail"
+    },
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 1.7
+      },
+      "kind": "tran_final_voltage",
+      "name": "rail_settled",
+      "node": "rail"
+    }
+  ],
+  "name": "rail_mating_transient_over_ideal_copper"
+}

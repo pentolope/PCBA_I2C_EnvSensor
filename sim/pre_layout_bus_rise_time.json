@@ -1,0 +1,72 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 9.999999999999999e-10,
+      "stop_s": 1e-06
+    }
+  ],
+  "assumptions": {
+    "CBUS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the whole bus - pod, cable and host - as one ideal capacitance at the specification's maximum, with no distributed delay"
+    },
+    "RELEASE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the open-drain sink letting go of the line, as an ideal source stepping from the 0.3 VDD threshold the rise time is measured from"
+    },
+    "RPULLUP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "one on-board pull-up at its nominal value; the pod carries the only pull-ups, so this is the weakest the bus can be pulled up and the slowest edge"
+    }
+  },
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "RELEASE",
+      "nodes": [
+        "rail",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 0.0,
+        "fall_s": 1e-12,
+        "period_s": 1.9999999999999998e-05,
+        "rise_s": 1e-12,
+        "v1": 1.0394999999999999,
+        "v2": 3.465,
+        "width_s": 9.999999999999999e-06
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RPULLUP",
+      "nodes": [
+        "rail",
+        "bus"
+      ],
+      "value": 2700.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CBUS",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 4e-10
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.4254999999999995
+      },
+      "kind": "tran_final_voltage",
+      "name": "bus_level_at_the_rise_time_limit",
+      "node": "bus"
+    }
+  ],
+  "name": "i2c_rise_time_at_the_capacitance_budget"
+}

@@ -1,0 +1,72 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 3.9999999999999994e-09,
+      "stop_s": 4e-06
+    }
+  ],
+  "assumptions": {
+    "CBUS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the whole bus as one ideal capacitance at the specification's maximum"
+    },
+    "RELEASE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the sink letting go from the highest low level any bus device may present, into a supply at its minimum"
+    },
+    "RPULLUP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "one on-board pull-up at its nominal value"
+    }
+  },
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "RELEASE",
+      "nodes": [
+        "rail",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 0.0,
+        "fall_s": 1e-12,
+        "period_s": 7.999999999999999e-05,
+        "rise_s": 1e-12,
+        "v1": 0.4,
+        "v2": 3.135,
+        "width_s": 3.9999999999999996e-05
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RPULLUP",
+      "nodes": [
+        "rail",
+        "bus"
+      ],
+      "value": 2700.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CBUS",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 4e-10
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 2.508
+      },
+      "kind": "tran_final_voltage",
+      "name": "receiver_level_at_the_end_of_the_high_period",
+      "node": "bus"
+    }
+  ],
+  "name": "receiver_high_level_within_the_clock_high_period"
+}

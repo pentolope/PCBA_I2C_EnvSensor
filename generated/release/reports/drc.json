@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.kicad.org/drc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-02T01:37:51",
+  "ignored_checks": [],
+  "included_severities": [
+    "error",
+    "warning",
+    "exclusion"
+  ],
+  "kicad_version": "10.0.5",
+  "schematic_parity": [],
+  "source": "i2c_env_sensor.kicad_pcb",
+  "unconnected_items": [],
+  "violations": [],
+  "source_sha256": "df7839a70f1c155aeb011a8ed75ec74b16ec4d532e7733631a8edf3ad7783b14",
+  "source_closure_sha256": "ac50e9147df7ec3d1f51fad689b62899e9e8b9d314de49e41b89ceb174b36e1b"
+}

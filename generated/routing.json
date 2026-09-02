@@ -1,0 +1,166 @@
+{
+  "accepted_attempt": 2,
+  "adopted_sha256": "df7839a70f1c155aeb011a8ed75ec74b16ec4d532e7733631a8edf3ad7783b14",
+  "attempts": [
+    {
+      "accepted": false,
+      "attempt": 1,
+      "context": {
+        "ordering": "mps",
+        "router_summary": {
+          "failed": 0,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 0.06,
+          "min_clearance_used": 0.125,
+          "multipoint_deficit": 0,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 0,
+            "nets": []
+          },
+          "routed": 4,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 5
+        }
+      },
+      "source_sha256": "9bd42bd021c58d99f5f1ee7777fe7ab38adf4d74762d37a5b9539e5d41cf9d97",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "3b22aad8baddbed24e79cc94534dff583226096e968e8a0cedd08bd402fead89",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "dangling_tracks_removed": 1,
+            "endpoints_snapped": 2,
+            "junctions_bonded": 4,
+            "zones_refilled": 1
+          },
+          "parameters": {
+            "snap_tolerance_mm": 0.25,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "b190eb52262520de07b6c7df3899fe62ae3e3b4861dd43661ed4b9cc7017033c",
+          "stage": "tidied",
+          "transform": "snap track endpoints onto same-net via centres; prune dangling track ends, keeping any removal only while connectivity is unchanged; split a track where another track's end lands in the middle of it, so the junction is an endpoint of both; refill the zones so the pour is knocked out around the copper the router added"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "attempt": 2,
+      "context": {
+        "ordering": "inside_out",
+        "router_summary": {
+          "failed": 0,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 0.07,
+          "min_clearance_used": 0.125,
+          "multipoint_deficit": 0,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 0,
+            "nets": []
+          },
+          "routed": 4,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 5
+        }
+      },
+      "source_sha256": "9bd42bd021c58d99f5f1ee7777fe7ab38adf4d74762d37a5b9539e5d41cf9d97",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "c0332b7672bbdbd41feb6427d5608b8e105783018b6b9492d75f8416eb15e412",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "dangling_tracks_removed": 1,
+            "endpoints_snapped": 2,
+            "junctions_bonded": 4,
+            "zones_refilled": 1
+          },
+          "parameters": {
+            "snap_tolerance_mm": 0.25,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "df7839a70f1c155aeb011a8ed75ec74b16ec4d532e7733631a8edf3ad7783b14",
+          "stage": "tidied",
+          "transform": "snap track endpoints onto same-net via centres; prune dangling track ends, keeping any removal only while connectivity is unchanged; split a track where another track's end lands in the middle of it, so the junction is an endpoint of both; refill the zones so the pour is knocked out around the copper the router added"
+        }
+      ]
+    }
+  ],
+  "context": {
+    "generated_nets": [
+      "3V3",
+      "GND",
+      "SDA",
+      "SCL"
+    ],
+    "options": [
+      "--track-width",
+      "0.25",
+      "--clearance",
+      "0.2",
+      "--via-size",
+      "0.6",
+      "--via-drill",
+      "0.3",
+      "--board-edge-clearance",
+      "0.3",
+      "--hole-to-hole-clearance",
+      "0.3",
+      "--same-net-pad-clearance",
+      "0.3"
+    ],
+    "reproducibility": "the router is not bit-reproducible; candidates are generated until one passes the board gates and every attempt is recorded here",
+    "resolution": {
+      "origin": "vendored submodule",
+      "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools"
+    },
+    "routed_nets": [
+      "3V3_IN",
+      "3V3",
+      "SDA",
+      "SCL"
+    ],
+    "router": {
+      "git": {
+        "dirty": false,
+        "sha": "3fb9c05f182db88fe1fccfaa515bc5c466169dd4",
+        "upstream_base": null
+      },
+      "grid_router": {
+        "kind": "native-binary",
+        "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/rust_router/grid_router.so",
+        "sha256": "bac20f431312bdf6ab2e585295cb320e2b634a9f28a0c6286b6ae170a51b3cf2",
+        "version": "0.21.4"
+      },
+      "kicad_cli": "/usr/bin/kicad-cli",
+      "kicad_version": "10.0.5",
+      "kind": "krt-provenance",
+      "meaning": "the routing implementation identity for this run; a different sha, dirty state or native hash is a different router, and downstream routing-derived artifacts must go stale with it",
+      "python": {
+        "executable": "/usr/bin/python3",
+        "version": "3.12.3"
+      },
+      "source_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools",
+      "version": "0.21.5"
+    }
+  },
+  "kind": "routing-run",
+  "source_sha256": "9bd42bd021c58d99f5f1ee7777fe7ab38adf4d74762d37a5b9539e5d41cf9d97"
+}

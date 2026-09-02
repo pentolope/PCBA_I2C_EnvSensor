@@ -1,0 +1,1451 @@
+{
+  "i2c": {
+    "document": "i2c_um10204_nxp",
+    "iol_a": {
+      "basis": "direct",
+      "document": "i2c_um10204_nxp",
+      "value": 0.003
+    },
+    "modes": {
+      "fast": {
+        "max_bus_capacitance_f": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 4e-10
+        },
+        "max_rise_time_s": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 3e-07
+        },
+        "max_scl_hz": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 400000.0
+        }
+      },
+      "standard": {
+        "max_bus_capacitance_f": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 4e-10
+        },
+        "max_rise_time_s": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 1e-06
+        },
+        "max_scl_hz": {
+          "basis": "direct",
+          "document": "i2c_um10204_nxp",
+          "value": 100000.0
+        }
+      }
+    },
+    "pin_capacitance_max_f": {
+      "basis": "direct",
+      "document": "i2c_um10204_nxp",
+      "value": 1e-11
+    },
+    "rise_time_rc_factor": {
+      "basis": "direct",
+      "document": "i2c_um10204_nxp",
+      "value": 0.8473
+    },
+    "vol_max_v": {
+      "basis": "direct",
+      "document": "i2c_um10204_nxp",
+      "iol_a": 0.003,
+      "value": 0.4
+    }
+  },
+  "parts": {
+    "0402WGF2701TCE": {
+      "ground_pins": [],
+      "kind": "resistor",
+      "land_pattern": {
+        "document": "uniroyal_0402wgf",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "uniroyal_0402wgf",
+          "value": [
+            1.0,
+            0.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "uniroyal_0402wgf",
+          "value": 0.45
+        }
+      },
+      "power_rating_w": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.0625
+      },
+      "resistance_ohms": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 2700.0
+      },
+      "resistance_tolerance": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.01
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.0
+      },
+      "supply_pins": [],
+      "temperature_range_c": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": [
+          -55.0,
+          155.0
+        ]
+      },
+      "working_voltage_max_v": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 50.0
+      }
+    },
+    "0402WGF470KTCE": {
+      "ground_pins": [],
+      "kind": "resistor",
+      "land_pattern": {
+        "document": "uniroyal_0402wgf",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "uniroyal_0402wgf",
+          "value": [
+            1.0,
+            0.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "uniroyal_0402wgf",
+          "value": 0.45
+        }
+      },
+      "power_rating_w": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.0625
+      },
+      "resistance_ohms": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 4.7
+      },
+      "resistance_tolerance": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.01
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 0.0
+      },
+      "supply_pins": [],
+      "temperature_range_c": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": [
+          -55.0,
+          155.0
+        ]
+      },
+      "working_voltage_max_v": {
+        "basis": "direct",
+        "document": "uniroyal_0402wgf",
+        "value": 50.0
+      }
+    },
+    "CL05B104KO5NNNC": {
+      "capacitance_f": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 1e-07
+      },
+      "capacitance_tolerance": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 0.1
+      },
+      "dielectric": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": "X7R"
+      },
+      "ground_pins": [],
+      "kind": "capacitor",
+      "land_pattern": {
+        "document": "samsung_mlcc_cl_series",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "samsung_mlcc_cl_series",
+          "value": [
+            1.0,
+            0.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "samsung_mlcc_cl_series",
+          "value": 0.55
+        }
+      },
+      "rated_voltage_v": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 16.0
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 0.0
+      },
+      "supply_pins": []
+    },
+    "CL10A105KB8NNNC": {
+      "capacitance_f": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 1e-06
+      },
+      "capacitance_tolerance": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 0.1
+      },
+      "dielectric": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": "X5R"
+      },
+      "ground_pins": [],
+      "kind": "capacitor",
+      "land_pattern": {
+        "document": "samsung_mlcc_cl_series",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "samsung_mlcc_cl_series",
+          "value": [
+            1.6,
+            0.8
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "samsung_mlcc_cl_series",
+          "value": 0.9
+        }
+      },
+      "rated_voltage_v": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 50.0
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "samsung_mlcc_cl_series",
+        "value": 0.0
+      },
+      "supply_pins": []
+    },
+    "LPS22HBTR": {
+      "copper_keepout_under_body": {
+        "basis": "direct",
+        "document": "lps22hb_st",
+        "value": false
+      },
+      "digital_inputs": {
+        "2": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.8
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.2
+          }
+        },
+        "4": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.8
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.2
+          }
+        },
+        "5": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.8
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.2
+          }
+        },
+        "6": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.8
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "factor_of_supply": 0.2
+          }
+        }
+      },
+      "digital_outputs": {
+        "4": {
+          "vol_max": {
+            "basis": "direct",
+            "document": "lps22hb_st",
+            "iol_a": 0.003,
+            "value": 0.2
+          }
+        }
+      },
+      "ground_pins": [
+        "3",
+        "8",
+        "9"
+      ],
+      "i2c_addresses": {
+        "3V3": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 93
+        },
+        "GND": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 92
+        },
+        "strap_pin": "5"
+      },
+      "land_pattern": {
+        "document": "lps22hb_st",
+        "recommended": null,
+        "terminal_basis": "derived",
+        "terminals": [
+          {
+            "h": 0.25,
+            "number": "1",
+            "w": 0.25,
+            "x": -0.775,
+            "y": -0.25
+          },
+          {
+            "h": 0.25,
+            "number": "2",
+            "w": 0.25,
+            "x": -0.775,
+            "y": 0.25
+          },
+          {
+            "h": 0.25,
+            "number": "6",
+            "w": 0.25,
+            "x": 0.775,
+            "y": 0.25
+          },
+          {
+            "h": 0.25,
+            "number": "7",
+            "w": 0.25,
+            "x": 0.775,
+            "y": -0.25
+          },
+          {
+            "h": 0.25,
+            "number": "3",
+            "w": 0.25,
+            "x": -0.5,
+            "y": 0.775
+          },
+          {
+            "h": 0.25,
+            "number": "4",
+            "w": 0.25,
+            "x": 0.0,
+            "y": 0.775
+          },
+          {
+            "h": 0.25,
+            "number": "5",
+            "w": 0.25,
+            "x": 0.5,
+            "y": 0.775
+          },
+          {
+            "h": 0.25,
+            "number": "8",
+            "w": 0.25,
+            "x": 0.5,
+            "y": -0.775
+          },
+          {
+            "h": 0.25,
+            "number": "9",
+            "w": 0.25,
+            "x": 0.0,
+            "y": -0.775
+          },
+          {
+            "h": 0.25,
+            "number": "10",
+            "w": 0.25,
+            "x": -0.5,
+            "y": -0.775
+          }
+        ]
+      },
+      "mode_select": {
+        "i2c_level": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": "supply"
+        },
+        "pin": "6"
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": [
+            2.0,
+            2.0
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 0.8
+        }
+      },
+      "pin_abs_max": {
+        "max_offset_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 0.3
+        },
+        "min_offset_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": -0.3
+        },
+        "relative_to": "supply"
+      },
+      "sensing_opening": {
+        "centre_mm": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": [
+            0.245,
+            -0.19
+          ]
+        },
+        "kind": "pressure",
+        "size_mm": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": [
+            1.14,
+            1.1
+          ]
+        }
+      },
+      "supply": {
+        "abs_max_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 4.8
+        },
+        "abs_min_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": -0.3
+        },
+        "characterised_max_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 3.6
+        },
+        "characterised_min_v": {
+          "basis": "direct",
+          "document": "lps22hb_st",
+          "value": 1.7
+        }
+      },
+      "supply_current_idle_typ_a": {
+        "basis": "direct",
+        "document": "lps22hb_st",
+        "value": 1e-06
+      },
+      "supply_current_max_a": {
+        "knowledge": "unknown"
+      },
+      "supply_current_typ_a": {
+        "basis": "direct",
+        "document": "lps22hb_st",
+        "lc_en": false,
+        "odr_hz": 1.0,
+        "value": 1.2e-05
+      },
+      "supply_pins": [
+        "1",
+        "10"
+      ]
+    },
+    "OPT3001DNPR": {
+      "bus_supply_range_v": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": [
+          1.6,
+          5.5
+        ]
+      },
+      "cleaning_recommended": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": true
+      },
+      "copper_keepout_under_body": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": false
+      },
+      "digital_inputs": {
+        "2": {
+          "input_capacitance_f": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "value": 3e-12
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.7
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.3
+          }
+        },
+        "4": {
+          "input_capacitance_f": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "value": 3e-12
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.7
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.3
+          }
+        },
+        "6": {
+          "input_capacitance_f": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "value": 3e-12
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.7
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "factor_of_supply": 0.3
+          }
+        }
+      },
+      "digital_outputs": {
+        "5": {
+          "vol_max": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "iol_a": 0.003,
+            "value": 0.32
+          }
+        },
+        "6": {
+          "vol_max": {
+            "basis": "direct",
+            "document": "opt3001_ti",
+            "iol_a": 0.003,
+            "value": 0.32
+          }
+        }
+      },
+      "ground_pins": [
+        "3",
+        "7"
+      ],
+      "i2c_addresses": {
+        "3V3": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 69
+        },
+        "GND": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 68
+        },
+        "strap_pin": "2"
+      },
+      "land_pattern": {
+        "document": "opt3001_ti",
+        "paste_coverage_min": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "pad": "7",
+          "value": 0.88
+        },
+        "recommended": [
+          {
+            "h": 0.25,
+            "number": "1",
+            "w": 0.5,
+            "x": -0.7,
+            "y": -0.65
+          },
+          {
+            "h": 0.25,
+            "number": "2",
+            "w": 0.5,
+            "x": -0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.25,
+            "number": "3",
+            "w": 0.5,
+            "x": -0.7,
+            "y": 0.65
+          },
+          {
+            "h": 0.25,
+            "number": "4",
+            "w": 0.5,
+            "x": 0.7,
+            "y": 0.65
+          },
+          {
+            "h": 0.25,
+            "number": "5",
+            "w": 0.5,
+            "x": 0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.25,
+            "number": "6",
+            "w": 0.5,
+            "x": 0.7,
+            "y": -0.65
+          },
+          {
+            "h": 1.35,
+            "number": "7",
+            "w": 0.65,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ],
+        "terminal_basis": "direct",
+        "terminals": [
+          {
+            "h": 0.25,
+            "number": "1",
+            "w": 0.3,
+            "x": -0.7,
+            "y": -0.65
+          },
+          {
+            "h": 0.25,
+            "number": "2",
+            "w": 0.3,
+            "x": -0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.25,
+            "number": "3",
+            "w": 0.3,
+            "x": -0.7,
+            "y": 0.65
+          },
+          {
+            "h": 0.25,
+            "number": "4",
+            "w": 0.3,
+            "x": 0.7,
+            "y": 0.65
+          },
+          {
+            "h": 0.25,
+            "number": "5",
+            "w": 0.3,
+            "x": 0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.25,
+            "number": "6",
+            "w": 0.3,
+            "x": 0.7,
+            "y": -0.65
+          },
+          {
+            "h": 1.35,
+            "number": "7",
+            "w": 0.65,
+            "x": 0.0,
+            "y": 0.0
+          }
+        ]
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": [
+            2.1,
+            2.1
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 0.65
+        }
+      },
+      "pin_abs_max": {
+        "max_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 6.0
+        },
+        "min_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": -0.5
+        },
+        "relative_to": "ground"
+      },
+      "pin_current_max_a": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": 0.01
+      },
+      "sensing_opening": {
+        "centre_mm": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": [
+            0.0,
+            0.0
+          ]
+        },
+        "half_power_angle_deg": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 47.0
+        },
+        "kind": "illuminance",
+        "obstruction_distance_per_height": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 2.0
+        },
+        "size_mm": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": [
+            0.49,
+            0.39
+          ]
+        }
+      },
+      "supply": {
+        "abs_max_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 6.0
+        },
+        "abs_min_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": -0.5
+        },
+        "characterised_max_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 3.6
+        },
+        "characterised_min_v": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 1.6
+        }
+      },
+      "supply_current_idle_typ_a": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": 3e-07
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "opt3001_ti",
+        "value": 2.5e-06
+      },
+      "supply_pins": [
+        "1"
+      ],
+      "thermal": {
+        "rja_k_per_w": {
+          "basis": "direct",
+          "document": "opt3001_ti",
+          "value": 71.2
+        }
+      }
+    },
+    "S4B-PH-K-S(LF)(SN)": {
+      "board_retention_mechanism": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": true
+      },
+      "board_thickness_range_mm": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": [
+          0.8,
+          1.6
+        ]
+      },
+      "contact_current_max_a": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": 2.0
+      },
+      "contact_resistance_max_ohm": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": 0.02
+      },
+      "contact_voltage_max_v": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": 100.0
+      },
+      "ground_pins": [],
+      "hole_diameter_mm": {
+        "basis": "direct",
+        "document": "s4b_ph_k_s_jst",
+        "value": [
+          0.7,
+          0.8
+        ]
+      },
+      "land_pattern": {
+        "document": "s4b_ph_k_s_jst",
+        "recommended": [
+          {
+            "drill": 0.75,
+            "number": "1",
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "drill": 0.75,
+            "number": "2",
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "drill": 0.75,
+            "number": "3",
+            "x": 4.0,
+            "y": 0.0
+          },
+          {
+            "drill": 0.75,
+            "number": "4",
+            "x": 6.0,
+            "y": 0.0
+          }
+        ],
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "mating_axis": {
+        "basis": "direct",
+        "document": "s4b_ph_k_s_jst",
+        "value": "in_plane"
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "s4b_ph_k_s_jst",
+          "value": [
+            9.6,
+            7.6
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "s4b_ph_k_s_jst",
+          "value": 4.8
+        }
+      },
+      "pitch_mm": {
+        "basis": "direct",
+        "document": "s4b_ph_k_s_jst",
+        "value": 2.0
+      },
+      "positions": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": 4
+      },
+      "shrouded_header": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": true
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": 0.0
+      },
+      "supply_pins": [],
+      "temperature_range_c": {
+        "basis": "direct",
+        "document": "ph_series_jst",
+        "value": [
+          -25.0,
+          85.0
+        ]
+      },
+      "termination": {
+        "basis": "direct",
+        "document": "s4b_ph_k_s_jst",
+        "value": "through_hole"
+      }
+    },
+    "SHT40-AD1B-R3": {
+      "accuracy": {
+        "humidity_typ_pct_rh": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 1.8
+        },
+        "temperature_typ_c": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 0.2
+        }
+      },
+      "average_supply_current_1hz_typ_a": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "repeatability": "high",
+        "value": 2.3e-06
+      },
+      "bus_capacitance_max_f": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "max_pullup_ohms": 820.0,
+        "value": 4e-10
+      },
+      "copper_keepout_under_body": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "value": true
+      },
+      "digital_inputs": {
+        "1": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "sht40_sensirion",
+            "factor_of_supply": 0.7
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "sht40_sensirion",
+            "factor_of_supply": 0.3
+          }
+        },
+        "2": {
+          "input_capacitance_f": {
+            "basis": "derived",
+            "document": "i2c_um10204_nxp",
+            "value": 1e-11
+          },
+          "vih_min": {
+            "basis": "direct",
+            "document": "sht40_sensirion",
+            "factor_of_supply": 0.7
+          },
+          "vil_max": {
+            "basis": "direct",
+            "document": "sht40_sensirion",
+            "factor_of_supply": 0.3
+          }
+        }
+      },
+      "digital_outputs": {
+        "1": {
+          "vol_max": {
+            "basis": "direct",
+            "document": "sht40_sensirion",
+            "min_pullup_ohms": 390.0,
+            "min_supply_v": 2.0,
+            "value": 0.4
+          }
+        }
+      },
+      "ground_pins": [
+        "4"
+      ],
+      "i2c_addresses": {
+        "fixed": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 68
+        }
+      },
+      "land_pattern": {
+        "document": "sht40_sensirion",
+        "recommended": [
+          {
+            "h": 0.3,
+            "number": "1",
+            "w": 0.5,
+            "x": -0.7,
+            "y": -0.4
+          },
+          {
+            "h": 0.3,
+            "number": "2",
+            "w": 0.5,
+            "x": -0.7,
+            "y": 0.4
+          },
+          {
+            "h": 0.3,
+            "number": "3",
+            "w": 0.5,
+            "x": 0.7,
+            "y": 0.4
+          },
+          {
+            "h": 0.3,
+            "number": "4",
+            "w": 0.5,
+            "x": 0.7,
+            "y": -0.4
+          }
+        ],
+        "terminal_basis": "derived",
+        "terminals": [
+          {
+            "h": 0.3,
+            "number": "1",
+            "w": 0.4,
+            "x": -0.55,
+            "y": -0.4
+          },
+          {
+            "h": 0.3,
+            "number": "2",
+            "w": 0.4,
+            "x": -0.55,
+            "y": 0.4
+          },
+          {
+            "h": 0.3,
+            "number": "3",
+            "w": 0.4,
+            "x": 0.55,
+            "y": 0.4
+          },
+          {
+            "h": 0.3,
+            "number": "4",
+            "w": 0.4,
+            "x": 0.55,
+            "y": -0.4
+          }
+        ]
+      },
+      "measurement_duration_max_s": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "repeatability": "high",
+        "value": 0.0082
+      },
+      "min_pullup_ohms": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "min_supply_v": 1.62,
+        "value": 390.0
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": [
+            1.5,
+            1.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 0.59
+        }
+      },
+      "pin_abs_max": {
+        "max_offset_v": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 0.3
+        },
+        "min_offset_v": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": -0.3
+        },
+        "relative_to": "supply"
+      },
+      "pin_current_max_a": {
+        "basis": "direct",
+        "condition": "latch_up_jesd78_class_ii",
+        "document": "sht40_sensirion",
+        "value": 0.1
+      },
+      "sensing_opening": {
+        "centre_mm": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": [
+            0.0,
+            0.0
+          ]
+        },
+        "diameter_mm": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 0.6
+        },
+        "kind": "humidity"
+      },
+      "supply": {
+        "abs_max_v": {
+          "knowledge": "unknown"
+        },
+        "abs_min_v": {
+          "knowledge": "unknown"
+        },
+        "characterised_max_v": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 3.6
+        },
+        "characterised_min_v": {
+          "basis": "direct",
+          "document": "sht40_sensirion",
+          "value": 1.08
+        }
+      },
+      "supply_current_idle_typ_a": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "value": 8e-08
+      },
+      "supply_current_max_a": {
+        "knowledge": "unknown"
+      },
+      "supply_current_typ_a": {
+        "basis": "direct",
+        "document": "sht40_sensirion",
+        "value": 0.00035
+      },
+      "supply_pins": [
+        "3"
+      ],
+      "thermal": {
+        "rja_k_per_w": {
+          "basis": "direct",
+          "die_pad_soldered": false,
+          "document": "sht40_sensirion",
+          "heater": "off",
+          "value": 297.0
+        },
+        "rjb_k_per_w": {
+          "basis": "direct",
+          "die_pad_soldered": false,
+          "document": "sht40_sensirion",
+          "heater": "off",
+          "value": 193.0
+        }
+      }
+    },
+    "TPD1E10B06DYAR": {
+      "ground_pins": [],
+      "iec61000_4_2_contact_v": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": 30000.0
+      },
+      "land_pattern": {
+        "document": "tpd1e10b06_ti",
+        "recommended": null,
+        "terminal_basis": "derived",
+        "terminals": [
+          {
+            "h": 0.7,
+            "number": "1",
+            "w": 0.3,
+            "x": -0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.7,
+            "number": "2",
+            "w": 0.3,
+            "x": 0.7,
+            "y": 0.0
+          }
+        ]
+      },
+      "leakage_current_max_a": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": 1e-07
+      },
+      "line_capacitance_typ_f": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": 1.2e-11
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": [
+            1.7,
+            0.85
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 0.77
+        }
+      },
+      "protected_pins": [
+        "1",
+        "2"
+      ],
+      "rail_referenced": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": false
+      },
+      "reverse_standoff_v": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": 5.5
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "tpd1e10b06_ti",
+        "value": 1e-07
+      },
+      "supply_pins": []
+    },
+    "TPD2E2U06DRLR": {
+      "breakdown_min_v": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 6.5
+      },
+      "ground_pins": [
+        "4"
+      ],
+      "iec61000_4_2_contact_v": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 25000.0
+      },
+      "land_pattern": {
+        "document": "tpd2e2u06_ti",
+        "recommended": null,
+        "terminal_basis": "derived",
+        "terminals": [
+          {
+            "h": 0.3,
+            "number": "1",
+            "w": 0.3,
+            "x": -0.7,
+            "y": -0.5
+          },
+          {
+            "h": 0.3,
+            "number": "2",
+            "w": 0.3,
+            "x": -0.7,
+            "y": 0.0
+          },
+          {
+            "h": 0.3,
+            "number": "3",
+            "w": 0.3,
+            "x": -0.7,
+            "y": 0.5
+          },
+          {
+            "h": 0.3,
+            "number": "4",
+            "w": 0.3,
+            "x": 0.7,
+            "y": 0.5
+          },
+          {
+            "h": 0.3,
+            "number": "5",
+            "w": 0.3,
+            "x": 0.7,
+            "y": -0.5
+          }
+        ]
+      },
+      "leakage_current_max_a": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 1e-08
+      },
+      "line_capacitance_max_f": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 1.9e-12
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "tpd2e2u06_ti",
+          "value": [
+            1.6,
+            1.6
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "tpd2e2u06_ti",
+          "value": 0.6
+        }
+      },
+      "protected_pins": [
+        "3",
+        "5"
+      ],
+      "rail_referenced": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": false
+      },
+      "reverse_standoff_v": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 5.5
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "tpd2e2u06_ti",
+        "value": 1e-08
+      },
+      "supply_pins": []
+    }
+  },
+  "schema_version": 1
+}

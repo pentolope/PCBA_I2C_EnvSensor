@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "board_id": "i2c_env_sensor",
+  "constraint_version": "layout-stage-2026-09-02",
+  "release_profile": "jlcpcb-2layer-assembled",
+  "generated_utc": "2026-09-02T07:37:53.095425+00:00",
+  "source_closure_sha256": "ac50e9147df7ec3d1f51fad689b62899e9e8b9d314de49e41b89ceb174b36e1b",
+  "source_closure_files": 17,
+  "tools": {
+    "kicad": "10.0.5",
+    "kicad_cli": "kicad-cli"
+  },
+  "toolkit": {
+    "commit": "9528bfa3466b95f2e48b989d0b71fff8350865ad",
+    "working_tree_dirty": false,
+    "detail": "git HEAD of the toolkit checkout that executed this validation"
+  },
+  "commands": [
+    "kicad-cli sch erc --output erc.json --format json --severity-all --severity-exclusions --exit-code-violations i2c_env_sensor.kicad_sch",
+    "kicad-cli pcb drc --output drc.json --format json --severity-all --severity-exclusions --all-track-errors --schematic-parity --refill-zones --save-board --exit-code-violations i2c_env_sensor.kicad_pcb",
+    "kicad-cli pcb export gerbers --output export --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask i2c_env_sensor.kicad_pcb",
+    "kicad-cli pcb export drill --output export --format excellon --excellon-separate-th --drill-origin plot i2c_env_sensor.kicad_pcb",
+    "kicad-cli pcb export pos --output cpl.csv --format csv --units mm --side both --exclude-dnp i2c_env_sensor.kicad_pcb",
+    "kicad-cli sch export bom --output bom.csv --fields ${QUANTITY},Reference,Value,Footprint,LCSC --labels Quantity,Designator,Comment,Footprint,LCSC Part # --group-by Value,Footprint,LCSC --exclude-dnp --ref-range-delimiter  i2c_env_sensor.kicad_sch",
+    "zip i2c_env_sensor-fabrication.zip"
+  ],
+  "artifacts": {
+    "bom.csv": "ff57556003bdde069ecffaf2e9d3fa3b1cfc69bad9ff40711c76fcdb1b2d96cf",
+    "cpl.csv": "8c74c74089ea83e5cf443c4d959c60d6c53b7f50dfe5b9b5e74d3713ecd7de41",
+    "gerbers/i2c_env_sensor-B_Cu.gbr": "354a18dffbfbce54518c4b110ed44ed214334e773bddc56c3827cfff2545db23",
+    "gerbers/i2c_env_sensor-B_Mask.gbr": "51b5db4fd781343617b1b08b8d4fe8bfc3dcff27cd34cc2d21c330c272c4f825",
+    "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "e407b1dc69305814ce743d2a4a76307e81bab5c9321285ebb934a8775508b442",
+    "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "fe40ad4f309965c09851f6f4af3b161b2455a7565fef0ca85cc38263d44e57b7",
+    "gerbers/i2c_env_sensor-F_Cu.gbr": "75da134b487c495aa0e500570c81dcebeec46e5cc41899ff1cb7e695682017c2",
+    "gerbers/i2c_env_sensor-F_Mask.gbr": "76a21f4310f04904f96ade938e6b1470477745d04e30bcb6a3d2e7433795858e",
+    "gerbers/i2c_env_sensor-F_Paste.gbr": "4677c0906f7cc38af7c8ef91b5f07e4d64c050091fa6b4d2a6f1782fb6ff06bf",
+    "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "559298ea24ce8058ac624243320d6815331bfab566aa5299af32aa347c05f390",
+    "gerbers/i2c_env_sensor-NPTH.drl": "a0a8fd77b682b982984f125a456dfb62b61b23449df52faa38f95b976db425ba",
+    "gerbers/i2c_env_sensor-PTH.drl": "1b42737b904b5677330fe65ad77b541724833317e82851b0dad74b5277c1c159",
+    "gerbers/i2c_env_sensor-job.gbrjob": "621e46c64386ed3ea8a304f06cde5241d83740b586f876a4cfa41fa9fa77ad2a",
+    "i2c_env_sensor-fabrication.zip": "11b155e2420cdabdd450298f2bca7ad2d5bb7e106b42aab3358b6bbeb43f8a0c",
+    "reports/drc.json": "02d305d95e4ab3892ee78e950776770a174d1693efdd276fbd984a18b0b3894b",
+    "reports/erc.json": "553cc1ee78831e4a8235836657192dc2e209944e18b707adc7705c8f51f3ec96"
+  },
+  "excluded_layers": []
+}

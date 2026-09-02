@@ -1,0 +1,148 @@
+{
+  "blocks": [
+    {
+      "context": {
+        "why": "the ESD device has to sit between the connector and everything it protects, and the damping resistor between the connector and the bulk capacitance it damps"
+      },
+      "name": "host_interface",
+      "note": "protection and rail damping at the mating face",
+      "refs": [
+        "J1",
+        "D1",
+        "D2",
+        "R3",
+        "C1"
+      ],
+      "side": "F",
+      "zone": [
+        91.0,
+        86.0,
+        109.0,
+        100.0
+      ]
+    },
+    {
+      "context": {
+        "why": "the pressure port and the optical aperture only need to be clear, so this block is the search space"
+      },
+      "name": "bus_and_sensors",
+      "note": "pull-ups, pressure and light sensors",
+      "refs": [
+        "R1",
+        "R2",
+        "U2",
+        "U3",
+        "C3",
+        "C4"
+      ],
+      "side": "F",
+      "zone": [
+        91.0,
+        77.3,
+        109.0,
+        86.0
+      ]
+    },
+    {
+      "context": {
+        "why": "the island exists to hold this sensor away from every part that dissipates"
+      },
+      "exclusive": true,
+      "name": "isolated_island",
+      "note": "temperature and humidity sensor, across the neck",
+      "refs": [
+        "U1",
+        "C2"
+      ],
+      "side": "F",
+      "zone": [
+        91.0,
+        60.0,
+        109.0,
+        68.0
+      ]
+    }
+  ],
+  "board": "i2c_env_sensor.kicad_pcb",
+  "decaps": {
+    "exempt": [
+      "C1"
+    ],
+    "max_distance_mm": 2.5,
+    "pin_functions": [
+      "3V3"
+    ]
+  },
+  "defaults": {
+    "zone_tolerance_mm": 0.5
+  },
+  "edge_connectors": [
+    {
+      "center_on_edge": {
+        "tolerance_mm": 0.5
+      },
+      "context": {
+        "why": "the cable leaves the board in its own plane, so a pull is reacted by the through-hole retention and not by a solder fillet"
+      },
+      "edge": "south",
+      "ref": "J1"
+    }
+  ],
+  "envelope": {
+    "rect": [
+      91.0,
+      60.0,
+      109.0,
+      100.0
+    ],
+    "tolerance_mm": 0.5
+  },
+  "keepouts": [
+    {
+      "context": {
+        "why": "copper and parts in the neck are the conduction path the neck exists to break"
+      },
+      "name": "isolation_neck",
+      "note": "only the four island nets cross here",
+      "rect": [
+        91.0,
+        68.0,
+        109.0,
+        76.0
+      ],
+      "sides": [
+        "F",
+        "B"
+      ]
+    }
+  ],
+  "kind": "floorplan-intent",
+  "legality_budget": {
+    "oob_count": 3,
+    "overlap_area": 0.0
+  },
+  "min_reader": 2,
+  "must_lock": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "D1",
+    "D2",
+    "H1",
+    "H2",
+    "J1",
+    "R1",
+    "R2",
+    "R3",
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "U1",
+    "U2",
+    "U3"
+  ],
+  "schema": 1,
+  "units": "mm"
+}

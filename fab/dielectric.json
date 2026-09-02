@@ -1,0 +1,10 @@
+{
+  "relative_permittivity_max": {
+    "applicability": "the highest core permittivity the approved fabricator catalog publishes; used only where a larger permittivity is the conservative choice",
+    "digest": "f7cd05e75e1f9d6d015276986a43c13f2e2162ded30eea61f0362f999a97918c",
+    "source": "core",
+    "source_type": "approved-evidence",
+    "units": "1",
+    "value": 4.6
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "schema_version": 2,
+  "board_id": "i2c_env_sensor",
+  "constraint_version": "layout-stage-2026-09-02",
+  "project_root": "..",
+  "tools": {
+    "kicad_cli": "kicad-cli"
+  },
+  "sources": {
+    "schematic": "i2c_env_sensor.kicad_sch",
+    "project": "i2c_env_sensor.kicad_pro",
+    "pcb": "i2c_env_sensor.kicad_pcb"
+  },
+  "board_origin_mm": [
+    100.0,
+    100.0
+  ],
+  "documentation_globs": [
+    "BRIEF.md"
+  ],
+  "checks": {
+    "erc": {
+      "extra_flags": []
+    },
+    "drc": {
+      "extra_flags": [],
+      "forbidden_severities": [
+        "ignore"
+      ],
+      "permitted_ignored_rules": [],
+      "constraint_floor": {
+        "rules": {
+          "min_clearance": 0.125,
+          "min_track_width": 0.15,
+          "min_via_diameter": 0.45,
+          "min_via_annular_width": 0.1,
+          "min_through_hole_diameter": 0.3,
+          "min_hole_clearance": 0.25,
+          "min_hole_to_hole": 0.25,
+          "min_copper_edge_clearance": 0.3
+        },
+        "net_classes": {
+          "Default": {
+            "clearance": 0.125,
+            "track_width": 0.25,
+            "via_diameter": 0.6,
+            "via_drill": 0.3
+          }
+        }
+      }
+    }
+  },
+  "waivers": [],
+  "geometry_profile": {
+    "version": "geom-1",
+    "tolerances": {
+      "waiver_location_mm": {
+        "value": 0.001,
+        "units": "mm"
+      },
+      "polygon_chord_error_mm": {
+        "value": 0.001,
+        "units": "mm"
+      },
+      "contact_mm": {
+        "value": 1e-06,
+        "units": "mm"
+      },
+      "coordinate_match_mm": {
+        "value": 0.002,
+        "units": "mm"
+      },
+      "rotation_match_deg": {
+        "value": 0.1,
+        "units": "deg"
+      },
+      "dimension_match_mm": {
+        "value": 0.002,
+        "units": "mm"
+      },
+      "clearance_match_mm": {
+        "value": 0.01,
+        "units": "mm"
+      },
+      "layer_symmetric_difference_mm2": {
+        "value": 0.05,
+        "units": "mm2"
+      }
+    }
+  },
+  "stackup": {
+    "expected": [
+      {
+        "role": "signal"
+      },
+      {
+        "role": "plane",
+        "plane_net": "GND"
+      }
+    ]
+  },
+  "placement_rules": [
+    {
+      "id": "EXPOSED_SENSORS",
+      "reference_regex": "^U[123]$",
+      "count": 3
+    },
+    {
+      "id": "BUS_PULLUPS",
+      "reference_regex": "^R[12]$",
+      "count": 2
+    },
+    {
+      "id": "MOUNTING",
+      "reference_regex": "^H[12]$",
+      "count": 2
+    }
+  ],
+  "net_topology": {
+    "rules": [
+      {
+        "id": "BUS_TO_SENSORS",
+        "net_regex": "^(SDA|SCL)$",
+        "source_pad_regex": "^J1\\.[34]$",
+        "load_pad_regex": "^U\\d+\\.\\d+$",
+        "max_vias_per_net": 6,
+        "permitted_layers": [
+          "F.Cu",
+          "B.Cu"
+        ]
+      },
+      {
+        "id": "SUPPLY_TO_SENSORS",
+        "net_regex": "^3V3$",
+        "source_pad_regex": "^R3\\.2$",
+        "load_pad_regex": "^(U\\d+|C\\d+)\\.\\d+$",
+        "max_vias_per_net": 6,
+        "permitted_layers": [
+          "F.Cu",
+          "B.Cu"
+        ]
+      }
+    ]
+  },
+  "routing": {
+    "min_segment_mm": 0.1,
+    "short_segment_justification": {
+      "allow_pad_or_via_entry": true
+    },
+    "hygiene": {
+      "forbid_duplicate_geometry": true,
+      "forbid_net_crossings": true,
+      "forbid_dangling": true
+    },
+    "provenance": "generated/routing.json",
+    "acceptance_gates": [
+      "ERC.AUTHORITATIVE",
+      "DRC.AUTHORITATIVE",
+      "DRC.NO_SUPPRESSED_RULES",
+      "DRC.CONSTRAINT_FLOOR",
+      "NET.TOPOLOGY",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.TINY_SEGMENTS",
+      "ROUTE.PROVENANCE",
+      "CONTRACT.PLACEMENT",
+      "CONTRACT.CONNECTOR",
+      "STACK.NATIVE_VS_MANIFEST",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "TIMING.PATH_INTEGRITY",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE"
+    ]
+  },
+  "via_mask": {
+    "pad_contact": {
+      "populated_pad_attributes": [
+        "SMD"
+      ],
+      "require_paste": true
+    },
+    "metric": "annulus_to_opening_mm",
+    "contact_semantics": "annulus_contacts counts zero-distance tangency as contact; annulus_strict_overlaps counts positive shared area only",
+    "mask_dam_rule": "contact",
+    "design_target_mm": 0.125
+  },
+  "artifacts": {
+    "gerber_dir": "generated/release/gerbers",
+    "bom": "generated/release/bom.csv",
+    "cpl": "generated/release/cpl.csv",
+    "fabrication_manifest": "generated/release/fabrication.json",
+    "validation_report": "generated/release/validation.json",
+    "position_tolerance_mm": 0.01,
+    "cpl_fields": {
+      "designator": "Ref",
+      "x": "PosX",
+      "y": "PosY",
+      "side": "Side",
+      "rotation": "Rot"
+    },
+    "cpl_origin": {
+      "frame": "absolute page origin",
+      "offset_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    "gerber_export_flags": [
+      "--layers",
+      "F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+      "--no-protel-ext",
+      "--use-drill-file-origin",
+      "--subtract-soldermask"
+    ],
+    "reports_dir": "generated/release/reports"
+  },
+  "archive": {
+    "zip": "generated/release/i2c_env_sensor-fabrication.zip",
+    "allow": [
+      {
+        "file_function": "Copper,L1,Top",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Copper,L2,Bot",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Soldermask,Top",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Soldermask,Bot",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Legend,Top",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Legend,Bot",
+        "require_payload": false,
+        "min_count": 1
+      },
+      {
+        "file_function": "Paste,Top",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Profile,NP",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Drill/plated",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "Drill/nonplated",
+        "require_payload": true,
+        "min_count": 1
+      },
+      {
+        "file_function": "JobFile",
+        "require_payload": true,
+        "min_count": 1
+      }
+    ]
+  },
+  "assembly": {
+    "schematic_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ],
+    "required_part_fields": [
+      "LCSC"
+    ],
+    "bom_fields": {
+      "designators": "Designator",
+      "value": "Comment",
+      "footprint": "Footprint",
+      "quantity": "Quantity",
+      "LCSC": "LCSC Part #"
+    },
+    "schematic_export": {
+      "fields": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "${DNP}",
+        "${EXCLUDE_FROM_BOM}",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "labels": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "DNP",
+        "ExcludeFromBOM",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "flags": [],
+      "reference_label": "Reference",
+      "value_label": "Value",
+      "footprint_label": "Footprint",
+      "dnp_label": "DNP",
+      "exclude_label": "ExcludeFromBOM",
+      "true_tokens": [
+        "1",
+        "true",
+        "yes",
+        "x",
+        "dnp"
+      ]
+    },
+    "compared_part_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ]
+  },
+  "release_generation": {
+    "lock_file_globs": [
+      "*.lck",
+      "~*.lck",
+      ".#*",
+      "*-lock",
+      "*.kicad_prl-lock"
+    ],
+    "erc": {
+      "output": "erc.json"
+    },
+    "drc": {
+      "output": "drc.json"
+    },
+    "drill": {
+      "flags": [
+        "--format",
+        "excellon",
+        "--excellon-separate-th",
+        "--drill-origin",
+        "plot"
+      ]
+    },
+    "bom": {
+      "output": "bom.csv",
+      "fields": [
+        "${QUANTITY}",
+        "Reference",
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "labels": [
+        "Quantity",
+        "Designator",
+        "Comment",
+        "Footprint",
+        "LCSC Part #"
+      ],
+      "group_by": [
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "flags": [
+        "--exclude-dnp",
+        "--ref-range-delimiter",
+        ""
+      ],
+      "field_map": {
+        "designators": "Designator",
+        "value": "Comment",
+        "footprint": "Footprint",
+        "quantity": "Quantity",
+        "LCSC": "LCSC Part #"
+      }
+    },
+    "cpl": {
+      "output": "cpl.csv",
+      "flags": [
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--exclude-dnp"
+      ],
+      "field_map": {
+        "designator": "Ref",
+        "x": "PosX",
+        "y": "PosY",
+        "side": "Side",
+        "rotation": "Rot"
+      },
+      "origin": {
+        "frame": "absolute page origin",
+        "offset_mm": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "archive": {
+      "zip": "i2c_env_sensor-fabrication.zip"
+    }
+  },
+  "reports": {
+    "files": [
+      "generated/release/reports/erc.json",
+      "generated/release/reports/drc.json"
+    ],
+    "source_field": "source",
+    "date_field": "date",
+    "require_source_hash": true,
+    "tolerance_seconds": 0,
+    "source_closure": [
+      "*.kicad_pcb",
+      "*.kicad_pro",
+      "*.kicad_sch",
+      "board/floorplan.json",
+      "components/*.json",
+      "evidence/index.json",
+      "fab/*.json",
+      "sim/*.json"
+    ],
+    "source_hash_field": "source_sha256",
+    "closure_field": "source_closure_sha256"
+  },
+  "fixture": {
+    "attributes_file": ".gitattributes"
+  },
+  "release_profile": {
+    "id": "jlcpcb-2layer-assembled",
+    "mandatory_gates": [
+      "ARCH.CONTENTS",
+      "ARCH.PROVENANCE",
+      "BOM.NATIVE_PARITY",
+      "CONTRACT.CONNECTOR",
+      "CONTRACT.PLACEMENT",
+      "CPL.NATIVE_PARITY",
+      "DRC.AUTHORITATIVE",
+      "DRC.CONSTRAINT_FLOOR",
+      "DRC.NO_SUPPRESSED_RULES",
+      "ERC.AUTHORITATIVE",
+      "NET.TOPOLOGY",
+      "PROV.REPORT_FRESHNESS",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.PROVENANCE",
+      "ROUTE.TINY_SEGMENTS",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE",
+      "STACK.GERBER_PARITY",
+      "STACK.NATIVE_VS_MANIFEST",
+      "TIMING.PATH_INTEGRITY",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "VIA.MASK_CLEARANCE_TARGET"
+    ],
+    "required_evidence": [
+      "generated/routing.json",
+      "evidence/index.json"
+    ]
+  },
+  "simulation": {
+    "stages": {
+      "pre_layout": [
+        "sim/pre_layout_bus_rise_time.json",
+        "sim/pre_layout_receiver_high_level.json",
+        "sim/pre_layout_rail_mating.json"
+      ],
+      "post_layout": [
+        "sim/post_layout_rail_mating.json"
+      ]
+    },
+    "required_stages": [
+      "pre_layout",
+      "post_layout"
+    ],
+    "extracted_models": {
+      "paths": {
+        "rail_copper": {
+          "net": "3V3",
+          "from_pad": "R3.2",
+          "to_pad": "U1.3"
+        }
+      },
+      "physical_inputs": "fab/physical_inputs.json"
+    }
+  },
+  "timing": {
+    "physical_stackup": {
+      "reference_nets": [
+        "GND"
+      ],
+      "require_complete": false
+    },
+    "interfaces": {
+      "island_bus": {
+        "expected_path_count": 2,
+        "required_component_crossings": 0,
+        "routes": {
+          "paths": [
+            {
+              "id": "connector_to_humidity_sensor_data",
+              "steps": [
+                {
+                  "kind": "copper",
+                  "net": "SDA",
+                  "from": "J1.3",
+                  "to": "U1.1"
+                }
+              ]
+            },
+            {
+              "id": "connector_to_humidity_sensor_clock",
+              "steps": [
+                {
+                  "kind": "copper",
+                  "net": "SCL",
+                  "from": "J1.4",
+                  "to": "U1.2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "island_supply": {
+        "expected_path_count": 1,
+        "required_component_crossings": 1,
+        "routes": {
+          "paths": [
+            {
+              "id": "connector_to_humidity_sensor_supply",
+              "steps": [
+                {
+                  "kind": "copper",
+                  "net": "3V3_IN",
+                  "from": "J1.2",
+                  "to": "R3.1"
+                },
+                {
+                  "kind": "component",
+                  "reference": "R3",
+                  "from_pad": "1",
+                  "to_pad": "2"
+                },
+                {
+                  "kind": "copper",
+                  "net": "3V3",
+                  "from": "R3.2",
+                  "to": "U1.3"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "connector_gender_tokens": {
+    "receptacle": [
+      "receptacle",
+      "socket",
+      "female"
+    ],
+    "plug": [
+      "plug",
+      "header",
+      "male"
+    ]
+  },
+  "connector_contracts": [
+    {
+      "id": "host_i2c_connector",
+      "reference": "J1",
+      "required_positions": 4,
+      "required_rows": 1,
+      "required_pitch_mm": 2.0,
+      "required_side": "front",
+      "required_gender": "plug",
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "pin_map": {
+        "1": "GND",
+        "2": "3V3_IN",
+        "3": "SDA",
+        "4": "SCL"
+      }
+    }
+  ]
+}
