@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-03T08:53:13.138188+00:00",
-  "source_closure_sha256": "f6b7bb781080075e84d3cd1a8c59cf9500cead0d5a7cd1902e50b091c8342e1c",
+  "generated_utc": "2026-09-03T16:27:30.606459+00:00",
+  "source_closure_sha256": "589916ba693a8641860c5b1a75117f916ff9c191f4da8325f8e941afe0d53f06",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/board/manifest.json",
     "sha256": "537cbbcf5c79a65b4ee9995c0d03959407ee1cb81e975ad96cdf4f4bcbc8b3a7",
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/tooling/PCBA_AutoDesignAndTest",
-      "commit": "a0f53eb0a0245d7c12d10c3f31f39af1ba53cc43",
+      "commit": "0c051f23f5cb7c08360e7db4ab231ec321a4459c",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/i2c_env_sensor-fabrication.zip",
           "name": "i2c_env_sensor-fabrication.zip",
-          "sha256": "6a05e1617595792c48aee47b3df4b311f9cd180e6f11205183fe20722f475459"
+          "sha256": "883cf7e43a33ad8e0f42a45ee68f6641121d8102165828035210bcfe1376239f"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "f6b7bb781080075e84d3cd1a8c59cf9500cead0d5a7cd1902e50b091c8342e1c",
-        "recorded_source_closure_sha256": "f6b7bb781080075e84d3cd1a8c59cf9500cead0d5a7cd1902e50b091c8342e1c"
+        "source_closure_sha256": "589916ba693a8641860c5b1a75117f916ff9c191f4da8325f8e941afe0d53f06",
+        "recorded_source_closure_sha256": "589916ba693a8641860c5b1a75117f916ff9c191f4da8325f8e941afe0d53f06"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "1573f9e30553d25c82f1def0cfeca39fa305cf13ad33e7e5f2f651172f61e25c"
+          "sha256": "ca075f5cdae8d772cde00ac1a42c5ac7a03a09c99e94ab644458090cef34c7a9"
         }
       ]
     },
@@ -404,10 +404,10 @@
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
         "constraint_manifest_sha256": "537cbbcf5c79a65b4ee9995c0d03959407ee1cb81e975ad96cdf4f4bcbc8b3a7",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T08:53:10.006073+00:00",
+        "generated_utc": "2026-09-03T16:27:26.529093+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-03T02:53:09",
+          "date": "2026-09-03T10:27:26",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_pcb",
           "ignored_checks": [],
@@ -441,9 +441,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T085307Z-3cd81717/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T162723Z-42735717/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "ca65ab544310b4a0df5b0bcd460030226ca285e47ee22b1cab37990f1b032cdd"
+          "sha256": "d338c7c417390309675e7ca070eb5e3815470ea98ad0f5c4e322792e0cba0d92"
         }
       ]
     },
@@ -612,10 +612,10 @@
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
         "constraint_manifest_sha256": "537cbbcf5c79a65b4ee9995c0d03959407ee1cb81e975ad96cdf4f4bcbc8b3a7",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T08:53:11.729248+00:00",
+        "generated_utc": "2026-09-03T16:27:28.658347+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-03T02:53:11",
+          "date": "2026-09-03T10:27:28",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_sch",
           "ignored_checks": [],
@@ -649,9 +649,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T085307Z-3cd81717/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T162723Z-42735717/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "6c782a6a0f522a7c7b44df2e153856068457a584de98cc4067c01e520f979608"
+          "sha256": "73bf3daa1d25bb56d6dec301addf6e801a8eb65e8995d1ca4c7f443235d9a032"
         }
       ]
     },
@@ -768,7 +768,7 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 17 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 17,
-        "source_closure_sha256": "f6b7bb781080075e84d3cd1a8c59cf9500cead0d5a7cd1902e50b091c8342e1c",
+        "source_closure_sha256": "589916ba693a8641860c5b1a75117f916ff9c191f4da8325f8e941afe0d53f06",
         "source_sha256": {
           "pcb": "6318d1371e472266",
           "schematic": "41ea2108eb7896cf"
@@ -947,7 +947,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T085307Z-3cd81717/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T085307Z-3cd81717/work/design/i2c_env_sensor.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T162723Z-42735717/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260903T162723Z-42735717/work/design/i2c_env_sensor.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",

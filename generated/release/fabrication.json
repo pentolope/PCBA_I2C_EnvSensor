@@ -3,12 +3,12 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-03T08:53:06.891710+00:00",
-  "source_closure_sha256": "f6b7bb781080075e84d3cd1a8c59cf9500cead0d5a7cd1902e50b091c8342e1c",
+  "generated_utc": "2026-09-03T16:27:22.525668+00:00",
+  "source_closure_sha256": "589916ba693a8641860c5b1a75117f916ff9c191f4da8325f8e941afe0d53f06",
   "source_closure_files": 17,
   "source_closure": {
     "<configuration>": "beebb2b61c76dd6082da97462073c838a1a99d10fffa2142c38ab8b86eebf214",
-    "<toolkit>": "a0f53eb0a0245d7c12d10c3f31f39af1ba53cc43+clean",
+    "<toolkit>": "0c051f23f5cb7c08360e7db4ab231ec321a4459c+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -30,7 +30,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "a0f53eb0a0245d7c12d10c3f31f39af1ba53cc43",
+    "commit": "0c051f23f5cb7c08360e7db4ab231ec321a4459c",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -46,20 +46,20 @@
   "artifacts": {
     "bom.csv": "67a9764146aa580649ff3c58b1c56f70d97075b61c6c1ac87aa4d4be00642aea",
     "cpl.csv": "6f171cfc9910fab4e4451f6308ec8c8dbd883894e8d046c2faacaf22d61fdca6",
-    "gerbers/i2c_env_sensor-B_Cu.gbr": "3161c59621639d0f25bac95708397b374492b26ee57365c6816baa4501f2ae25",
-    "gerbers/i2c_env_sensor-B_Mask.gbr": "b8a453cdd21446c8f0b7d0082aacece34a563bdd0d625c9b2f6db2aa326714e0",
-    "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "257494e8ef27eda4a4e4550f1a5af1c5e4d0c550be5f3dcd2ff60a270138ee51",
-    "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "6eb79b9978a399dc7ae0230ca71737afbc51163213e2061784462cf92f93a20b",
-    "gerbers/i2c_env_sensor-F_Cu.gbr": "57adfca9842fac710200f970f2a113846dba144015f62645e3431c3d751c0340",
-    "gerbers/i2c_env_sensor-F_Mask.gbr": "b2e5aafc6b6491b0b9b484b8e68be3589fe427ddc5c85fd05e18ddde6dd85f2b",
-    "gerbers/i2c_env_sensor-F_Paste.gbr": "b0cc365c3c56ea7e3962bace9e104ea3f427951a118b1974e8ba9315881ee594",
-    "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "f0654370898b193d7d615527ebd32ebac80e2bf7d6954bea0e0a31152bf9a460",
-    "gerbers/i2c_env_sensor-NPTH.drl": "7acf6272e8e9cf33bb41ce61f5cd373f5a6fab8be19dfaec59cdade560123cf0",
-    "gerbers/i2c_env_sensor-PTH.drl": "f4f0a69e43d2213843e775a322e5127475c0c5d4ea98b9979dc48c9c34135ad5",
-    "gerbers/i2c_env_sensor-job.gbrjob": "9b0f44eb3cb883d2d5472da401e5d9385be5fb4564a28c7f4421b04fbf5c9716",
-    "i2c_env_sensor-fabrication.zip": "6a05e1617595792c48aee47b3df4b311f9cd180e6f11205183fe20722f475459",
-    "reports/drc.json": "7fb22395a88b46c523d2cd9b00c324dd04e1a8ee41c4e6c620cefb92855e2062",
-    "reports/erc.json": "0129ab440c600d87c48b571b192b96ac2671f3e7eebea8f60af4a0323a4be384"
+    "gerbers/i2c_env_sensor-B_Cu.gbr": "e6baddd8c6ec568d0e1bb2d72ab14b0991e1b4e3b44889325e8db6e72d031af0",
+    "gerbers/i2c_env_sensor-B_Mask.gbr": "fef225d911bd3998ab05d2377551b1dd3c0512f797e175ab7bf6afbb62ac6760",
+    "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "73f1f71282a0e5c72de01cfc539559ab5120e020abfc3d606f416bc6c04642f6",
+    "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "daf30ae57a52ac19770c2664cefdb8429704b1b8da0f11678b8db4f14274500b",
+    "gerbers/i2c_env_sensor-F_Cu.gbr": "75003537ad8db67ba83c24de595cd23a3662562c66848f64c46a9574afc088ed",
+    "gerbers/i2c_env_sensor-F_Mask.gbr": "ae84c8a1c2f9a13e0095eab84865798b8a611d8754d6a90df3320370dd7aedd7",
+    "gerbers/i2c_env_sensor-F_Paste.gbr": "5cf72379830578eb70248ef54b63910b2411290cd22dd47c7820a8c803886d82",
+    "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "7d54fe221cd856c577cc7edb660c6f01aa1b77c247b3b6bbbe38e44fe5ba143a",
+    "gerbers/i2c_env_sensor-NPTH.drl": "09a97945c5aba83ceccca3c2b1bb9bc24f52410aaaff042ec9ef9aee863e6712",
+    "gerbers/i2c_env_sensor-PTH.drl": "f7abd3eccd884e0d23f184c282d25354aa0a0e8e6de793090c24961cd6094a70",
+    "gerbers/i2c_env_sensor-job.gbrjob": "acd806cff8a41e671833e94f12fb104d7a054d5e67b2efea39f206ed703ec677",
+    "i2c_env_sensor-fabrication.zip": "883cf7e43a33ad8e0f42a45ee68f6641121d8102165828035210bcfe1376239f",
+    "reports/drc.json": "08da70485d8f2a5804d7a71339240bfee6fa87cdb201e62e535dc636491700a4",
+    "reports/erc.json": "9d1df05c6cb68205ef77ab73a15a8e0dfee3619b5beaab159b6a6663159af103"
   },
   "excluded_layers": []
 }
