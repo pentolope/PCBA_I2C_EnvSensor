@@ -135,9 +135,10 @@ def _route_once(resolved, candidate, attempt, placed_pcb):
     }
 
 
-def _acceptance_gates():
-    with open(MANIFEST, encoding="utf-8") as handle:
-        return json.load(handle)["routing"]["acceptance_gates"]
+#: Candidate acceptance judges the toolkit's design gate class: every gate
+#: that judges the design itself, expanded by the toolkit, so the selection
+#: cannot rot as gates are added.
+ACCEPTANCE_SELECTION = "design"
 
 
 def _gates_pass():
@@ -151,7 +152,7 @@ def _gates_pass():
     """
     completed = subprocess.run(
         [sys.executable, VALIDATOR, "validate", MANIFEST,
-         "--only=" + ",".join(_acceptance_gates())],
+         "--only=" + ACCEPTANCE_SELECTION],
         capture_output=True, text=True, cwd=REPO_ROOT)
     return completed.returncode == 0
 
