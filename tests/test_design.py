@@ -630,11 +630,19 @@ class DeclaredContracts(unittest.TestCase):
         from design import route
         from pcbqa import core, gates
         gates.load()
-        ids, unknown = core.select_gates([route.ACCEPTANCE_SELECTION])
+        ids, unknown = core.select_gates(
+            route.ACCEPTANCE_SELECTION.split(","))
         self.assertEqual(unknown, [])
+        floor = {"ERC.AUTHORITATIVE", "DRC.AUTHORITATIVE",
+                 "ROUTE.GEOMETRY_HYGIENE", "ROUTE.TINY_SEGMENTS",
+                 "ROUTE.PROVENANCE"}
+        self.assertEqual(floor - set(ids), set(),
+                         "the acceptance selection lost a gate the routing "
+                         "loop depends on")
         artifact_gates = {"ARCH.CONTENTS", "ARCH.PROVENANCE",
-                          "BOM.NATIVE_PARITY", "CPL.NATIVE_PARITY",
-                          "STACK.GERBER_PARITY", "PROV.REPORT_FRESHNESS"}
+                          "BOM.NATIVE_PARITY",
+                          "CPL.NATIVE_PARITY", "STACK.GERBER_PARITY",
+                          "PROV.REPORT_FRESHNESS"}
         self.assertEqual(set(ids) & artifact_gates, set())
 
     def test_every_mandatory_gate_passed_in_the_last_validation(self):
