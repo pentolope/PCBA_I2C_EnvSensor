@@ -8,7 +8,6 @@ fp-info-cache
 *.bak
 *.tmp
 *.kicad_pcb-bak
-*.kicad_prl
 *.kicad_sch-bak
 out/
 build/
@@ -23,3 +22,4 @@ openems/
 *.vtr
 *.vtu
 *.log
+.pcbqa-hold-*
