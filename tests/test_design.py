@@ -627,18 +627,22 @@ class DeclaredContracts(unittest.TestCase):
                                  expected, "%s.%s" % (reference, pin))
 
     def test_the_routing_acceptance_set_excludes_artifact_gates(self):
-        from design import route
         from pcbqa import core, gates
         gates.load()
-        ids, unknown = core.select_gates(
-            route.ACCEPTANCE_SELECTION.split(","))
+        selection = manifest()["routing"]["search"]["acceptance"]["gates"]
+        self.assertIn("design", selection)
+        ids, unknown = core.select_gates(selection)
         self.assertEqual(unknown, [])
         floor = {"ERC.AUTHORITATIVE", "DRC.AUTHORITATIVE",
-                 "ROUTE.GEOMETRY_HYGIENE", "ROUTE.TINY_SEGMENTS",
-                 "ROUTE.PROVENANCE"}
+                 "ROUTE.GEOMETRY_HYGIENE", "ROUTE.TINY_SEGMENTS"}
         self.assertEqual(floor - set(ids), set(),
                          "the acceptance selection lost a gate the routing "
                          "loop depends on")
+        self.assertIn("ROUTE.PROVENANCE",
+                      manifest()["release_profile"]["mandatory_gates"],
+                      "the record-board agreement left the mid-search "
+                      "selection for --adopt's digest check, so the release "
+                      "validate must still judge it")
         artifact_gates = {"ARCH.CONTENTS", "ARCH.PROVENANCE",
                           "BOM.NATIVE_PARITY",
                           "CPL.NATIVE_PARITY", "STACK.GERBER_PARITY",

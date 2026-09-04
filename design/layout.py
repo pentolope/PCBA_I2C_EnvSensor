@@ -4,9 +4,8 @@ import json
 import math
 import os
 import sys
-import uuid
 
-from . import ksym, netlist, sexpr
+from . import ksym, netlist
 
 _TOOLKIT = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -14,6 +13,8 @@ _TOOLKIT = os.path.join(
 if _TOOLKIT not in sys.path:
     sys.path.insert(0, _TOOLKIT)
 
+from pcbqa import board as pcbqa_board  # noqa: E402
+from pcbqa import board_text  # noqa: E402
 from pcbqa import headless  # noqa: E402
 
 headless.suppress_blocking_ui()
@@ -498,65 +499,6 @@ def build(placed=None):
     return board, footprints
 
 
-#: Item kinds whose order in the file carries no meaning. Everything
-#: before the first of them - the version, the layer table, the setup and
-#: the net declarations - keeps the order KiCad wrote it in.
-_ORDERED_ITEMS = ("footprint", "gr_line", "gr_arc", "gr_circle", "gr_rect",
-                  "gr_poly", "gr_text", "segment", "arc", "via", "zone",
-                  "dimension", "group", "image")
-
-_UUID_NAMESPACE = uuid.UUID("8f1c2d64-5e73-5a19-b0c8-2d47e6a91b35")
-
-
-def _strip_uuids(node):
-    if not isinstance(node, list):
-        return node
-    return [_strip_uuids(item) for item in node
-            if not (isinstance(item, list) and item and item[0] == "uuid")]
-
-
-def _assign_uuids(node, path):
-    """Give every item a UUID derived from where it sits in the file.
-
-    KiCad mints a random UUID for each object it creates and then writes
-    the objects out in an order that follows those UUIDs, so the same
-    design source produces a different file on every run - and a router
-    reading it takes a different path. Deriving each UUID from the item's
-    canonical content makes the generated board a function of the design
-    source alone, which is what lets a later failure be reproduced.
-    """
-    if not isinstance(node, list):
-        return
-    counter = {}
-    for index, item in enumerate(node):
-        if not isinstance(item, list) or not item:
-            continue
-        if item[0] == "uuid":
-            digest = sexpr.dump(_strip_uuids(node))
-            item[1] = sexpr.Quoted(
-                str(uuid.uuid5(_UUID_NAMESPACE, path + "|" + digest)))
-            continue
-        key = str(item[0])
-        counter[key] = counter.get(key, 0) + 1
-        _assign_uuids(item, "%s/%s[%d]" % (path, key, counter[key]))
-
-
-def canonicalise(path):
-    with open(path, encoding="utf-8") as handle:
-        tree = sexpr.parse(handle.read())
-    first = next((index for index, item in enumerate(tree)
-                  if isinstance(item, list) and item
-                  and str(item[0]) in _ORDERED_ITEMS), len(tree))
-    head, tail = tree[:first], tree[first:]
-    tail.sort(key=lambda item: (str(item[0]),
-                                sexpr.dump(_strip_uuids(item))))
-    tree = head + tail
-    _assign_uuids(tree, "")
-    with open(path, "w", encoding="utf-8", newline="\n") as handle:
-        handle.write(sexpr.dump(tree) + "\n")
-    return path
-
-
 def fill_zones(board):
     """Cache the pour in the file, so the board describes its own copper."""
     filler = pcbnew.ZONE_FILLER(board)
@@ -569,8 +511,9 @@ def write(path=None):
     path = BOARD_PATH if path is None else path
     board, _ = build()
     fill_zones(board)
-    pcbnew.SaveBoard(path, board)
-    return canonicalise(path)
+    pcbqa_board.save(board, path)
+    board_text.canonicalize(path)
+    return path
 
 
 if __name__ == "__main__":

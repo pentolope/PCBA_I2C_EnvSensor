@@ -152,7 +152,47 @@
       "forbid_net_crossings": true,
       "forbid_dangling": true
     },
-    "provenance": "generated/routing.json"
+    "provenance": "generated/routing.json",
+    "search": {
+      "nets": {
+        "reserved": [
+          "GND",
+          "unconnected-*"
+        ]
+      },
+      "orderings": [
+        "mps",
+        "inside_out",
+        "original"
+      ],
+      "clearances_mm": [
+        0.2
+      ],
+      "attempts": 3,
+      "grid_step_mm": 0.1,
+      "options": {
+        "track_width_mm": 0.25,
+        "via_size_mm": 0.6,
+        "via_drill_mm": 0.3,
+        "board_edge_clearance_mm": 0.3,
+        "hole_to_hole_clearance_mm": 0.3,
+        "same_net_pad_clearance_mm": 0.3
+      },
+      "acceptance": {
+        "gates": [
+          "design"
+        ]
+      }
+    },
+    "transforms": {
+      "passes": [
+        "snap_to_via",
+        "collapse_degenerate",
+        "split_tees",
+        "prune"
+      ],
+      "canonicalize": true
+    }
   },
   "via_mask": {
     "pad_contact": {
