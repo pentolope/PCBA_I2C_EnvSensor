@@ -187,11 +187,23 @@
     "transforms": {
       "passes": [
         "snap_to_via",
+        "snap_to_pad_anchor",
         "collapse_degenerate",
+        "fold_subfloor",
+        "dedupe",
         "split_tees",
+        "trim_dangling_ends",
         "prune"
       ],
       "canonicalize": true
+    }
+  },
+  "placement": {
+    "courtyard": {
+      "sides": [
+        "front",
+        "back"
+      ]
     }
   },
   "via_mask": {

@@ -1,54 +1,425 @@
 {
   "accepted_attempt": 2,
-  "adopted_sha256": "6318d1371e472266e528c7f692b32a9327f61e83a879b8407ec9d5b9a470e505",
+  "adopted_sha256": "bbccddf00916d11ba4b5958bb8aafd1d56382c3c8d6469cff4fd753aba0daa81",
   "attempts": [
     {
       "accepted": false,
       "attempt": 1,
       "context": {
-        "ordering": "mps",
-        "router_summary": {
+        "artifacts": {
+          "stderr": "attempt-01/router-stderr.txt",
+          "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
+          "stdout": "attempt-01/router-stdout.txt",
+          "stdout_sha256": "38c2a4ebe850eed9f11259e57e20353d7d2dd07fdb7e3e085b018caf12971855",
+          "summary": "attempt-01/summary.json",
+          "summary_sha256": "a5f854a9084fe643e946aa82a7a4897265fe97d50c68bfaa446321e568350b82"
+        },
+        "exit": 0,
+        "expected_project_writes": [
+          "routed.kicad_pro"
+        ],
+        "findings": [
+          {
+            "finding": "finalize skipped reserved zone nets",
+            "meaning": "expected: their pours are the design's, restored by splice and judged by the acceptance connectivity",
+            "nets": [
+              "GND"
+            ]
+          },
+          {
+            "finding": "router summary rescue",
+            "value": {
+              "attempted": 3,
+              "improved": [],
+              "pads_reconnected": 3,
+              "recovered": [
+                "3V3",
+                "SCL",
+                "SDA"
+              ],
+              "time": 0.7,
+              "unchanged": [],
+              "widths": {
+                "3V3": {
+                  "delivered_mm": 0.25,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.25": 4
+                  },
+                  "rescue_max_mm": 0.25,
+                  "rescue_min_mm": 0.25,
+                  "rescue_segments_emitted": 4,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                },
+                "SCL": {
+                  "delivered_mm": 0.25,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.25": 42
+                  },
+                  "rescue_max_mm": 0.25,
+                  "rescue_min_mm": 0.25,
+                  "rescue_segments_emitted": 42,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                },
+                "SDA": {
+                  "delivered_mm": 0.15,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.15": 5
+                  },
+                  "rescue_max_mm": 0.15,
+                  "rescue_min_mm": 0.15,
+                  "rescue_segments_emitted": 5,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                }
+              }
+            }
+          },
+          {
+            "finding": "clearance escalated below the request",
+            "meaning": "rescue rungs routed tighter than the margin but at or above the declared floor; DRC judges the result",
+            "requested_mm": 0.2,
+            "used_mm": 0.1813
+          },
+          {
+            "changed_paths": [
+              "board.design_settings.rule_severities.annular_width",
+              "board.design_settings.rule_severities.courtyards_overlap",
+              "board.design_settings.rule_severities.lib_footprint_issues",
+              "board.design_settings.rule_severities.lib_footprint_mismatch",
+              "board.design_settings.rule_severities.malformed_courtyard",
+              "board.design_settings.rule_severities.npth_inside_courtyard",
+              "board.design_settings.rule_severities.pth_inside_courtyard",
+              "board.design_settings.rule_severities.solder_mask_bridge",
+              "board.design_settings.rule_severities.starved_thermal",
+              "board.design_settings.rules.min_clearance",
+              "board.design_settings.rules.min_hole_clearance",
+              "board.design_settings.rules.min_via_drill",
+              "kicad_routing_tools",
+              "net_settings.classes",
+              "net_settings.meta"
+            ],
+            "finding": "router rewrote the output project",
+            "meaning": "expected of the pinned router: floors lowered to routed values, severities gagged, its own namespace added. The authoritative project is out of reach and the candidate is judged beside the tree's own project"
+          },
+          {
+            "finding": "unprotected source copper reworked",
+            "items": [
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[95500000, 77700000], [98950000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65400000], [96400000, 65800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65400000], [96920000, 65400000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65800000], [98950000, 66400000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[98950000, 66400000], [98950000, 66800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[98950000, 66800000], [98950000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SCL\", 0, 200000, [[101050000, 66800000], [101050000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SCL\", 0, 200000, [[101050000, 66800000], [102600000, 65599999]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SCL\", 0, 200000, [[101050000, 76800000], [104500000, 77700000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[100350000, 66800000], [100350000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[100350000, 66800000], [101800000, 65599999]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[101800000, 64400000], [101800000, 65599999]]]",
+                "source_count": 1
+              }
+            ],
+            "meaning": "in-scope copper the search legitimately replaced; reported per item, judged by the gates",
+            "total": 12
+          }
+        ],
+        "locked_protected_items": 29,
+        "patched_project_sha256": "c7836bc34e97b884964fb4b057e8be0a1d056f642e386c112919e668052a5282",
+        "router_summary_min": {
           "failed": 0,
           "failed_single": [],
           "finalize_excluded_nets": [
             "GND"
           ],
-          "main_loop_time_s": 0.06,
-          "min_clearance_used": 0.125,
-          "multipoint_deficit": 0,
-          "open_single": [],
-          "pad_pairs_open": {
-            "count": 0,
-            "nets": []
+          "min_clearance_used": 0.1813,
+          "open_single": []
+        },
+        "row": {
+          "clearance_mm": 0.2,
+          "ordering": "mps"
+        },
+        "runtime_s": 3.1,
+        "verdict": {
+          "accepted": false,
+          "counters": {
+            "errors": 0,
+            "excluded": 0,
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-01/gatework/candidate-drc.json",
+            "schematic_parity": 0,
+            "unconnected": 0,
+            "warnings": 0
           },
-          "routed": 4,
-          "scope": "merged",
-          "terminal_restores_broken": [],
-          "vias": 5
+          "gates": [
+            {
+              "gate": "CONTRACT.CONNECTOR",
+              "reason": "every connector matches its contract in board, model and docs",
+              "status": "PASS"
+            },
+            {
+              "gate": "CONTRACT.PLACEMENT",
+              "reason": "every placement contract holds",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.AUTHORITATIVE",
+              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source 6dba00906cff",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.CONSTRAINT_FLOOR",
+              "reason": "every one of the 12 declared design-rule floors is still carried by the project",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.NO_SUPPRESSED_RULES",
+              "reason": "no rule is disabled outside the approved list",
+              "status": "PASS"
+            },
+            {
+              "gate": "ERC.AUTHORITATIVE",
+              "reason": "ERC clean: exit 0, schema https://schemas.kicad.org/erc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 3 required options used, source 41ea2108eb78",
+              "status": "PASS"
+            },
+            {
+              "gate": "NET.TOPOLOGY",
+              "reason": "every critical net meets its topology contract",
+              "status": "PASS"
+            },
+            {
+              "gate": "PLACEMENT.COURTYARD",
+              "reason": "no courtyard overlaps on front, back",
+              "status": "PASS"
+            },
+            {
+              "gate": "PLACEMENT.EDGE_CLEARANCE",
+              "reason": "manifest does not declare placement.edge_clearance; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "ROUTE.ANGLE_STYLE",
+              "reason": "manifest does not declare routing.permitted_turn_degrees; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "ROUTE.GEOMETRY_HYGIENE",
+              "reason": "1 dangling track end",
+              "status": "FAIL"
+            },
+            {
+              "gate": "ROUTE.TINY_SEGMENTS",
+              "reason": "11 short fragments are all pad/via entry geometry",
+              "status": "PASS"
+            },
+            {
+              "gate": "SIM.MODEL_PROVENANCE",
+              "reason": "manifest does not declare simulation.models; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "SIM.SCENARIOS",
+              "reason": "4 scenario(s) ran and all 5 declared assertion(s) hold",
+              "status": "PASS"
+            },
+            {
+              "gate": "SIM.STAGE_COVERAGE",
+              "reason": "all 2 required stage(s) are covered by a scenario that ran and asserted",
+              "status": "PASS"
+            },
+            {
+              "gate": "STACK.NATIVE_VS_MANIFEST",
+              "reason": "native stackup agrees with the frozen constraints",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.ANNULUS_MASK_OVERLAP",
+              "reason": "no via annulus reaches a mask opening",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.IN_PAD_CONTACT",
+              "reason": "no via contacts a solderable pad",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.MASK_CLEARANCE_PROCESS",
+              "reason": "manifest does not declare via_mask.process.limit_mm; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "VIA.MASK_CLEARANCE_TARGET",
+              "reason": "all 20 vias clear 0.125 mm (annulus_to_opening_mm)",
+              "status": "PASS"
+            },
+            {
+              "gate": "STACK.PHYSICAL",
+              "reason": "this board does not require a complete physical stackup, and the one available (native_kicad_board) does not state 1 field(s) that its declared analyses read; propagation delay is therefore not derivable and every gate that needs it says so rather than substituting a material",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.PATH_INTEGRITY",
+              "reason": "all 3 declared electrical path(s) across 2 interface(s) resolve end to end, each crossing the series component(s) it declares",
+              "status": "PASS"
+            },
+            {
+              "gate": "TIMING.INTERCONNECT_DELAY",
+              "reason": "no timing interface declares a maximum interconnect delay, so there is nothing to compare the 3 measured path(s) against; the measurements are recorded",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.INTERCONNECT_SKEW",
+              "reason": "no endpoint group declares a skew or length-spread limit, so there is nothing to compare the 0 measured group(s) against; the measurements are recorded",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.SETUP_HOLD",
+              "reason": "manifest does not declare timing.device_timing; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "PROV.TIMING_MODELS",
+              "reason": "manifest does not declare timing.models; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            }
+          ],
+          "open_nets": [],
+          "problems": [
+            "ROUTE.GEOMETRY_HYGIENE FAIL"
+          ]
         }
       },
-      "source_sha256": "d3e8e40657f188af3dae9df2c2a820aa14518af0e55966ecdb50f7f357bfd53c",
+      "source_sha256": "d9e4882ba621fa5883c8b131fb6c79874410865a7e4d740cc60f7d4f07de3d9b",
       "stages": [
         {
+          "context": {
+            "argv": [
+              "/usr/bin/python3",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-01/i2c_env_sensor.kicad_pcb",
+              "--output",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-01/routed.kicad_pcb",
+              "--nets",
+              "3V3",
+              "3V3_IN",
+              "SCL",
+              "SDA",
+              "--ordering",
+              "mps",
+              "--clearance",
+              "0.2",
+              "--grid-step",
+              "0.1",
+              "--track-width",
+              "0.25",
+              "--via-size",
+              "0.6",
+              "--via-drill",
+              "0.3",
+              "--same-net-pad-clearance",
+              "0.3",
+              "--fab-overrides",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-01/fab-floor.txt",
+              "--json-out",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-01/summary.json",
+              "--board-edge-clearance",
+              "0.3",
+              "--hole-to-hole-clearance",
+              "0.3"
+            ],
+            "exit": 0,
+            "runtime_s": 3.1
+          },
           "produced_by": "router",
-          "sha256": "0f211b3076d93635e1661c738a53e265ac2d81db663aef6983e944a60fe0d1ad",
-          "stage": "routed"
+          "sha256": "9980b75d76fdc68a9b4dede3534770d5a59ff5d6d19d765977523ac152278d8e",
+          "stage": "route"
         },
         {
           "effects": {
-            "dangling_tracks_removed": 1,
-            "endpoints_snapped": 2,
-            "junctions_bonded": 4,
-            "zones_refilled": 1
-          },
-          "parameters": {
-            "snap_tolerance_mm": 0.25,
-            "touch_tolerance_mm": 0.01
+            "reserved_removed": 29,
+            "reserved_restored": 29
           },
           "produced_by": "transform",
-          "sha256": "313790dbc11312d20d39b071991c9ea30f2771ba14c7737b55b34dc7f14f26ce",
-          "stage": "tidied",
-          "transform": "snap track endpoints onto same-net via centres; prune dangling track ends, keeping any removal only while connectivity is unchanged; split a track where another track's end lands in the middle of it, so the junction is an endpoint of both; refill the zones so the pour is knocked out around the copper the router added"
+          "sha256": "bb40153190383381de163fd4540436292c97c09cfb326dde6d52c6cad023a440",
+          "stage": "restore_reserved",
+          "transform": "restore_reserved"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 3,
+            "dangling_ends_trimmed": 0,
+            "dangling_tracks_removed": 0,
+            "duplicate_segments_removed": 0,
+            "endpoints_snapped": 7,
+            "endpoints_snapped_to_pads": 0,
+            "fixpoint_exhausted": 0,
+            "fixpoint_rounds_used": 2,
+            "fragments_absorbed": 10,
+            "junctions_resolved": 9,
+            "unneeded_vias_removed": 0,
+            "zones_refilled": 2
+          },
+          "produced_by": "transform",
+          "sha256": "5f6492d954e5c90c131532500f6d1624f8add8ee59b4cc9361f7b3ef0174e87f",
+          "stage": "normalize",
+          "transform": "normalize"
+        },
+        {
+          "effects": {
+            "changed": 1,
+            "objects_ordered": 232,
+            "uuids_rederived": 547
+          },
+          "produced_by": "transform",
+          "sha256": "6dba00906cff1921911464d806552075f8cdc0a4a6ce07903f40eb8c2afeafc6",
+          "stage": "canonicalize",
+          "transform": "canonicalize"
         }
       ]
     },
@@ -56,86 +427,534 @@
       "accepted": true,
       "attempt": 2,
       "context": {
-        "ordering": "inside_out",
-        "router_summary": {
+        "artifacts": {
+          "stderr": "attempt-02/router-stderr.txt",
+          "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
+          "stdout": "attempt-02/router-stdout.txt",
+          "stdout_sha256": "62274766cbf5c37ed978bb4e8f5517134ac907c97aa66abe6d40e2109411ea79",
+          "summary": "attempt-02/summary.json",
+          "summary_sha256": "619de313a9489bd8afd712fc54fae26dc0d58ed286bb1da6b14b7af4dc4c41f8"
+        },
+        "exit": 0,
+        "expected_project_writes": [
+          "routed.kicad_pro"
+        ],
+        "findings": [
+          {
+            "finding": "finalize skipped reserved zone nets",
+            "meaning": "expected: their pours are the design's, restored by splice and judged by the acceptance connectivity",
+            "nets": [
+              "GND"
+            ]
+          },
+          {
+            "finding": "router summary rescue",
+            "value": {
+              "attempted": 3,
+              "improved": [],
+              "pads_reconnected": 3,
+              "recovered": [
+                "3V3",
+                "SCL",
+                "SDA"
+              ],
+              "time": 0.71,
+              "unchanged": [],
+              "widths": {
+                "3V3": {
+                  "delivered_mm": 0.25,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.25": 24
+                  },
+                  "rescue_max_mm": 0.25,
+                  "rescue_min_mm": 0.25,
+                  "rescue_segments_emitted": 24,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                },
+                "SCL": {
+                  "delivered_mm": 0.25,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.25": 40
+                  },
+                  "rescue_max_mm": 0.25,
+                  "rescue_min_mm": 0.25,
+                  "rescue_segments_emitted": 40,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                },
+                "SDA": {
+                  "delivered_mm": 0.15,
+                  "requested_mm": 0.25,
+                  "rescue_by_width": {
+                    "0.15": 7
+                  },
+                  "rescue_max_mm": 0.15,
+                  "rescue_min_mm": 0.15,
+                  "rescue_segments_emitted": 7,
+                  "scope": "THIS RESCUE ONLY -- not the net. Counts are as EMITTED, before cycle-prune drops redundant loop segments, so the board can carry fewer. For the net's whole width profile, measure the board."
+                }
+              }
+            }
+          },
+          {
+            "finding": "clearance escalated below the request",
+            "meaning": "rescue rungs routed tighter than the margin but at or above the declared floor; DRC judges the result",
+            "requested_mm": 0.2,
+            "used_mm": 0.1813
+          },
+          {
+            "changed_paths": [
+              "board.design_settings.rule_severities.annular_width",
+              "board.design_settings.rule_severities.courtyards_overlap",
+              "board.design_settings.rule_severities.lib_footprint_issues",
+              "board.design_settings.rule_severities.lib_footprint_mismatch",
+              "board.design_settings.rule_severities.malformed_courtyard",
+              "board.design_settings.rule_severities.npth_inside_courtyard",
+              "board.design_settings.rule_severities.pth_inside_courtyard",
+              "board.design_settings.rule_severities.solder_mask_bridge",
+              "board.design_settings.rule_severities.starved_thermal",
+              "board.design_settings.rules.min_clearance",
+              "board.design_settings.rules.min_hole_clearance",
+              "board.design_settings.rules.min_via_drill",
+              "kicad_routing_tools",
+              "net_settings.classes",
+              "net_settings.meta"
+            ],
+            "finding": "router rewrote the output project",
+            "meaning": "expected of the pinned router: floors lowered to routed values, severities gagged, its own namespace added. The authoritative project is out of reach and the candidate is judged beside the tree's own project"
+          },
+          {
+            "finding": "unprotected source copper reworked",
+            "items": [
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[95500000, 77700000], [98950000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65400000], [96400000, 65800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65400000], [96920000, 65400000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[96400000, 65800000], [98950000, 66400000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[98950000, 66400000], [98950000, 66800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"3V3\", 0, 200000, [[98950000, 66800000], [98950000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SCL\", 0, 200000, [[101050000, 66800000], [101050000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SCL\", 0, 200000, [[101050000, 66800000], [102600000, 65599999]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[100350000, 66800000], [100350000, 76800000]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[100350000, 66800000], [101800000, 65599999]]]",
+                "source_count": 1
+              },
+              {
+                "candidate_count": 0,
+                "item": "[\"track\", \"SDA\", 0, 200000, [[101800000, 64400000], [101800000, 65599999]]]",
+                "source_count": 1
+              }
+            ],
+            "meaning": "in-scope copper the search legitimately replaced; reported per item, judged by the gates",
+            "total": 11
+          }
+        ],
+        "locked_protected_items": 29,
+        "patched_project_sha256": "c7836bc34e97b884964fb4b057e8be0a1d056f642e386c112919e668052a5282",
+        "router_summary_min": {
           "failed": 0,
           "failed_single": [],
           "finalize_excluded_nets": [
             "GND"
           ],
-          "main_loop_time_s": 0.07,
-          "min_clearance_used": 0.125,
-          "multipoint_deficit": 0,
-          "open_single": [],
-          "pad_pairs_open": {
-            "count": 0,
-            "nets": []
+          "min_clearance_used": 0.1813,
+          "open_single": []
+        },
+        "row": {
+          "clearance_mm": 0.2,
+          "ordering": "inside_out"
+        },
+        "runtime_s": 2.9,
+        "verdict": {
+          "accepted": true,
+          "counters": {
+            "errors": 0,
+            "excluded": 0,
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-02/gatework/candidate-drc.json",
+            "schematic_parity": 0,
+            "unconnected": 0,
+            "warnings": 0
           },
-          "routed": 4,
-          "scope": "merged",
-          "terminal_restores_broken": [],
-          "vias": 5
+          "gates": [
+            {
+              "gate": "CONTRACT.CONNECTOR",
+              "reason": "every connector matches its contract in board, model and docs",
+              "status": "PASS"
+            },
+            {
+              "gate": "CONTRACT.PLACEMENT",
+              "reason": "every placement contract holds",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.AUTHORITATIVE",
+              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source bbccddf00916",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.CONSTRAINT_FLOOR",
+              "reason": "every one of the 12 declared design-rule floors is still carried by the project",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.NO_SUPPRESSED_RULES",
+              "reason": "no rule is disabled outside the approved list",
+              "status": "PASS"
+            },
+            {
+              "gate": "ERC.AUTHORITATIVE",
+              "reason": "ERC clean: exit 0, schema https://schemas.kicad.org/erc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 3 required options used, source 41ea2108eb78",
+              "status": "PASS"
+            },
+            {
+              "gate": "NET.TOPOLOGY",
+              "reason": "every critical net meets its topology contract",
+              "status": "PASS"
+            },
+            {
+              "gate": "PLACEMENT.COURTYARD",
+              "reason": "no courtyard overlaps on front, back",
+              "status": "PASS"
+            },
+            {
+              "gate": "PLACEMENT.EDGE_CLEARANCE",
+              "reason": "manifest does not declare placement.edge_clearance; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "ROUTE.ANGLE_STYLE",
+              "reason": "manifest does not declare routing.permitted_turn_degrees; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "ROUTE.GEOMETRY_HYGIENE",
+              "reason": "no duplicate, dangling or crossing copper",
+              "status": "PASS"
+            },
+            {
+              "gate": "ROUTE.TINY_SEGMENTS",
+              "reason": "9 short fragments are all pad/via entry geometry",
+              "status": "PASS"
+            },
+            {
+              "gate": "SIM.MODEL_PROVENANCE",
+              "reason": "manifest does not declare simulation.models; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "SIM.SCENARIOS",
+              "reason": "4 scenario(s) ran and all 5 declared assertion(s) hold",
+              "status": "PASS"
+            },
+            {
+              "gate": "SIM.STAGE_COVERAGE",
+              "reason": "all 2 required stage(s) are covered by a scenario that ran and asserted",
+              "status": "PASS"
+            },
+            {
+              "gate": "STACK.NATIVE_VS_MANIFEST",
+              "reason": "native stackup agrees with the frozen constraints",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.ANNULUS_MASK_OVERLAP",
+              "reason": "no via annulus reaches a mask opening",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.IN_PAD_CONTACT",
+              "reason": "no via contacts a solderable pad",
+              "status": "PASS"
+            },
+            {
+              "gate": "VIA.MASK_CLEARANCE_PROCESS",
+              "reason": "manifest does not declare via_mask.process.limit_mm; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "VIA.MASK_CLEARANCE_TARGET",
+              "reason": "all 19 vias clear 0.125 mm (annulus_to_opening_mm)",
+              "status": "PASS"
+            },
+            {
+              "gate": "STACK.PHYSICAL",
+              "reason": "this board does not require a complete physical stackup, and the one available (native_kicad_board) does not state 1 field(s) that its declared analyses read; propagation delay is therefore not derivable and every gate that needs it says so rather than substituting a material",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.PATH_INTEGRITY",
+              "reason": "all 3 declared electrical path(s) across 2 interface(s) resolve end to end, each crossing the series component(s) it declares",
+              "status": "PASS"
+            },
+            {
+              "gate": "TIMING.INTERCONNECT_DELAY",
+              "reason": "no timing interface declares a maximum interconnect delay, so there is nothing to compare the 3 measured path(s) against; the measurements are recorded",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.INTERCONNECT_SKEW",
+              "reason": "no endpoint group declares a skew or length-spread limit, so there is nothing to compare the 0 measured group(s) against; the measurements are recorded",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "TIMING.SETUP_HOLD",
+              "reason": "manifest does not declare timing.device_timing; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "PROV.TIMING_MODELS",
+              "reason": "manifest does not declare timing.models; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            }
+          ],
+          "open_nets": [],
+          "problems": []
         }
       },
-      "source_sha256": "d3e8e40657f188af3dae9df2c2a820aa14518af0e55966ecdb50f7f357bfd53c",
+      "source_sha256": "d9e4882ba621fa5883c8b131fb6c79874410865a7e4d740cc60f7d4f07de3d9b",
       "stages": [
         {
+          "context": {
+            "argv": [
+              "/usr/bin/python3",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-02/i2c_env_sensor.kicad_pcb",
+              "--output",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-02/routed.kicad_pcb",
+              "--nets",
+              "3V3",
+              "3V3_IN",
+              "SCL",
+              "SDA",
+              "--ordering",
+              "inside_out",
+              "--clearance",
+              "0.2",
+              "--grid-step",
+              "0.1",
+              "--track-width",
+              "0.25",
+              "--via-size",
+              "0.6",
+              "--via-drill",
+              "0.3",
+              "--same-net-pad-clearance",
+              "0.3",
+              "--fab-overrides",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-02/fab-floor.txt",
+              "--json-out",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260904T210439Z-bb0cc121/attempt-02/summary.json",
+              "--board-edge-clearance",
+              "0.3",
+              "--hole-to-hole-clearance",
+              "0.3"
+            ],
+            "exit": 0,
+            "runtime_s": 2.9
+          },
           "produced_by": "router",
-          "sha256": "b3520b6e33c933dd8959fbb0c4d739f3a7d0bbdf5a778a8cbd54876682931910",
-          "stage": "routed"
+          "sha256": "8c8f641f1f373661b3d87f8b59c9e2817c990a15a5906599d6332bbb6dd3e842",
+          "stage": "route"
         },
         {
           "effects": {
-            "dangling_tracks_removed": 1,
-            "endpoints_snapped": 2,
-            "junctions_bonded": 7,
-            "zones_refilled": 1
-          },
-          "parameters": {
-            "snap_tolerance_mm": 0.25,
-            "touch_tolerance_mm": 0.01
+            "reserved_removed": 29,
+            "reserved_restored": 29
           },
           "produced_by": "transform",
-          "sha256": "6318d1371e472266e528c7f692b32a9327f61e83a879b8407ec9d5b9a470e505",
-          "stage": "tidied",
-          "transform": "snap track endpoints onto same-net via centres; prune dangling track ends, keeping any removal only while connectivity is unchanged; split a track where another track's end lands in the middle of it, so the junction is an endpoint of both; refill the zones so the pour is knocked out around the copper the router added"
+          "sha256": "4aaf4d922c00fca18cae2fcd80251eebbaedf2ce2942d2bb31c7743f3b5f5378",
+          "stage": "restore_reserved",
+          "transform": "restore_reserved"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 3,
+            "dangling_ends_trimmed": 0,
+            "dangling_tracks_removed": 0,
+            "duplicate_segments_removed": 0,
+            "endpoints_snapped": 7,
+            "endpoints_snapped_to_pads": 0,
+            "fixpoint_exhausted": 0,
+            "fixpoint_rounds_used": 2,
+            "fragments_absorbed": 10,
+            "junctions_resolved": 3,
+            "unneeded_vias_removed": 0,
+            "zones_refilled": 2
+          },
+          "produced_by": "transform",
+          "sha256": "df36a9f97538524558392c0a0eec0ac326b9fcbce4528754cc9ac44f35e461d5",
+          "stage": "normalize",
+          "transform": "normalize"
+        },
+        {
+          "effects": {
+            "changed": 1,
+            "objects_ordered": 222,
+            "uuids_rederived": 537
+          },
+          "produced_by": "transform",
+          "sha256": "bbccddf00916d11ba4b5958bb8aafd1d56382c3c8d6469cff4fd753aba0daa81",
+          "stage": "canonicalize",
+          "transform": "canonicalize"
         }
       ]
     }
   ],
   "context": {
-    "generated_nets": [
-      "3V3",
+    "aborted_attempts": [],
+    "accept_rate": {
+      "accepted": 1,
+      "attempts": 2,
+      "meaning": "the honest measure of how reproducible this board's routing is"
+    },
+    "binding": {
+      "design_inputs_sha256": "334bf8b9c994ac6834215691c72038fc83aa7198e8b733ee68e00185543d2f81",
+      "dru_sha256": null,
+      "manifest_sha256": "663d8eac7c739df540a2a3aa3c52734ea04a1062a97713f35a31ddbf3893c263",
+      "pcbnew_version": "10.0.5-10.0.5~ubuntu24.04.1",
+      "project_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
+      "python_version": "3.12.3"
+    },
+    "environment": {
+      "KICAD_FINALIZE_RIP": "1",
+      "KICAD_PLANE_FINALIZE": "1",
+      "KICAD_RIP_PREEXISTING": "0"
+    },
+    "environment_cleared": [
+      "KICAD_PLANE_FINALIZE_LIVE",
+      "KICAD_CKPT_PREFINALIZE",
+      "KICAD_FINALIZE_ONLY"
+    ],
+    "grid": {
+      "finest_pad_pitch_mm": 0.5,
+      "grid_step_mm": 0.1
+    },
+    "offered_nets": [],
+    "options": {
+      "board_edge_clearance_mm": 0.3,
+      "hole_to_hole_clearance_mm": 0.3,
+      "same_net_pad_clearance_mm": 0.3,
+      "track_width_mm": 0.25,
+      "via_drill_mm": 0.3,
+      "via_size_mm": 0.6
+    },
+    "plan": {
+      "acceptance": {
+        "gates": [
+          "design"
+        ]
+      },
+      "attempts": 3,
+      "clearances_mm": [
+        0.2
+      ],
+      "constraint_floor_min_clearance_mm": 0.125,
+      "grid_step_mm": 0.1,
+      "layers": null,
+      "min_segment_mm": 0.1,
+      "offered_nets": [],
+      "options": {
+        "board_edge_clearance_mm": 0.3,
+        "hole_to_hole_clearance_mm": 0.3,
+        "same_net_pad_clearance_mm": 0.3,
+        "track_width_mm": 0.25,
+        "via_drill_mm": 0.3,
+        "via_size_mm": 0.6
+      },
+      "orderings": [
+        "mps",
+        "inside_out",
+        "original"
+      ],
+      "reserved_nets": [
+        "GND",
+        "unconnected-(D1-NC-Pad1)",
+        "unconnected-(D1-NC-Pad2)",
+        "unconnected-(U2-INT_DRDY-Pad7)",
+        "unconnected-(U3-INT-Pad5)"
+      ],
+      "scope": [
+        "3V3",
+        "3V3_IN",
+        "SCL",
+        "SDA"
+      ],
+      "splice_nets": [
+        "GND",
+        "unconnected-(D1-NC-Pad1)",
+        "unconnected-(D1-NC-Pad2)",
+        "unconnected-(U2-INT_DRDY-Pad7)",
+        "unconnected-(U3-INT-Pad5)"
+      ],
+      "transforms": {
+        "canonicalize": true,
+        "passes": [
+          "snap_to_via",
+          "snap_to_pad_anchor",
+          "collapse_degenerate",
+          "fold_subfloor",
+          "dedupe",
+          "split_tees",
+          "trim_dangling_ends",
+          "prune"
+        ]
+      }
+    },
+    "plan_sha256": "c03bf8a3e5757202b32915b2f93421818aa12a326b3e752d7152fa6585d75e24",
+    "reserved_nets": [
       "GND",
-      "SDA",
-      "SCL"
+      "unconnected-(D1-NC-Pad1)",
+      "unconnected-(D1-NC-Pad2)",
+      "unconnected-(U2-INT_DRDY-Pad7)",
+      "unconnected-(U3-INT-Pad5)"
     ],
-    "options": [
-      "--track-width",
-      "0.25",
-      "--clearance",
-      "0.2",
-      "--via-size",
-      "0.6",
-      "--via-drill",
-      "0.3",
-      "--board-edge-clearance",
-      "0.3",
-      "--hole-to-hole-clearance",
-      "0.3",
-      "--same-net-pad-clearance",
-      "0.3"
-    ],
-    "reproducibility": "the router is not bit-reproducible; candidates are generated until one passes the board gates and every attempt is recorded here",
     "resolution": {
       "origin": "vendored submodule",
       "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools"
     },
     "routed_nets": [
-      "3V3_IN",
       "3V3",
-      "SDA",
-      "SCL"
+      "3V3_IN",
+      "SCL",
+      "SDA"
     ],
     "router": {
       "git": {
@@ -159,8 +978,15 @@
       },
       "source_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools",
       "version": "0.21.5"
-    }
+    },
+    "splice_nets": [
+      "GND",
+      "unconnected-(D1-NC-Pad1)",
+      "unconnected-(D1-NC-Pad2)",
+      "unconnected-(U2-INT_DRDY-Pad7)",
+      "unconnected-(U3-INT-Pad5)"
+    ]
   },
   "kind": "routing-run",
-  "source_sha256": "d3e8e40657f188af3dae9df2c2a820aa14518af0e55966ecdb50f7f357bfd53c"
+  "source_sha256": "d9e4882ba621fa5883c8b131fb6c79874410865a7e4d740cc60f7d4f07de3d9b"
 }

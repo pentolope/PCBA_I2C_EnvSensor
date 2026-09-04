@@ -19,6 +19,7 @@ TOOLKIT = os.path.join(REPO_ROOT, "tooling", "PCBA_AutoDesignAndTest")
 if TOOLKIT not in sys.path:
     sys.path.insert(0, TOOLKIT)
 
+from pcbqa import board as pcbqa_board  # noqa: E402
 from pcbqa import claim, routing_record  # noqa: E402
 
 MANIFEST_PATH = os.path.join(REPO_ROOT, "board", "manifest.json")
@@ -211,8 +212,9 @@ class GeneratedBoard(unittest.TestCase):
         for track in self.board.GetTracks():
             if track.Type() == self.pcbnew.PCB_VIA_T:
                 continue
-            start = self._design_xy(track.GetStart())
-            end = self._design_xy(track.GetEnd())
+            track_start, track_end = pcbqa_board.endpoints(track)
+            start = self._design_xy(track_start)
+            end = self._design_xy(track_end)
             if min(start[1], end[1]) <= middle <= max(start[1], end[1]):
                 crossing.setdefault(track.GetNetname(), []).append(
                     round(self.pcbnew.ToMM(track.GetWidth()), 4))
@@ -244,8 +246,9 @@ class GeneratedBoard(unittest.TestCase):
             if track.Type() == self.pcbnew.PCB_VIA_T:
                 start = end = self._design_xy(track.GetPosition())
             else:
-                start = self._design_xy(track.GetStart())
-                end = self._design_xy(track.GetEnd())
+                track_start, track_end = pcbqa_board.endpoints(track)
+                start = self._design_xy(track_start)
+                end = self._design_xy(track_end)
             reach = self.pcbnew.ToMM(track.GetWidth()) / 2.0
             box = (min(start[0], end[0]) - reach,
                    min(start[1], end[1]) - reach,
@@ -721,8 +724,15 @@ class RoutingProvenance(unittest.TestCase):
     def test_the_planes_and_lanes_were_not_left_to_the_router(self):
         context = self.record["context"]
         self.assertNotIn("GND", context["routed_nets"])
-        self.assertEqual(set(context["generated_nets"]),
-                         {name for name, _x in layout.NECK_TRACKS})
+        self.assertIn("GND", context["reserved_nets"])
+        self.assertIn("GND", context["splice_nets"],
+                      "the plane comes back from the source by splice, "
+                      "never from the router")
+        # The neck lanes' authored geometry is proven on the board
+        # itself (test_only_the_declared_lanes_cross_the_isolation_neck);
+        # the record's job is the full resolved plan, which the owned
+        # search binds and route --check verifies.
+        self.assertEqual(len(context["plan_sha256"]), 64)
 
 
 class TestSuiteIsWhole(unittest.TestCase):
