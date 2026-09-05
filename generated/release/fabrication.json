@@ -3,7 +3,7 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-05T08:27:55.333933+00:00",
+  "generated_utc": "2026-09-05T08:43:20.814734+00:00",
   "source_closure_sha256": "eb15569a71e683beb689baea60b2f3467e1e75bcbf0764b90518f939144fe254",
   "source_closure_files": 33,
   "source_closure": {
@@ -75,8 +75,8 @@
     "gerbers/i2c_env_sensor-PTH.drl": "8ec94c7a995b0925b2380a17aac6f27bf58e5465ede67ba42337f69f5e176419",
     "gerbers/i2c_env_sensor-job.gbrjob": "8a2b8ca4f15170acf1d64ced3589d1c2e89fa8f82d45f2a5403f8cc4c2c5e59c",
     "i2c_env_sensor-fabrication.zip": "e81f3f303e803bf59389e08a42c2b831bbd91499971e174ebe55e125eda45a1f",
-    "reports/drc.json": "22b100556f143cc14cae77a7e014652f3e2342ffdfae03dd8f81e8923e17e7fe",
-    "reports/erc.json": "a1e3c446903444c42bc32286a9bac5f86a8c20a83ff6450060390a746d5fa5c5"
+    "reports/drc.json": "85c8019e5a6f065bc134faed026ae1758089dafef0798555ce15d3076cd2c466",
+    "reports/erc.json": "2e4b76c8d0c2572d3d75684708136588d6aa79fda607483457648a4ac8f33f7f"
   },
   "excluded_layers": []
 }
