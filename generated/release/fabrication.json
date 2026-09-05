@@ -3,12 +3,12 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-05T06:37:01.026540+00:00",
-  "source_closure_sha256": "09131221e809479d381bb1470889ed87c8b02afa3d7a9c7148b897a58e334784",
+  "generated_utc": "2026-09-05T07:30:16.124964+00:00",
+  "source_closure_sha256": "5d2d9fc942c29d75545f07b2314a6303d723fedab2a4f2d04d23ab664d292815",
   "source_closure_files": 33,
   "source_closure": {
     "<configuration>": "1c9103fad67ebfd324cf8badf2905c7d582f5ed0a9c95242cfec14044a23a80b",
-    "<toolkit>": "ce99472a7b68454b810f8130441590af2a3bc801+dirty",
+    "<toolkit>": "5918e5d0225533a2069502017f70b39f6fed6b2e+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -46,8 +46,8 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "ce99472a7b68454b810f8130441590af2a3bc801",
-    "working_tree_dirty": true,
+    "commit": "5918e5d0225533a2069502017f70b39f6fed6b2e",
+    "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
   "commands": [
@@ -75,8 +75,8 @@
     "gerbers/i2c_env_sensor-PTH.drl": "8ec94c7a995b0925b2380a17aac6f27bf58e5465ede67ba42337f69f5e176419",
     "gerbers/i2c_env_sensor-job.gbrjob": "8a2b8ca4f15170acf1d64ced3589d1c2e89fa8f82d45f2a5403f8cc4c2c5e59c",
     "i2c_env_sensor-fabrication.zip": "5013e70a0bce914fc622d2c3e2e731d6d491245d08da33d4a24c7d4c734c24d4",
-    "reports/drc.json": "6f850a377981448d35e5c7ad7bbf9c1c240b3ed2ad8f4199fdda26b0ef218131",
-    "reports/erc.json": "54c5805ab86bfd15ef4077a95d204a714af4e13ce154771f645a28e01ad61b33"
+    "reports/drc.json": "5940d1770213372888f571f6150de3b39ac3345cd9b81ef4c762c5472409221c",
+    "reports/erc.json": "163decde6fadf09a15a9e73d3526c2bf967ac7a948c9e22cb7881b6622911f99"
   },
   "excluded_layers": []
 }
