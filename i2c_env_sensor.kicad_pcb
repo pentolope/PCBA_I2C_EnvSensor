@@ -5320,12 +5320,12 @@
 		(uuid "f78fa9b3-d211-5a56-82ec-9bb6b827a176")
 	)
 	(segment
-		(start 93.525 82.2)
+		(start 93.525 82.225)
 		(end 93.475 82.325)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "SCL")
-		(uuid "65b514e2-be73-57ed-b197-75896ee9b0ca")
+		(uuid "245ad675-3dfc-5d57-9e5f-0b7066b37b06")
 	)
 	(segment
 		(start 93.9 80.5)
@@ -5345,11 +5345,11 @@
 	)
 	(segment
 		(start 94.4 81.3)
-		(end 93.525 82.2)
+		(end 93.525 82.225)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "SCL")
-		(uuid "f03c870a-30a7-53e9-bf3b-35bc2a4fc0f7")
+		(uuid "32db1f19-2c18-52f6-80e7-f99b22033ea1")
 	)
 	(segment
 		(start 94.475 81.15)

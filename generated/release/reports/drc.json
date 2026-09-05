@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/drc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-05T02:43:19",
+  "date": "2026-09-05T03:41:05",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -13,11 +13,11 @@
   "source": "i2c_env_sensor.kicad_pcb",
   "unconnected_items": [],
   "violations": [],
-  "source_sha256": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
-  "source_closure_sha256": "eb15569a71e683beb689baea60b2f3467e1e75bcbf0764b90518f939144fe254",
+  "source_sha256": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
+  "source_closure_sha256": "9eb97597d8a2a51c412c650c9bba8e1f5485aa7155cf84834992651cf79acabb",
   "source_closure": {
-    "<configuration>": "1c9103fad67ebfd324cf8badf2905c7d582f5ed0a9c95242cfec14044a23a80b",
-    "<toolkit>": "0c7274190de891f20cd9a73b6cc9548f3fdb7642+clean",
+    "<configuration>": "8c4f7d8d07a5f87ba684eb7a54106b5c3fd457133f8210a1f58f6ba0a5eb84fd",
+    "<toolkit>": "49c830212ae5bb44e7f161de7ba78103841de55c+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -37,7 +37,7 @@
     "fab/requirements.json": "a1ce772006bc179dd7c7923704fe9d11898baea1fe457387032cc9708bcc8cbf",
     "fab/selection.json": "9c6e57cf271a009bf5402d49ab3f6761f6f8bd533427a0b47fad7b4bf495f2ac",
     "fp-lib-table": "87bb6bd2a525ddb6afa14db5b1f04999f3cca540652eff62ea28202794770de7",
-    "i2c_env_sensor.kicad_pcb": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
+    "i2c_env_sensor.kicad_pcb": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
     "i2c_env_sensor.kicad_prl": "36be0e1baad5df1026a77af595f2be054f6b48f7a5c1a35af798e3885bcb576d",
     "i2c_env_sensor.kicad_pro": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
     "i2c_env_sensor.kicad_sch": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
