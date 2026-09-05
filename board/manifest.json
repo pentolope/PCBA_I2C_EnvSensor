@@ -469,7 +469,8 @@
       "evidence/datasheets/*",
       "evidence/index.json",
       "fab/*.json",
-      "sim/*.json"
+      "sim/*.json",
+      "generated/claims.json"
     ],
     "source_hash_field": "source_sha256",
     "closure_field": "source_closure_sha256"
