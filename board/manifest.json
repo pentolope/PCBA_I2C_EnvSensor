@@ -696,7 +696,8 @@
       "method": "PHYSICAL_TEST",
       "owner": "bench bring-up",
       "status": "open",
-      "blocking": false
+      "blocking": false,
+      "review_by": "2027-03-01"
     },
     {
       "id": "jlcpcb-assembly-preview",
@@ -704,7 +705,8 @@
       "method": "MANUFACTURING_CHECK",
       "owner": "fabrication order review",
       "status": "open",
-      "blocking": false
+      "blocking": false,
+      "review_by": "2027-03-01"
     }
   ],
   "provenance": {
