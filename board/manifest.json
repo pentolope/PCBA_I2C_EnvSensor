@@ -466,6 +466,7 @@
       "*.kicad_sch",
       "board/floorplan.json",
       "components/*.json",
+      "evidence/datasheets/*",
       "evidence/index.json",
       "fab/*.json",
       "sim/*.json"
@@ -482,6 +483,8 @@
       "ARCH.CONTENTS",
       "ARCH.PROVENANCE",
       "BOM.NATIVE_PARITY",
+      "CLAIM.MATRIX",
+      "CLAIM.POLICY",
       "CONTRACT.CONNECTOR",
       "CONTRACT.PLACEMENT",
       "CPL.NATIVE_PARITY",
@@ -489,7 +492,10 @@
       "DRC.CONSTRAINT_FLOOR",
       "DRC.NO_SUPPRESSED_RULES",
       "ERC.AUTHORITATIVE",
+      "EXT.DEPENDENCIES",
       "NET.TOPOLOGY",
+      "PROV.DERIVED_DOCUMENTS",
+      "PROV.EVIDENCE_INTEGRITY",
       "PROV.REPORT_FRESHNESS",
       "ROUTE.GEOMETRY_HYGIENE",
       "ROUTE.PROVENANCE",
@@ -504,8 +510,28 @@
       "VIA.MASK_CLEARANCE_TARGET"
     ],
     "required_evidence": [
-      "generated/routing.json",
-      "evidence/index.json"
+      "evidence/index.json",
+      "generated/claims.json",
+      "generated/routing.json"
+    ],
+    "required_domains": [
+      "claims",
+      "simulation",
+      "timing"
+    ],
+    "declined_domains": [
+      {
+        "domain": "requirements",
+        "reason": "no requirement register is authored yet; every claim cites the brief and the frozen datasheets in its own requirement source, and the register lands with a later revision"
+      },
+      {
+        "domain": "device_parameters",
+        "reason": "the parameters this board's claims rest on live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
+      },
+      {
+        "domain": "orientation",
+        "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
+      }
     ]
   },
   "simulation": {
@@ -636,6 +662,62 @@
         "3": "SDA",
         "4": "SCL"
       }
+    }
+  ],
+  "claims": {
+    "document": "generated/claims.json",
+    "unsupported": {
+      "default": "blocking",
+      "permitted": [
+        {
+          "id": "injected current within the device's pin current rating",
+          "scope": "U2 pin current during a mis-ordered mate",
+          "because": "the sensor's datasheet states no bus-pin injection rating, so the current a host's pull-ups push into the unpowered part during a mis-ordered mate has no figure to be judged against; only a vendor figure or a bench measurement closes it",
+          "accepted_by": "pentolope",
+          "review_by": "2027-09-01"
+        },
+        {
+          "id": "bus pin within its absolute maximum relative to the supply",
+          "scope": "U* bus pin excursion above its supply during a mis-ordered mate",
+          "because": "neither datasheet states how far a bus pin may stand above its own unpowered rail while the internal clamp carries the host's pull-up current; only a bench measurement of a mis-ordered mate closes it",
+          "accepted_by": "pentolope",
+          "review_by": "2027-09-01"
+        }
+      ]
+    },
+    "approximate": {
+      "default": "permitted-with-label"
+    }
+  },
+  "external_dependencies": [
+    {
+      "id": "connector-bus-scan",
+      "statement": "a bus scan over the pod connector finds every fitted device answering at its documented address",
+      "method": "PHYSICAL_TEST",
+      "owner": "bench bring-up",
+      "status": "open",
+      "blocking": false
+    },
+    {
+      "id": "jlcpcb-assembly-preview",
+      "statement": "JLCPCB's own assembly preview shows every part at its intended position and rotation",
+      "method": "MANUFACTURING_CHECK",
+      "owner": "fabrication order review",
+      "status": "open",
+      "blocking": false
+    }
+  ],
+  "provenance": {
+    "evidence_index": "evidence/index.json"
+  },
+  "derived_documents": [
+    {
+      "path": "generated/claims.json",
+      "command": [
+        "python3",
+        "-m",
+        "design.claims"
+      ]
     }
   ]
 }

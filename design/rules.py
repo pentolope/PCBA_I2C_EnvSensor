@@ -118,7 +118,7 @@ def _claim(identity, units, significance, value, basis, documents,
 
 def _structural(identity, significance, violations, requirement_name):
     return _claim(identity, "violations", significance, float(len(violations)),
-                  DERIVED, ["design-source"],
+                  DERIVED, [],
                   _requirement(requirement_name, "<=", 0.0))
 
 
@@ -219,7 +219,7 @@ def evaluate_sink_current(parameters):
                 "the bus low, against the current its low level is "
                 "specified at",
                 current, DERIVED,
-                _documents(vol, spec_limit) + ["design-source"],
+                _documents(vol, spec_limit),
                 _requirement("open-drain sink current within the device's "
                              "specified low-level current", "<=", limit),
                 scope_level="measurement"))
@@ -251,7 +251,7 @@ def evaluate_rise_time(parameters):
                 "line from 0.3 to 0.7 of the supply at the specification's "
                 "maximum load",
                 rise, DERIVED,
-                _documents(factor, capacitance, limit) + ["design-source"],
+                _documents(factor, capacitance, limit),
                 _requirement("bus rise time within the mode's limit",
                              "<=", limit["value"])),
         })
@@ -368,7 +368,7 @@ def evaluate_bus_capacitance(parameters, board_module=None):
             "the pin, protection and copper capacitance this board hangs "
             "on the line, which the cable and the host share the "
             "specification's one budget with",
-            total, DERIVED, documents + ["design-source"],
+            total, DERIVED, documents,
             _requirement("the board's own share of the bus capacitance "
                          "budget", "<=", budget["value"]),
             knowledge=knowledge, assumptions=assumptions,
@@ -413,13 +413,13 @@ def evaluate_logic_levels(parameters):
             _claim("bus low-level noise margin", "V",
                    "how far below the strictest receiver's low threshold the "
                    "highest low level any driver may present sits",
-                   low_margin, DERIVED, documents + ["design-source"],
+                   low_margin, DERIVED, documents,
                    _requirement("every receiver reads a low as a low",
                                 ">=", 0.0)),
             _claim("bus high-level noise margin", "V",
                    "how far above the strictest receiver's high threshold "
                    "the pull-up carries the line at the lowest supply",
-                   high_margin, DERIVED, documents + ["design-source"],
+                   high_margin, DERIVED, documents,
                    _requirement("every receiver reads a high as a high",
                                 ">=", 0.0)),
         ],
@@ -472,7 +472,7 @@ def evaluate_supply_current(parameters):
             "pull-ups conducting, which is what the connector and the host "
             "have to carry",
             total, DERIVED,
-            _documents(connector) + ["design-source"],
+            _documents(connector),
             _requirement("board current within the connector's contact "
                          "rating", "<=", connector["value"]),
             knowledge=knowledge, assumptions=assumptions),
@@ -500,7 +500,7 @@ def evaluate_rail_range(parameters):
             "its datasheet characterises it at, after the damping "
             "resistor's drop at the peak board current",
             rail_min - low["value"], DERIVED,
-            _documents(low) + ["design-source"],
+            _documents(low),
             _requirement("every device is inside its characterised supply "
                          "range", ">=", 0.0),
             scope_level="group"))
@@ -515,7 +515,7 @@ def evaluate_rail_range(parameters):
                 "how far the highest steady rail sits below the supply "
                 "voltage the device is rated to survive",
                 abs_max["value"] - rail_max, DERIVED,
-                _documents(abs_max) + ["design-source"],
+                _documents(abs_max),
                 _requirement("no device is taken past its absolute maximum "
                              "supply", ">=", 0.0),
                 scope_level="group"))
@@ -552,7 +552,7 @@ def evaluate_back_feed(parameters):
                 "%s pin current during a mis-ordered mate" % reference, "A",
                 "the current a host's pull-ups can push into this device's "
                 "bus pins before the supply contact closes",
-                None, DIRECT, ["design-source"],
+                None, DIRECT, [],
                 _requirement("injected current within the device's pin "
                              "current rating", "<=", 0.0),
                 scope_level="group"))
@@ -561,7 +561,7 @@ def evaluate_back_feed(parameters):
                 "%s pin current during a mis-ordered mate" % reference, "A",
                 "the current a host's pull-ups can push into this device's "
                 "bus pins before the supply contact closes",
-                total, DERIVED, _documents(rating) + ["design-source"],
+                total, DERIVED, _documents(rating),
                 _requirement("injected current within the device's pin "
                              "current rating", "<=", rating["value"]),
                 scope_level="group"))
@@ -583,7 +583,7 @@ def evaluate_back_feed(parameters):
             "device's own clamp carries the host's pull-up current into an "
             "unpowered rail",
             None, DIRECT, _documents(abs_max.get("max_offset_v"))
-            + ["design-source"],
+           ,
             _requirement("bus pin within its absolute maximum relative to "
                          "the supply", "<=",
                          abs_max["max_offset_v"]["value"]),
@@ -682,7 +682,7 @@ def evaluate_thermal_isolation(parameters, layout_module):
             "the temperature and humidity sensor sits on, in still air at "
             "one measurement per second",
             island_rise, DERIVED,
-            _documents(accuracy) + ["design-source"],
+            _documents(accuracy),
             _requirement("self-heating small against the sensor's own "
                          "accuracy", "<=", limit),
             knowledge=claim.UPPER_BOUND, scope_level="group",

@@ -340,13 +340,11 @@ class GeneratedBoard(unittest.TestCase):
 
 
 class ElectricalRules(unittest.TestCase):
-    #: Every claim this board cannot decide, and nothing else. Each is a
-    #: mis-ordered mating question no datasheet in evidence answers.
-    OPEN = {
-        "U2 pin current during a mis-ordered mate",
-        "U1 bus pin excursion above its supply during a mis-ordered mate",
-        "U2 bus pin excursion above its supply during a mis-ordered mate",
-    }
+    # Which undecided claims are permitted is no longer a test constant:
+    # it is board policy in the manifest (`claims.unsupported.permitted`),
+    # read by CLAIM.POLICY at validate and release time. The committed
+    # claim document is proven fresh by PROV.DERIVED_DOCUMENTS; the test
+    # below keeps that honest locally, before any release command runs.
 
     @classmethod
     def setUpClass(cls):
@@ -357,10 +355,18 @@ class ElectricalRules(unittest.TestCase):
         failed = [row for row in self.rows if row["verdict"] == "FAIL"]
         self.assertEqual(failed, [])
 
-    def test_the_undecided_claims_are_exactly_the_known_open_ones(self):
-        unknown = {row["identity"] for row in self.rows
-                   if row["verdict"] != "PASS"}
-        self.assertEqual(unknown, self.OPEN)
+    def test_the_committed_claim_document_is_the_generated_one(self):
+        from design import claims as claims_module
+        from pcbqa import evidence as toolkit_evidence
+
+        committed = read(os.path.join(REPO_ROOT, "generated",
+                                      "claims.json"))
+        generated = json.dumps(claims_module.document(), indent=2,
+                               sort_keys=True) + "\n"
+        self.assertEqual(committed, generated)
+        document = toolkit_evidence.load_claims(committed,
+                                                "generated/claims.json")
+        self.assertEqual(len(document["results"]), len(self.rows))
 
     def test_every_claim_carries_a_requirement(self):
         for record in rules.claims(self.results):

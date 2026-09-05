@@ -1,0 +1,1066 @@
+{
+  "kind": "board-requirement-evidence",
+  "results": [
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st",
+              "opt3001_ti",
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.6269999999999998
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "every receiver reads a high as a high",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "bus high-level noise margin",
+          "level": "net"
+        },
+        "significance": "how far above the strictest receiver's high threshold the pull-up carries the line at the lowest supply",
+        "units": "V"
+      },
+      "id": "bus_high_level_noise_margin",
+      "identity": "bus high-level noise margin",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st",
+              "opt3001_ti",
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.22699999999999998
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "every receiver reads a low as a low",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "bus low-level noise margin",
+          "level": "net"
+        },
+        "significance": "how far below the strictest receiver's low threshold the highest low level any driver may present sits",
+        "units": "V"
+      },
+      "id": "bus_low_level_noise_margin",
+      "identity": "bus low-level noise margin",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "i2c_um10204_nxp"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 9.15084e-07
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 1e-06
+          },
+          "name": "bus rise time within the mode's limit",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "bus rise time in standard mode at the maximum bus capacitance",
+          "level": "net"
+        },
+        "significance": "how long the weakest pull-up on the bus takes to carry the line from 0.3 to 0.7 of the supply at the specification's maximum load",
+        "units": "s"
+      },
+      "id": "bus_rise_time_in_standard_mode_at_the_maximum_bus_capacitance",
+      "identity": "bus rise time in standard mode at the maximum bus capacitance",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "no two reachable devices share a 7-bit address",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "i2c_address_uniqueness",
+          "level": "net"
+        },
+        "significance": "every device the board ships with answers at its own address",
+        "units": "violations"
+      },
+      "id": "i2c_address_uniqueness",
+      "identity": "i2c_address_uniqueness",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            {
+              "detail": "no maximum supply current is published for U1, U2; each is charged 4 times its typical, which is assumed to bound it"
+            }
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ph_series_jst"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "quantity": {
+          "value": 0.0040172766666666665
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 2.0
+          },
+          "name": "board current within the connector's contact rating",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "peak board supply current",
+          "level": "net"
+        },
+        "significance": "every fitted part's largest published supply current with both pull-ups conducting, which is what the connector and the host have to carry",
+        "units": "A"
+      },
+      "id": "peak_board_supply_current",
+      "identity": "peak board supply current",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            {
+              "detail": "every device pin contributes its published maximum, the routed copper is charged at the microstrip capacitance of the highest permittivity the approved catalog publishes, and copper on B.Cu - which runs between coplanar pour edges rather than over a plane - is charged 4 times that"
+            }
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "capacitance",
+          "provenance": {
+            "documents": [
+              "i2c_um10204_nxp",
+              "opt3001_ti",
+              "tpd2e2u06_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "quantity": {
+          "value": 2.7998704536763165e-11
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 4e-10
+          },
+          "name": "the board's own share of the bus capacitance budget",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "SCL capacitance contributed by this board",
+          "level": "net"
+        },
+        "significance": "the pin, protection and copper capacitance this board hangs on the line, which the cable and the host share the specification's one budget with",
+        "units": "F"
+      },
+      "id": "scl_capacitance_contributed_by_this_board",
+      "identity": "SCL capacitance contributed by this board",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            {
+              "detail": "every device pin contributes its published maximum, the routed copper is charged at the microstrip capacitance of the highest permittivity the approved catalog publishes, and copper on B.Cu - which runs between coplanar pour edges rather than over a plane - is charged 4 times that"
+            }
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "capacitance",
+          "provenance": {
+            "documents": [
+              "i2c_um10204_nxp",
+              "opt3001_ti",
+              "tpd2e2u06_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "quantity": {
+          "value": 2.7511691399530324e-11
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 4e-10
+          },
+          "name": "the board's own share of the bus capacitance budget",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "SDA capacitance contributed by this board",
+          "level": "net"
+        },
+        "significance": "the pin, protection and copper capacitance this board hangs on the line, which the cable and the host share the specification's one budget with",
+        "units": "F"
+      },
+      "id": "sda_capacitance_contributed_by_this_board",
+      "identity": "SDA capacitance contributed by this board",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            {
+              "detail": "still air removes at least 5.0 W/m2K from both faces; less cooling would be more rise, so the number bounds the real one from above"
+            },
+            {
+              "detail": "the board and the island are each one isothermal node"
+            }
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [
+            {
+              "detail": "heat conducted up the cable from the host is not modelled; it is a property of the host, not of this board"
+            }
+          ],
+          "phenomenon": "functional_behavior",
+          "provenance": {
+            "documents": [
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "quantity": {
+          "value": 0.002634870888157895
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.05
+          },
+          "name": "self-heating small against the sensor's own accuracy",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "steady rise above ambient at the humidity sensor",
+          "level": "group"
+        },
+        "significance": "how far the board's own dissipation lifts the isolated island the temperature and humidity sensor sits on, in still air at one measurement per second",
+        "units": "K"
+      },
+      "id": "steady_rise_above_ambient_at_the_humidity_sensor",
+      "identity": "steady rise above ambient at the humidity sensor",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "sht40_sensirion",
+              "i2c_um10204_nxp"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0025283670033670034
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.003
+          },
+          "name": "open-drain sink current within the device's specified low-level current",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U1.1 sink current at its low level",
+          "level": "measurement"
+        },
+        "significance": "the current the pull-ups push into this pin while it holds the bus low, against the current its low level is specified at",
+        "units": "A"
+      },
+      "id": "u1_1_sink_current_at_its_low_level",
+      "identity": "U1.1 sink current at its low level",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "unknown",
+        "knowledge_basis": null,
+        "quantity": {},
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.3
+          },
+          "name": "bus pin within its absolute maximum relative to the supply",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U1 bus pin excursion above its supply during a mis-ordered mate",
+          "level": "group"
+        },
+        "significance": "how far the bus pin stands above the supply pin while the device's own clamp carries the host's pull-up current into an unpowered rail",
+        "units": "V"
+      },
+      "id": "u1_bus_pin_excursion_above_its_supply_during_a_mis_ordered_mate",
+      "identity": "U1 bus pin excursion above its supply during a mis-ordered mate",
+      "verdict": {
+        "basis": "unknown",
+        "exact": false,
+        "knowledge_basis": null,
+        "result": "UNKNOWN"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0014142857142857143
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.1
+          },
+          "name": "injected current within the device's pin current rating",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U1 pin current during a mis-ordered mate",
+          "level": "group"
+        },
+        "significance": "the current a host's pull-ups can push into this device's bus pins before the supply contact closes",
+        "units": "A"
+      },
+      "id": "u1_pin_current_during_a_mis_ordered_mate",
+      "identity": "U1 pin current during a mis-ordered mate",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "sht40_sensirion"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 2.0361187996666663
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "every device is inside its characterised supply range",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U1 supply headroom above its characterised minimum",
+          "level": "group"
+        },
+        "significance": "how far the rail at this device sits above the lowest supply its datasheet characterises it at, after the damping resistor's drop at the peak board current",
+        "units": "V"
+      },
+      "id": "u1_supply_headroom_above_its_characterised_minimum",
+      "identity": "U1 supply headroom above its characterised minimum",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st",
+              "i2c_um10204_nxp"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.002693350168350168
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.003
+          },
+          "name": "open-drain sink current within the device's specified low-level current",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U2.4 sink current at its low level",
+          "level": "measurement"
+        },
+        "significance": "the current the pull-ups push into this pin while it holds the bus low, against the current its low level is specified at",
+        "units": "A"
+      },
+      "id": "u2_4_sink_current_at_its_low_level",
+      "identity": "U2.4 sink current at its low level",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "unknown",
+        "knowledge_basis": null,
+        "quantity": {},
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.3
+          },
+          "name": "bus pin within its absolute maximum relative to the supply",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U2 bus pin excursion above its supply during a mis-ordered mate",
+          "level": "group"
+        },
+        "significance": "how far the bus pin stands above the supply pin while the device's own clamp carries the host's pull-up current into an unpowered rail",
+        "units": "V"
+      },
+      "id": "u2_bus_pin_excursion_above_its_supply_during_a_mis_ordered_mate",
+      "identity": "U2 bus pin excursion above its supply during a mis-ordered mate",
+      "verdict": {
+        "basis": "unknown",
+        "exact": false,
+        "knowledge_basis": null,
+        "result": "UNKNOWN"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "unknown",
+        "knowledge_basis": null,
+        "quantity": {},
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "injected current within the device's pin current rating",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U2 pin current during a mis-ordered mate",
+          "level": "group"
+        },
+        "significance": "the current a host's pull-ups can push into this device's bus pins before the supply contact closes",
+        "units": "A"
+      },
+      "id": "u2_pin_current_during_a_mis_ordered_mate",
+      "identity": "U2 pin current during a mis-ordered mate",
+      "verdict": {
+        "basis": "unknown",
+        "exact": false,
+        "knowledge_basis": null,
+        "result": "UNKNOWN"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.4161187996666664
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "every device is inside its characterised supply range",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U2 supply headroom above its characterised minimum",
+          "level": "group"
+        },
+        "significance": "how far the rail at this device sits above the lowest supply its datasheet characterises it at, after the damping resistor's drop at the peak board current",
+        "units": "V"
+      },
+      "id": "u2_supply_headroom_above_its_characterised_minimum",
+      "identity": "U2 supply headroom above its characterised minimum",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lps22hb_st"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.335
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "no device is taken past its absolute maximum supply",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U2 supply margin below its absolute maximum",
+          "level": "group"
+        },
+        "significance": "how far the highest steady rail sits below the supply voltage the device is rated to survive",
+        "units": "V"
+      },
+      "id": "u2_supply_margin_below_its_absolute_maximum",
+      "identity": "U2 supply margin below its absolute maximum",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "opt3001_ti",
+              "i2c_um10204_nxp"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0025943602693602693
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.003
+          },
+          "name": "open-drain sink current within the device's specified low-level current",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U3.6 sink current at its low level",
+          "level": "measurement"
+        },
+        "significance": "the current the pull-ups push into this pin while it holds the bus low, against the current its low level is specified at",
+        "units": "A"
+      },
+      "id": "u3_6_sink_current_at_its_low_level",
+      "identity": "U3.6 sink current at its low level",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "opt3001_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0014142857142857143
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.01
+          },
+          "name": "injected current within the device's pin current rating",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U3 pin current during a mis-ordered mate",
+          "level": "group"
+        },
+        "significance": "the current a host's pull-ups can push into this device's bus pins before the supply contact closes",
+        "units": "A"
+      },
+      "id": "u3_pin_current_during_a_mis_ordered_mate",
+      "identity": "U3 pin current during a mis-ordered mate",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "opt3001_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.5161187996666663
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "every device is inside its characterised supply range",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U3 supply headroom above its characterised minimum",
+          "level": "group"
+        },
+        "significance": "how far the rail at this device sits above the lowest supply its datasheet characterises it at, after the damping resistor's drop at the peak board current",
+        "units": "V"
+      },
+      "id": "u3_supply_headroom_above_its_characterised_minimum",
+      "identity": "U3 supply headroom above its characterised minimum",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "opt3001_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 2.535
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0
+          },
+          "name": "no device is taken past its absolute maximum supply",
+          "source": "BRIEF.md"
+        },
+        "scope": {
+          "identity": "U3 supply margin below its absolute maximum",
+          "level": "group"
+        },
+        "significance": "how far the highest steady rail sits below the supply voltage the device is rated to survive",
+        "units": "V"
+      },
+      "id": "u3_supply_margin_below_its_absolute_maximum",
+      "identity": "U3 supply margin below its absolute maximum",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    }
+  ],
+  "schema": 1,
+  "summary": {
+    "PASS": 18,
+    "UNKNOWN": 3
+  }
+}

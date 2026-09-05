@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-05T04:02:13.982397+00:00",
-  "source_closure_sha256": "753c44feec264cf2c1eae170b2f0fe711b163e55a2f2c9d0b36556135711847b",
+  "generated_utc": "2026-09-05T06:37:07.840659+00:00",
+  "source_closure_sha256": "09131221e809479d381bb1470889ed87c8b02afa3d7a9c7148b897a58e334784",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/board/manifest.json",
-    "sha256": "663d8eac7c739df540a2a3aa3c52734ea04a1062a97713f35a31ddbf3893c263",
+    "sha256": "cd661d2621c77813b6b26c0b0bb0743f409fd1d866a4a1cfed0c313fb2afee3e",
     "board_id": "i2c_env_sensor",
     "constraint_version": "layout-stage-2026-09-02"
   },
@@ -14,7 +14,7 @@
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/tooling/PCBA_AutoDesignAndTest",
       "commit": "ce99472a7b68454b810f8130441590af2a3bc801",
-      "working_tree_dirty": false,
+      "working_tree_dirty": true,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
     "kicad_version": "10.0.5",
@@ -60,8 +60,8 @@
   },
   "summary": {
     "counts": {
-      "PASS": 24,
-      "NOT_APPLICABLE": 14
+      "PASS": 29,
+      "NOT_APPLICABLE": 17
     },
     "blocking": [],
     "verdict": "ACCEPTED"
@@ -151,7 +151,7 @@
           "units": "file function",
           "kind": "policy",
           "manifest_key": "archive.allow",
-          "provenance": "manifest.json#archive.allow@663d8eac7c73"
+          "provenance": "manifest.json#archive.allow@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/i2c_env_sensor-fabrication.zip",
           "name": "i2c_env_sensor-fabrication.zip",
-          "sha256": "e81f3f303e803bf59389e08a42c2b831bbd91499971e174ebe55e125eda45a1f"
+          "sha256": "5013e70a0bce914fc622d2c3e2e731d6d491245d08da33d4a24c7d4c734c24d4"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "753c44feec264cf2c1eae170b2f0fe711b163e55a2f2c9d0b36556135711847b",
-        "recorded_source_closure_sha256": "753c44feec264cf2c1eae170b2f0fe711b163e55a2f2c9d0b36556135711847b"
+        "source_closure_sha256": "09131221e809479d381bb1470889ed87c8b02afa3d7a9c7148b897a58e334784",
+        "recorded_source_closure_sha256": "09131221e809479d381bb1470889ed87c8b02afa3d7a9c7148b897a58e334784"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "e311adb191487e6e483cb8208194eafab5dc8bfab16388aad7decea99e5fb700"
+          "sha256": "6a82cf7184e0fe73a4c73331c943e3f6f7e7210b8cdf134359e62305a79a6e0b"
         }
       ]
     },
@@ -219,7 +219,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.required_part_fields",
-          "provenance": "manifest.json#assembly.required_part_fields@663d8eac7c73"
+          "provenance": "manifest.json#assembly.required_part_fields@cd661d2621c7"
         },
         "assembly.compared_part_fields": {
           "id": "assembly.compared_part_fields",
@@ -231,7 +231,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.compared_part_fields",
-          "provenance": "manifest.json#assembly.compared_part_fields@663d8eac7c73"
+          "provenance": "manifest.json#assembly.compared_part_fields@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -248,6 +248,85 @@
           "sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c"
         }
       ]
+    },
+    {
+      "gate": "CLAIM.MATRIX",
+      "title": "Claim-evidence document is valid; verdicts are the claims' own",
+      "status": "PASS",
+      "reason": "21 claim(s) validated; every recorded verdict and the summary are exactly what the claims' own knowledge supports (18 PASS, 3 UNKNOWN)",
+      "measurements": {
+        "claims": 21,
+        "verdicts": {
+          "PASS": 18,
+          "UNKNOWN": 3
+        },
+        "omissions": 1,
+        "omissions_measurable_now": 0
+      },
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "CLAIM.POLICY",
+      "title": "Every unresolved claim is explicitly permitted or blocking",
+      "status": "PASS",
+      "reason": "18 passed; 0 approximate carrying their own labels; 3 unknown explicitly permitted; 0 awaiting a declared method owned by an open external dependency",
+      "measurements": {
+        "passed": 18,
+        "descriptive": 0,
+        "failed": 0,
+        "awaiting_method": 0,
+        "awaiting_method_items": [],
+        "permitted_unknown": 3,
+        "permitted_approximate": 0,
+        "approximate_labelled": 0,
+        "unpermitted": 0,
+        "stale_permissions": 0,
+        "expired_permissions": 0
+      },
+      "limits": {},
+      "finding_count": 3,
+      "findings": [
+        {
+          "classification": "permitted_unknown",
+          "id": "u1_bus_pin_excursion_above_its_supply_during_a_mis_ordered_mate",
+          "identity": "U1 bus pin excursion above its supply during a mis-ordered mate",
+          "requirement": "bus pin within its absolute maximum relative to the supply",
+          "knowledge": "unknown",
+          "permitted_by": {
+            "id": "bus pin within its absolute maximum relative to the supply",
+            "accepted_by": "pentolope",
+            "review_by": "2027-09-01"
+          }
+        },
+        {
+          "classification": "permitted_unknown",
+          "id": "u2_bus_pin_excursion_above_its_supply_during_a_mis_ordered_mate",
+          "identity": "U2 bus pin excursion above its supply during a mis-ordered mate",
+          "requirement": "bus pin within its absolute maximum relative to the supply",
+          "knowledge": "unknown",
+          "permitted_by": {
+            "id": "bus pin within its absolute maximum relative to the supply",
+            "accepted_by": "pentolope",
+            "review_by": "2027-09-01"
+          }
+        },
+        {
+          "classification": "permitted_unknown",
+          "id": "u2_pin_current_during_a_mis_ordered_mate",
+          "identity": "U2 pin current during a mis-ordered mate",
+          "requirement": "injected current within the device's pin current rating",
+          "knowledge": "unknown",
+          "permitted_by": {
+            "id": "injected current within the device's pin current rating",
+            "accepted_by": "pentolope",
+            "review_by": "2027-09-01"
+          }
+        }
+      ],
+      "evidence": []
     },
     {
       "gate": "CONTRACT.CONNECTOR",
@@ -333,7 +412,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "artifacts.position_tolerance_mm",
-          "provenance": "manifest.json#artifacts.position_tolerance_mm@663d8eac7c73"
+          "provenance": "manifest.json#artifacts.position_tolerance_mm@cd661d2621c7"
         },
         "geometry.rotation_match_deg": {
           "id": "geometry.rotation_match_deg",
@@ -341,7 +420,7 @@
           "units": "deg",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.rotation_match_deg.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@cd661d2621c7"
         },
         "artifacts.cpl_origin": {
           "id": "artifacts.cpl_origin",
@@ -355,7 +434,7 @@
           "units": "frame",
           "kind": "policy",
           "manifest_key": "artifacts.cpl_origin",
-          "provenance": "manifest.json#artifacts.cpl_origin@663d8eac7c73"
+          "provenance": "manifest.json#artifacts.cpl_origin@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -383,7 +462,7 @@
       "gate": "DRC.AUTHORITATIVE",
       "title": "Fresh DRC on the exact final board",
       "status": "PASS",
-      "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source e309fcfd12a9",
+      "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source 399aa2f47984",
       "measurements": {
         "command": "kicad-cli pcb drc --format json -o drc_authoritative.json --severity-all --severity-exclusions --all-track-errors --schematic-parity --refill-zones --save-board --exit-code-violations i2c_env_sensor.kicad_pcb",
         "command_sha256": "07967ec1e7313e7f04d4ccd57b75aa4d59f5b5fa88f5faa85c6325153bddbf4d",
@@ -399,15 +478,15 @@
         "exit_status": 0,
         "violations_exit_code": 5,
         "source": "i2c_env_sensor.kicad_pcb",
-        "source_sha256": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
-        "checked_copy_sha256": "a60fa24667021b829ea44d5a2ae7f4d45f45500da3f1f2deaaf54aa3589f7a21",
+        "source_sha256": "399aa2f47984079766126edb5d230d98b4cdad71ff5edb3143f3d40f3dfbcf41",
+        "checked_copy_sha256": "b97e97246d4f99093c6d09a19bd676758894594a62cf76b0f8e9889ee56662b4",
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
-        "constraint_manifest_sha256": "663d8eac7c739df540a2a3aa3c52734ea04a1062a97713f35a31ddbf3893c263",
+        "constraint_manifest_sha256": "cd661d2621c77813b6b26c0b0bb0743f409fd1d866a4a1cfed0c313fb2afee3e",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T04:02:10.674206+00:00",
+        "generated_utc": "2026-09-05T06:37:04.204422+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-04T22:02:10",
+          "date": "2026-09-05T00:37:04",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_pcb",
           "ignored_checks": [],
@@ -434,16 +513,16 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@cd661d2621c7"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T040208Z-ef0ad82b/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063701Z-d764fe66/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "958f1547368f04d46a96579224ddfd9f31edb7f4f89df275e679baee3f69cddb"
+          "sha256": "4a903c04addea465304f056db3af5054b39a308f9007f799f76897d8645bac85"
         }
       ]
     },
@@ -463,7 +542,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@cd661d2621c7"
         },
         "drc.floor.min_copper_edge_clearance": {
           "id": "drc.floor.min_copper_edge_clearance",
@@ -471,7 +550,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_copper_edge_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@cd661d2621c7"
         },
         "drc.floor.min_hole_clearance": {
           "id": "drc.floor.min_hole_clearance",
@@ -479,7 +558,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@cd661d2621c7"
         },
         "drc.floor.min_hole_to_hole": {
           "id": "drc.floor.min_hole_to_hole",
@@ -487,7 +566,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_to_hole",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@cd661d2621c7"
         },
         "drc.floor.min_through_hole_diameter": {
           "id": "drc.floor.min_through_hole_diameter",
@@ -495,7 +574,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_through_hole_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@cd661d2621c7"
         },
         "drc.floor.min_track_width": {
           "id": "drc.floor.min_track_width",
@@ -503,7 +582,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@cd661d2621c7"
         },
         "drc.floor.min_via_annular_width": {
           "id": "drc.floor.min_via_annular_width",
@@ -511,7 +590,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_annular_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@cd661d2621c7"
         },
         "drc.floor.min_via_diameter": {
           "id": "drc.floor.min_via_diameter",
@@ -519,7 +598,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@cd661d2621c7"
         },
         "drc.floor.Default.clearance": {
           "id": "drc.floor.Default.clearance",
@@ -527,7 +606,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@cd661d2621c7"
         },
         "drc.floor.Default.track_width": {
           "id": "drc.floor.Default.track_width",
@@ -535,7 +614,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@cd661d2621c7"
         },
         "drc.floor.Default.via_diameter": {
           "id": "drc.floor.Default.via_diameter",
@@ -543,7 +622,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@cd661d2621c7"
         },
         "drc.floor.Default.via_drill": {
           "id": "drc.floor.Default.via_drill",
@@ -551,7 +630,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_drill",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -578,7 +657,7 @@
           "units": "severity",
           "kind": "policy",
           "manifest_key": "checks.drc.forbidden_severities",
-          "provenance": "manifest.json#checks.drc.forbidden_severities@663d8eac7c73"
+          "provenance": "manifest.json#checks.drc.forbidden_severities@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -610,12 +689,12 @@
         "source_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
         "checked_copy_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
-        "constraint_manifest_sha256": "663d8eac7c739df540a2a3aa3c52734ea04a1062a97713f35a31ddbf3893c263",
+        "constraint_manifest_sha256": "cd661d2621c77813b6b26c0b0bb0743f409fd1d866a4a1cfed0c313fb2afee3e",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T04:02:12.516071+00:00",
+        "generated_utc": "2026-09-05T06:37:06.093157+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-04T22:02:12",
+          "date": "2026-09-05T00:37:05",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_sch",
           "ignored_checks": [],
@@ -642,18 +721,54 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@cd661d2621c7"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T040208Z-ef0ad82b/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063701Z-d764fe66/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "6c46cd47f48c01933a31494ad45c3e3185275d6d9c57dfee4fb29cacf8bc3ba9"
+          "sha256": "61b851a335c7658600ef118e81f6cadf6b6af8d6fe9edf039dad8a6dcd0a88ae"
         }
       ]
+    },
+    {
+      "gate": "EXT.DEPENDENCIES",
+      "title": "External release dependencies are recorded, owned and verified",
+      "status": "PASS",
+      "reason": "0 satisfied with verified evidence, 0 declined on the record, 2 open and listed in this verdict",
+      "measurements": {
+        "open": 2,
+        "satisfied": 0,
+        "declined": 0,
+        "open_ids": [
+          "connector-bus-scan",
+          "jlcpcb-assembly-preview"
+        ]
+      },
+      "limits": {},
+      "finding_count": 2,
+      "findings": [
+        {
+          "dependency": "connector-bus-scan",
+          "status": "open",
+          "statement": "a bus scan over the pod connector finds every fitted device answering at its documented address",
+          "method": "PHYSICAL_TEST",
+          "owner": "bench bring-up",
+          "issue": "open external dependency; the release carries this until evidence closes it"
+        },
+        {
+          "dependency": "jlcpcb-assembly-preview",
+          "status": "open",
+          "statement": "JLCPCB's own assembly preview shows every part at its intended position and rotation",
+          "method": "MANUFACTURING_CHECK",
+          "owner": "fabrication order review",
+          "issue": "open external dependency; the release carries this until evidence closes it"
+        }
+      ],
+      "evidence": []
     },
     {
       "gate": "FAB.LAYER_IDENTITY",
@@ -685,7 +800,7 @@
                 "F.Cu"
               ],
               "branch_points": 24,
-              "total_track_copper_mm": 51.724
+              "total_track_copper_mm": 51.722
             },
             {
               "net": "SDA",
@@ -728,7 +843,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@cd661d2621c7"
         },
         "net_topology.BUS_TO_SENSORS.max_vias_per_net": {
           "id": "net_topology.BUS_TO_SENSORS.max_vias_per_net",
@@ -736,7 +851,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.0.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@663d8eac7c73"
+          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@cd661d2621c7"
         },
         "net_topology.SUPPLY_TO_SENSORS.max_vias_per_net": {
           "id": "net_topology.SUPPLY_TO_SENSORS.max_vias_per_net",
@@ -744,7 +859,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.1.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@663d8eac7c73"
+          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -782,6 +897,102 @@
       "evidence": []
     },
     {
+      "gate": "PROV.DERIVED_DOCUMENTS",
+      "title": "Derived documents regenerate byte-identical from their generators",
+      "status": "PASS",
+      "reason": "1 derived document(s) regenerate byte-identical from their declared generators",
+      "measurements": {
+        "documents": 1
+      },
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": [
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/claims.json",
+          "name": "generated/claims.json",
+          "sha256": "85b0c092c9006d2e62e3402de4f99c3fb0ed1414b21def197f11714d26a609d1"
+        }
+      ]
+    },
+    {
+      "gate": "PROV.DEVICE_PARAMETERS",
+      "title": "Device parameters state their knowledge; claims respect it",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare device_parameters; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "PROV.EVIDENCE_INTEGRITY",
+      "title": "Frozen evidence documents exist, hash correctly and are cited resolvably",
+      "status": "PASS",
+      "reason": "10 frozen document(s) verified against their recorded digests inside the source closure; 30 citation(s) all resolve",
+      "measurements": {
+        "indexed": 10,
+        "verified": 10,
+        "citations": 30
+      },
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": [
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/i2c_um10204_nxp.pdf",
+          "name": "evidence/datasheets/i2c_um10204_nxp.pdf",
+          "sha256": "dc91f00f65584e06ef36e26c93bf9d91a95fb3c8a1830a9223e53caf678b36af"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/lps22hb_st.pdf",
+          "name": "evidence/datasheets/lps22hb_st.pdf",
+          "sha256": "b64e342cb6f703926efaba1a6924fa3312a5b4d8ef811f54bc2d98b72e80d4fa"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/opt3001_ti.pdf",
+          "name": "evidence/datasheets/opt3001_ti.pdf",
+          "sha256": "f2ab3d4822cbd4e6b702b09c4c22144f6d0583931e0cfc168394de9ab942ca11"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/ph_series_jst.pdf",
+          "name": "evidence/datasheets/ph_series_jst.pdf",
+          "sha256": "447624f4f2f7d37c58c1eaa7ee314ad757fe7aff48f6186491ef6f69fbc00b96"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/s4b_ph_k_s_jst.pdf",
+          "name": "evidence/datasheets/s4b_ph_k_s_jst.pdf",
+          "sha256": "4e41351f09263b950a29282923e6f6ef7c5bc95b538fe8db9d1d1e4a8c082918"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/samsung_mlcc_cl_series.pdf",
+          "name": "evidence/datasheets/samsung_mlcc_cl_series.pdf",
+          "sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/sht40_sensirion.pdf",
+          "name": "evidence/datasheets/sht40_sensirion.pdf",
+          "sha256": "1e488c7fdea67cd4f6ebfdc068a2c8a3da61a914abc56a3514cdc8a4838f5065"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/tpd1e10b06_ti.pdf",
+          "name": "evidence/datasheets/tpd1e10b06_ti.pdf",
+          "sha256": "6ffe72cb5f5e607fcafd05eef9809632402241eb44cd859a3652f43a35323da9"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/tpd2e2u06_ti.pdf",
+          "name": "evidence/datasheets/tpd2e2u06_ti.pdf",
+          "sha256": "a133b86ea3d3c3d34667339b92d3b5e98d541d10e9775d63e7cdfa153794f4ed"
+        },
+        {
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/evidence/datasheets/uniroyal_0402wgf.pdf",
+          "name": "evidence/datasheets/uniroyal_0402wgf.pdf",
+          "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef"
+        }
+      ]
+    },
+    {
       "gate": "PROV.FIXTURE_INTEGRITY",
       "title": "Frozen fixture matches its canonical digests",
       "status": "NOT_APPLICABLE",
@@ -796,12 +1007,12 @@
       "gate": "PROV.REPORT_FRESHNESS",
       "title": "Committed reports match the current sources",
       "status": "PASS",
-      "reason": "all 2 committed report(s) bind the canonical digest of all 23 source inputs, and every one still matches",
+      "reason": "all 2 committed report(s) bind the canonical digest of all 33 source inputs, and every one still matches",
       "measurements": {
-        "source_closure_files": 23,
-        "source_closure_sha256": "753c44feec264cf2c1eae170b2f0fe711b163e55a2f2c9d0b36556135711847b",
+        "source_closure_files": 33,
+        "source_closure_sha256": "09131221e809479d381bb1470889ed87c8b02afa3d7a9c7148b897a58e334784",
         "source_sha256": {
-          "pcb": "e309fcfd12a94000",
+          "pcb": "399aa2f479840797",
           "schematic": "41ea2108eb7896cf"
         },
         "reports_required": [],
@@ -820,6 +1031,7 @@
             "*.kicad_sch",
             "board/floorplan.json",
             "components/*.json",
+            "evidence/datasheets/*",
             "evidence/index.json",
             "fab/*.json",
             "sim/*.json"
@@ -827,7 +1039,7 @@
           "units": "path glob",
           "kind": "policy",
           "manifest_key": "reports.source_closure",
-          "provenance": "manifest.json#reports.source_closure@663d8eac7c73"
+          "provenance": "manifest.json#reports.source_closure@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -839,6 +1051,28 @@
       "title": "Everything the result was derived from is inside the source closure",
       "status": "NOT_APPLICABLE",
       "reason": "manifest does not declare release_generation.cpl_orientation.reproduction_inputs; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "REQ.CLAIM_JOIN",
+      "title": "Register and claim set join totally; methods meet the board's floor",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare requirements.register; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "REQ.REGISTER",
+      "title": "Requirement register states kinds, methods and resolving origins",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare requirements.register; this board does not opt in to this gate",
       "measurements": {},
       "limits": {},
       "finding_count": 0,
@@ -876,9 +1110,9 @@
       "reason": "the adopted board is the accepted candidate of 2 recorded attempt(s), every attempt started from the same declared source, each of the 3 post-router transform(s) states what it changed, and every bound design input is unchanged",
       "measurements": {
         "bound_design_inputs": 9,
-        "bound_acceptance_inputs": 6,
+        "bound_acceptance_inputs": 17,
         "record": "generated/routing.json",
-        "board_sha256": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
+        "board_sha256": "399aa2f47984079766126edb5d230d98b4cdad71ff5edb3143f3d40f3dfbcf41",
         "attempts": 2,
         "accepted_attempt": 2,
         "post_router_transforms": [
@@ -910,7 +1144,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "routing.min_segment_mm",
-          "provenance": "manifest.json#routing.min_segment_mm@663d8eac7c73"
+          "provenance": "manifest.json#routing.min_segment_mm@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -969,7 +1203,7 @@
           "units": "stage name",
           "kind": "policy",
           "manifest_key": "simulation.required_stages",
-          "provenance": "manifest.json#simulation.required_stages@663d8eac7c73"
+          "provenance": "manifest.json#simulation.required_stages@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -982,7 +1216,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T040208Z-ef0ad82b/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T040208Z-ef0ad82b/work/design/i2c_env_sensor.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063701Z-d764fe66/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063701Z-d764fe66/work/design/i2c_env_sensor.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -995,8 +1229,8 @@
         "per_layer": {
           "copper,l1,top": {
             "shipped_file": "i2c_env_sensor-F_Cu.gbr",
-            "shipped_area_mm2": 62.677,
-            "fresh_area_mm2": 62.677,
+            "shipped_area_mm2": 62.6764,
+            "fresh_area_mm2": 62.6764,
             "symmetric_difference_mm2": 0.0
           },
           "copper,l2,bot": {
@@ -1020,7 +1254,7 @@
           "units": "cli option",
           "kind": "policy",
           "manifest_key": "artifacts.gerber_export_flags",
-          "provenance": "manifest.json#artifacts.gerber_export_flags@663d8eac7c73"
+          "provenance": "manifest.json#artifacts.gerber_export_flags@cd661d2621c7"
         },
         "geometry.layer_symmetric_difference_mm2": {
           "id": "geometry.layer_symmetric_difference_mm2",
@@ -1028,7 +1262,7 @@
           "units": "mm2",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.layer_symmetric_difference_mm2.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1074,7 +1308,7 @@
           "units": "layer roles",
           "kind": "policy",
           "manifest_key": "stackup.expected",
-          "provenance": "manifest.json#stackup.expected@663d8eac7c73"
+          "provenance": "manifest.json#stackup.expected@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1099,7 +1333,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.contact_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@cd661d2621c7"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1107,7 +1341,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1137,7 +1371,7 @@
           "units": "pad attribute",
           "kind": "policy",
           "manifest_key": "via_mask.pad_contact.populated_pad_attributes",
-          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@663d8eac7c73"
+          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@cd661d2621c7"
         },
         "via_mask.mask_dam_rule": {
           "id": "via_mask.mask_dam_rule",
@@ -1145,7 +1379,7 @@
           "units": "policy",
           "kind": "policy",
           "manifest_key": "via_mask.mask_dam_rule",
-          "provenance": "manifest.json#via_mask.mask_dam_rule@663d8eac7c73"
+          "provenance": "manifest.json#via_mask.mask_dam_rule@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1179,7 +1413,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "via_mask.design_target_mm",
-          "provenance": "manifest.json#via_mask.design_target_mm@663d8eac7c73"
+          "provenance": "manifest.json#via_mask.design_target_mm@cd661d2621c7"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1187,7 +1421,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@663d8eac7c73"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@cd661d2621c7"
         },
         "via_mask.metric": {
           "id": "via_mask.metric",
@@ -1195,7 +1429,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "via_mask.metric",
-          "provenance": "manifest.json#via_mask.metric@663d8eac7c73"
+          "provenance": "manifest.json#via_mask.metric@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1271,7 +1505,7 @@
           "units": "policy",
           "kind": "policy",
           "manifest_key": "timing.physical_stackup.require_complete",
-          "provenance": "manifest.json#timing.physical_stackup.require_complete@663d8eac7c73"
+          "provenance": "manifest.json#timing.physical_stackup.require_complete@cd661d2621c7"
         }
       },
       "finding_count": 1,
@@ -1416,7 +1650,7 @@
           "units": "paths",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_bus.expected_path_count",
-          "provenance": "manifest.json#timing.interfaces.island_bus.expected_path_count@663d8eac7c73"
+          "provenance": "manifest.json#timing.interfaces.island_bus.expected_path_count@cd661d2621c7"
         },
         "timing.island_bus.required_component_crossings": {
           "id": "timing.island_bus.required_component_crossings",
@@ -1424,7 +1658,7 @@
           "units": "component crossings per path",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_bus.required_component_crossings",
-          "provenance": "manifest.json#timing.interfaces.island_bus.required_component_crossings@663d8eac7c73"
+          "provenance": "manifest.json#timing.interfaces.island_bus.required_component_crossings@cd661d2621c7"
         },
         "timing.island_supply.expected_path_count": {
           "id": "timing.island_supply.expected_path_count",
@@ -1432,7 +1666,7 @@
           "units": "paths",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_supply.expected_path_count",
-          "provenance": "manifest.json#timing.interfaces.island_supply.expected_path_count@663d8eac7c73"
+          "provenance": "manifest.json#timing.interfaces.island_supply.expected_path_count@cd661d2621c7"
         },
         "timing.island_supply.required_component_crossings": {
           "id": "timing.island_supply.required_component_crossings",
@@ -1440,7 +1674,7 @@
           "units": "component crossings per path",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_supply.required_component_crossings",
-          "provenance": "manifest.json#timing.interfaces.island_supply.required_component_crossings@663d8eac7c73"
+          "provenance": "manifest.json#timing.interfaces.island_supply.required_component_crossings@cd661d2621c7"
         }
       },
       "finding_count": 0,
@@ -1817,5 +2051,61 @@
       "findings": [],
       "evidence": []
     }
-  ]
+  ],
+  "policy": {
+    "state": "fabrication-ready",
+    "reasons": [
+      "every declared check ran clean; the release still names 2 open item(s) to close outside this toolkit"
+    ],
+    "domains": {
+      "claims": {
+        "status": "ran"
+      },
+      "device_parameters": {
+        "status": "declined",
+        "reason": "the parameters this board's claims rest on live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
+      },
+      "external_dependencies": {
+        "status": "ran"
+      },
+      "orientation": {
+        "status": "declined",
+        "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
+      },
+      "requirements": {
+        "status": "declined",
+        "reason": "no requirement register is authored yet; every claim cites the brief and the frozen datasheets in its own requirement source, and the register lands with a later revision"
+      },
+      "simulation": {
+        "status": "ran"
+      },
+      "timing": {
+        "status": "ran"
+      }
+    },
+    "required_domains": [
+      "claims",
+      "simulation",
+      "timing"
+    ],
+    "open_items": [
+      {
+        "kind": "external_dependency",
+        "id": "connector-bus-scan",
+        "statement": "a bus scan over the pod connector finds every fitted device answering at its documented address",
+        "method": "PHYSICAL_TEST",
+        "owner": "bench bring-up",
+        "blocking": false
+      },
+      {
+        "kind": "external_dependency",
+        "id": "jlcpcb-assembly-preview",
+        "statement": "JLCPCB's own assembly preview shows every part at its intended position and rotation",
+        "method": "MANUFACTURING_CHECK",
+        "owner": "fabrication order review",
+        "blocking": false
+      }
+    ],
+    "meaning": "what this verdict authorizes; see pcbqa/policy.py for the derivation"
+  }
 }
