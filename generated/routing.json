@@ -1,6 +1,6 @@
 {
   "accepted_attempt": 2,
-  "adopted_sha256": "399aa2f47984079766126edb5d230d98b4cdad71ff5edb3143f3d40f3dfbcf41",
+  "adopted_sha256": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
   "attempts": [
     {
       "accepted": false,
@@ -10,9 +10,9 @@
           "stderr": "attempt-01/router-stderr.txt",
           "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
           "stdout": "attempt-01/router-stdout.txt",
-          "stdout_sha256": "60b2a971f6588a95ab6f8fb9d0cc2d4a6180ecd9d52309d6327796a968d7b13b",
+          "stdout_sha256": "15ad3f78f52766a10fcb27daeae8ace1a11c38d862fdb87fb7d50e2c7bf924a4",
           "summary": "attempt-01/summary.json",
-          "summary_sha256": "b7cde6df5e2346e7d06b39708af6df275491e20662ea8212f087470b6a2ecd4c"
+          "summary_sha256": "bcd2f4b9f1bda844b2019cda9dfdb03640f9d014491293a944ed8dcd1b131d00"
         },
         "exit": 0,
         "expected_project_writes": [
@@ -37,7 +37,7 @@
                 "SCL",
                 "SDA"
               ],
-              "time": 0.83,
+              "time": 0.69,
               "unchanged": [],
               "widths": {
                 "3V3": {
@@ -190,13 +190,13 @@
           "clearance_mm": 0.2,
           "ordering": "mps"
         },
-        "runtime_s": 3.4,
+        "runtime_s": 3.1,
         "verdict": {
           "accepted": false,
           "counters": {
             "errors": 0,
             "excluded": 0,
-            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-01/gatework/candidate-drc.json",
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-01/gatework/candidate-drc.json",
             "schematic_parity": 0,
             "unconnected": 0,
             "warnings": 0
@@ -224,7 +224,7 @@
             },
             {
               "gate": "DRC.AUTHORITATIVE",
-              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source 03e70ba5d9b9",
+              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source ebfdf02fa089",
               "status": "PASS"
             },
             {
@@ -381,9 +381,9 @@
             "argv": [
               "/usr/bin/python3",
               "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-01/i2c_env_sensor.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-01/i2c_env_sensor.kicad_pcb",
               "--output",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-01/routed.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-01/routed.kicad_pcb",
               "--nets",
               "3V3",
               "3V3_IN",
@@ -404,19 +404,19 @@
               "--same-net-pad-clearance",
               "0.3",
               "--fab-overrides",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-01/fab-floor.txt",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-01/fab-floor.txt",
               "--json-out",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-01/summary.json",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-01/summary.json",
               "--board-edge-clearance",
               "0.3",
               "--hole-to-hole-clearance",
               "0.3"
             ],
             "exit": 0,
-            "runtime_s": 3.4
+            "runtime_s": 3.1
           },
           "produced_by": "router",
-          "sha256": "d07e8d72171ca10cad1d29097302c5a30f0d8fde7c161e5995d194f4477f9411",
+          "sha256": "fd8c2a04275fa743f73abd7eeba9b2aec783850d62b7372b8d13b8e957035bcc",
           "stage": "route"
         },
         {
@@ -425,7 +425,7 @@
             "reserved_restored": 29
           },
           "produced_by": "transform",
-          "sha256": "0a0b35c2a09d190c7a766b6f8e7f424ef322243317e161725f43b7132c1ca1f8",
+          "sha256": "3bac693e8d7c98670fd59ae8293d14dcf961ffc37608692ef7ab9445ead640cd",
           "stage": "restore_reserved",
           "transform": "restore_reserved"
         },
@@ -439,24 +439,24 @@
             "endpoints_snapped_to_pads": 0,
             "fixpoint_exhausted": 0,
             "fixpoint_rounds_used": 2,
-            "fragments_absorbed": 10,
+            "fragments_absorbed": 11,
             "junctions_resolved": 9,
             "unneeded_vias_removed": 0,
             "zones_refilled": 2
           },
           "produced_by": "transform",
-          "sha256": "41e7da2663b6503afd9e4c80c55cc55dcd97006a9d50165cbf0ddc032d800a5e",
+          "sha256": "dc8d0d72a48ccb8d827253942578d4697072652f6c85a3f07e088eb126937826",
           "stage": "normalize",
           "transform": "normalize"
         },
         {
           "effects": {
             "changed": 1,
-            "objects_ordered": 232,
-            "uuids_rederived": 547
+            "objects_ordered": 231,
+            "uuids_rederived": 546
           },
           "produced_by": "transform",
-          "sha256": "03e70ba5d9b9e243605fc5fb9405e5a6bbe0d7e0a26f958936125f60bd3937d1",
+          "sha256": "ebfdf02fa08905c1c4d8951ae8c1dfa440b49df58f315b9d43540197cd4c5665",
           "stage": "canonicalize",
           "transform": "canonicalize"
         }
@@ -470,9 +470,9 @@
           "stderr": "attempt-02/router-stderr.txt",
           "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
           "stdout": "attempt-02/router-stdout.txt",
-          "stdout_sha256": "d8d43b14245ca9e42c0383583fa6d670f3e19793c14ac6d09d98e9bf415a465b",
+          "stdout_sha256": "0d4ddfdebd4ae51bcc239eb4f3b66d1c99144e416f486ef2cda7096f5d82edab",
           "summary": "attempt-02/summary.json",
-          "summary_sha256": "ecf500ead9f0bdcfa3e0f793fb149a958d05e3ff1ce9907632bae2733291a850"
+          "summary_sha256": "62406ad897d22f47e8800c19af0b7488cfd8778e756b5b0be046c92025b578ce"
         },
         "exit": 0,
         "expected_project_writes": [
@@ -497,7 +497,7 @@
                 "SCL",
                 "SDA"
               ],
-              "time": 0.73,
+              "time": 0.76,
               "unchanged": [],
               "widths": {
                 "3V3": {
@@ -651,7 +651,7 @@
           "counters": {
             "errors": 0,
             "excluded": 0,
-            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-02/gatework/candidate-drc.json",
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-02/gatework/candidate-drc.json",
             "schematic_parity": 0,
             "unconnected": 0,
             "warnings": 0
@@ -679,7 +679,7 @@
             },
             {
               "gate": "DRC.AUTHORITATIVE",
-              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source 399aa2f47984",
+              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source e309fcfd12a9",
               "status": "PASS"
             },
             {
@@ -834,9 +834,9 @@
             "argv": [
               "/usr/bin/python3",
               "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-02/i2c_env_sensor.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-02/i2c_env_sensor.kicad_pcb",
               "--output",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-02/routed.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-02/routed.kicad_pcb",
               "--nets",
               "3V3",
               "3V3_IN",
@@ -857,9 +857,9 @@
               "--same-net-pad-clearance",
               "0.3",
               "--fab-overrides",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-02/fab-floor.txt",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-02/fab-floor.txt",
               "--json-out",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T063621Z-bd6dac55/attempt-02/summary.json",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T082418Z-8d6eafdc/attempt-02/summary.json",
               "--board-edge-clearance",
               "0.3",
               "--hole-to-hole-clearance",
@@ -869,7 +869,7 @@
             "runtime_s": 3.0
           },
           "produced_by": "router",
-          "sha256": "af99247faee53bd98722a77dba85536ad919358608843b3f502a077e42fdf218",
+          "sha256": "41b505d7a5f7ab6a850820e067dc82dd2d07a3c010cfec0c9ee93135aeefbbeb",
           "stage": "route"
         },
         {
@@ -878,7 +878,7 @@
             "reserved_restored": 29
           },
           "produced_by": "transform",
-          "sha256": "0fe998255e576cdd50fe6db05225b060ef51525d68b71681af1cd81931d6b2ac",
+          "sha256": "0e88741db8abda19557a065f9d4c7cf81abb44db6c328577c09f26041bb1eb97",
           "stage": "restore_reserved",
           "transform": "restore_reserved"
         },
@@ -898,7 +898,7 @@
             "zones_refilled": 2
           },
           "produced_by": "transform",
-          "sha256": "b398692b2e548e6fc53ff525190199e8d9bf8eed61e14d6daca2b1bf874f7369",
+          "sha256": "8954fd6c800f63f2e1b7e2342df5aa235497f28ebd75728b18d91f6a469a7033",
           "stage": "normalize",
           "transform": "normalize"
         },
@@ -909,7 +909,7 @@
             "uuids_rederived": 537
           },
           "produced_by": "transform",
-          "sha256": "399aa2f47984079766126edb5d230d98b4cdad71ff5edb3143f3d40f3dfbcf41",
+          "sha256": "e309fcfd12a94000e0ed8a1b862cae5d463a8dceb84ea1b4e9eb2ec282fbcfe7",
           "stage": "canonicalize",
           "transform": "canonicalize"
         }
@@ -946,6 +946,7 @@
         "evidence/datasheets/uniroyal_0402wgf.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
         "evidence/index.json": "61c163aaf152b94b3d78030125620f2e42cdedbc36cb9ff4804fb1ab7cc051eb",
         "fab/physical_inputs.json": "e70a05eb65b78f70bae108c450556158be2978f6c1acc1c0266f19971b1e34e9",
+        "generated/claims.json": "85b0c092c9006d2e62e3402de4f99c3fb0ed1414b21def197f11714d26a609d1",
         "sim/post_layout_rail_mating.json": "ebc152cbf3748253c4905108d18145983c5860bc0c12d2214402363b9ddad749",
         "sim/pre_layout_bus_rise_time.json": "e9360a12c73eb5d5b0bf9ac57ea81fdb19eb6d9ed644dcfa80c20906fce176c8",
         "sim/pre_layout_rail_mating.json": "686af76f1ced9b32ed4b6b2574b4107fb7c3382cc2f9ff37d8f096be22b34ac9",
