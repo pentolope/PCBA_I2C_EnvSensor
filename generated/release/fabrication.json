@@ -3,12 +3,12 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-05T11:04:01.774767+00:00",
-  "source_closure_sha256": "4622f8d3f027db6c5edb353989646642a9c7d48f6ac767df276f0e74a94f86b7",
+  "generated_utc": "2026-09-05T14:34:08.713015+00:00",
+  "source_closure_sha256": "3583e84b859be7299defc920a84e0715b776bed9021d313887ca16a8152a0176",
   "source_closure_files": 34,
   "source_closure": {
     "<configuration>": "68149761d3067427f0ce3d433ca685aa4e35217bec9db057c5b63778e8a13101",
-    "<toolkit>": "4eff2b1110f594ad99b4481e7d194019a70f8742+clean",
+    "<toolkit>": "9c04a643f2aff7c46578ba58ef3a3ae4b041271f+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -47,7 +47,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "4eff2b1110f594ad99b4481e7d194019a70f8742",
+    "commit": "9c04a643f2aff7c46578ba58ef3a3ae4b041271f",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -76,8 +76,8 @@
     "gerbers/i2c_env_sensor-PTH.drl": "8ec94c7a995b0925b2380a17aac6f27bf58e5465ede67ba42337f69f5e176419",
     "gerbers/i2c_env_sensor-job.gbrjob": "8a2b8ca4f15170acf1d64ced3589d1c2e89fa8f82d45f2a5403f8cc4c2c5e59c",
     "i2c_env_sensor-fabrication.zip": "ad22aa3f0f52fbbc3e591b1549580ce85087c8611c782ad0d1e606063c7c69d1",
-    "reports/drc.json": "1a54697c91be4bf932667db30ad99f496ebeca9c14adcb3786d83d8b316ba204",
-    "reports/erc.json": "38ba29b44bf214934663c0ed11e9551c53134eb2bb0fb874dff030bbdb18878f"
+    "reports/drc.json": "6e5dd9683c1d6623fc16edb5511da5fe29011003ba45161fb78fbb38c3b90b6f",
+    "reports/erc.json": "2aeda596fdc096eb0f8864af8a524153785bd48903e70e4dd94c928402e4bb22"
   },
   "excluded_layers": []
 }
