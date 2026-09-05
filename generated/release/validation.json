@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-05T20:14:01.488918+00:00",
-  "source_closure_sha256": "fe202cb113a86329c60b27c3471d13b5fbde6fe2d9e9200df6d03d1c8e7655f8",
+  "generated_utc": "2026-09-05T22:11:30.109687+00:00",
+  "source_closure_sha256": "444685ff2cb80372cad9a3c0514ca3442cdf6dc7c1ec44e72bb77e8e9b688355",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/board/manifest.json",
     "sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/tooling/PCBA_AutoDesignAndTest",
-      "commit": "cb03fa0fc091cbd8af36a42e6b288d32f61ceeb2",
+      "commit": "4f371f6385932e68d10b6781dfc4ef5b0020ff40",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "fe202cb113a86329c60b27c3471d13b5fbde6fe2d9e9200df6d03d1c8e7655f8",
-        "recorded_source_closure_sha256": "fe202cb113a86329c60b27c3471d13b5fbde6fe2d9e9200df6d03d1c8e7655f8"
+        "source_closure_sha256": "444685ff2cb80372cad9a3c0514ca3442cdf6dc7c1ec44e72bb77e8e9b688355",
+        "recorded_source_closure_sha256": "444685ff2cb80372cad9a3c0514ca3442cdf6dc7c1ec44e72bb77e8e9b688355"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "6b6a952f64c4eb53167163a3cd5bc0dc6f8603c240b1179c3ed12a20dc2e177d"
+          "sha256": "0e1c158491916f8cd5c6e8f3bc896da6d18c306994c9dce63f71991fd6c08cc8"
         }
       ]
     },
@@ -532,10 +532,10 @@
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
         "constraint_manifest_sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T20:13:57.238626+00:00",
+        "generated_utc": "2026-09-05T22:11:26.682953+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-05T14:13:57",
+          "date": "2026-09-05T16:11:26",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_pcb",
           "ignored_checks": [],
@@ -569,9 +569,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T201354Z-42fa6766/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T221124Z-80d1e085/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "3748c3b87f787fdaf8710a92049599ff94d5567aa14c9470d7e70dadd382686b"
+          "sha256": "73c115ce7f386202dd2a250486c16913799e8ee984d10af5a3c8d485e0c1b3cf"
         }
       ]
     },
@@ -740,10 +740,10 @@
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
         "constraint_manifest_sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T20:13:59.525820+00:00",
+        "generated_utc": "2026-09-05T22:11:28.381811+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-05T14:13:59",
+          "date": "2026-09-05T16:11:28",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_sch",
           "ignored_checks": [],
@@ -777,9 +777,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T201354Z-42fa6766/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T221124Z-80d1e085/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "844ab40303c39a9541d98f98bd53d39428c9914b303c5892095e24d871b19f85"
+          "sha256": "e487280a4f03f1f9a72def503701eef15437259d9b9b6926e5a37654949f27b3"
         }
       ]
     },
@@ -1059,7 +1059,7 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 34 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 34,
-        "source_closure_sha256": "fe202cb113a86329c60b27c3471d13b5fbde6fe2d9e9200df6d03d1c8e7655f8",
+        "source_closure_sha256": "444685ff2cb80372cad9a3c0514ca3442cdf6dc7c1ec44e72bb77e8e9b688355",
         "source_sha256": {
           "pcb": "797a2fdb30abb233",
           "schematic": "41ea2108eb7896cf"
@@ -1266,7 +1266,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T201354Z-42fa6766/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T201354Z-42fa6766/work/design/i2c_env_sensor.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T221124Z-80d1e085/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260905T221124Z-80d1e085/work/design/i2c_env_sensor.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -2224,13 +2224,20 @@
     }
   ],
   "policy": {
-    "state": "fabrication-ready",
+    "state": "requires-additional-evidence",
     "reasons": [
-      "every declared check ran clean; the release still names 5 open item(s) to close outside this toolkit"
+      "the current_capacity domain is neither declared nor explicitly declined; silence is not a decision",
+      "the differential_pairs domain is neither declared nor explicitly declined; silence is not a decision",
+      "the power_integrity domain is neither declared nor explicitly declined; silence is not a decision",
+      "the reference_continuity domain is neither declared nor explicitly declined; silence is not a decision",
+      "the thermal domain is neither declared nor explicitly declined; silence is not a decision"
     ],
     "domains": {
       "claims": {
         "status": "ran"
+      },
+      "current_capacity": {
+        "status": "absent"
       },
       "derived_documents": {
         "status": "ran"
@@ -2238,6 +2245,9 @@
       "device_parameters": {
         "status": "declined",
         "reason": "the parameters this board's claims rest on live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
+      },
+      "differential_pairs": {
+        "status": "absent"
       },
       "evidence_integrity": {
         "status": "ran"
@@ -2249,12 +2259,21 @@
         "status": "declined",
         "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
       },
+      "power_integrity": {
+        "status": "absent"
+      },
+      "reference_continuity": {
+        "status": "absent"
+      },
       "requirements": {
         "status": "declined",
         "reason": "no requirement register is authored yet; every claim cites the brief and the frozen datasheets in its own requirement source, and the register lands with a later revision"
       },
       "simulation": {
         "status": "ran"
+      },
+      "thermal": {
+        "status": "absent"
       },
       "timing": {
         "status": "ran"
