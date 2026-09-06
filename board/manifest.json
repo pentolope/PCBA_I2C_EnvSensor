@@ -532,6 +532,18 @@
       {
         "domain": "orientation",
         "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
+      },
+      {
+        "domain": "thermal",
+        "reason": "U2 publishes no junction-to-ambient thermal resistance in its frozen datasheet, so THERMAL.DERATING and THERMAL.JUNCTION refuse it, and declaring thermal.parts without U2 would state a dissipation inventory that omits a real source. The board's own thermal requirement is carried by the validated claim steady_rise_above_ambient_at_the_humidity_sensor, a 2.6 mK upper bound against a 50 mK budget, over a total board dissipation of 25.6 uW"
+      },
+      {
+        "domain": "current_capacity",
+        "reason": "peak board current is 4.0 mA. IPC-2221's curve is fitted over cross-sections down to 1 mil2, and the section 4 mA demands at any rise inside the fitted window is about 0.008 mil2, so required_area_mm2 refuses it as an extrapolation. The requirement the domain would serve, that the board's current stays inside what the connector and host carry, is settled by the validated claim peak_board_supply_current against the connector's 2 A contact rating"
+      },
+      {
+        "domain": "differential_pairs",
+        "reason": "no differential pair is routed on this board; the only bus is single-ended I2C and the remaining nets are the supply and its return"
       }
     ]
   },
@@ -629,6 +641,98 @@
             }
           ]
         }
+      }
+    }
+  },
+  "pdn": {
+    "why": "the 3V3 rail is track-routed and its return is the B.Cu ground pour, which stops at the isolation neck; what the copper itself adds is solved rather than assumed negligible",
+    "grid": {
+      "columns": 36,
+      "rows": 80
+    },
+    "copper_thickness_mm": {
+      "F.Cu": 0.04064,
+      "B.Cu": 0.04064
+    },
+    "via_resistance_ohm": 0.001534,
+    "fill_match_fraction": 0.02,
+    "rails": {
+      "sensor_supply": {
+        "net": "3V3",
+        "sources": [
+          "R3.2"
+        ],
+        "return_net": "GND",
+        "return_sources": [
+          "J1.1"
+        ],
+        "drop_budget_v": 0.01,
+        "return_budget_v": 0.01,
+        "why": "0.01 V is under 1 percent of the 1.416 V minimum supply headroom any fitted part holds, so a rail inside this budget cannot move a supply-headroom verdict",
+        "loads": [
+          {
+            "pad": "U1.3",
+            "return_pad": "U1.4",
+            "current_a": 0.0014,
+            "why": "no maximum is published; charged at 4x the 350 uA typical, the same bound peak_board_supply_current uses"
+          },
+          {
+            "pad": "U2.1",
+            "return_pad": "U2.3",
+            "current_a": 4.8e-05,
+            "why": "no maximum is published; charged at 4x the 12 uA typical at 1 Hz"
+          },
+          {
+            "pad": "U3.1",
+            "return_pad": "U3.3",
+            "current_a": 2.5e-06,
+            "why": "the published maximum"
+          },
+          {
+            "pad": "R1.1",
+            "return_pad": "U1.4",
+            "current_a": 0.001283333,
+            "why": "the SDA pull-up at the rail maximum, returned at the island sensor rather than at whichever device holds the line low, which lengthens the modelled return and so bounds it"
+          },
+          {
+            "pad": "R2.1",
+            "return_pad": "U1.4",
+            "current_a": 0.001283333,
+            "why": "the SCL pull-up at the rail maximum; on the board this current returns to the host over SCL, and charging it to the island bounds the return rather than omitting it"
+          }
+        ]
+      }
+    }
+  },
+  "reference_continuity": {
+    "why": "the ground pour stops at the isolation neck on purpose: copper carried across the neck would be the conduction path the neck exists to break, and the sensor sits 13.0 mm beyond the pour edge. The bus therefore reaches the island unreferenced. No standard sets a limit for a 100 kHz single-ended bus, so the limits below are this board's own routed geometry recorded as a ceiling: they exist to stop the unreferenced run growing, not to certify it is minimal",
+    "reference_nets": [
+      "GND"
+    ],
+    "paths": {
+      "connector_to_humidity_sensor_data": {
+        "steps": [
+          {
+            "kind": "copper",
+            "net": "SDA",
+            "from": "J1.3",
+            "to": "U1.1"
+          }
+        ],
+        "max_unreferenced_mm": 17.5,
+        "why": "16.83 mm as routed: the pour edge to the sensor across the neck"
+      },
+      "connector_to_humidity_sensor_clock": {
+        "steps": [
+          {
+            "kind": "copper",
+            "net": "SCL",
+            "from": "J1.4",
+            "to": "U1.2"
+          }
+        ],
+        "max_unreferenced_mm": 21.0,
+        "why": "20.20 mm as routed, longer than the data line because pin 2 sits on the far side of the sensor and the track runs past the body to reach it"
       }
     }
   },
