@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-06T01:10:53.659189+00:00",
-  "source_closure_sha256": "d7b45f463bfd082d8dc220678727d01c1f98bc92455c49925c7017f37b902837",
+  "generated_utc": "2026-09-06T05:36:36.079524+00:00",
+  "source_closure_sha256": "f6a8291f24d8fc3c9f587403feb2bc03b6f613e34a5c24e36b168fccb7b5438d",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/board/manifest.json",
-    "sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
+    "sha256": "78012bb03142e3e448d5ef1e6ecc3a42c8adf812badebb66a9efbfa5c8594902",
     "board_id": "i2c_env_sensor",
     "constraint_version": "layout-stage-2026-09-02"
   },
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/tooling/PCBA_AutoDesignAndTest",
-      "commit": "c17ebb505b5dc98c445b68b9d743047e7b1d59eb",
+      "commit": "0130082a979a9a27959cc3410fefaa22fe329a51",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -60,8 +60,8 @@
   },
   "summary": {
     "counts": {
-      "PASS": 29,
-      "NOT_APPLICABLE": 28
+      "PASS": 32,
+      "NOT_APPLICABLE": 25
     },
     "blocking": [],
     "verdict": "ACCEPTED"
@@ -151,7 +151,7 @@
           "units": "file function",
           "kind": "policy",
           "manifest_key": "archive.allow",
-          "provenance": "manifest.json#archive.allow@5985a5035bc2"
+          "provenance": "manifest.json#archive.allow@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/i2c_env_sensor-fabrication.zip",
           "name": "i2c_env_sensor-fabrication.zip",
-          "sha256": "ad22aa3f0f52fbbc3e591b1549580ce85087c8611c782ad0d1e606063c7c69d1"
+          "sha256": "566af512d2dc7e1d92c8e5de70520ff610d4783191cbd7502142e3fbe504b734"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "d7b45f463bfd082d8dc220678727d01c1f98bc92455c49925c7017f37b902837",
-        "recorded_source_closure_sha256": "d7b45f463bfd082d8dc220678727d01c1f98bc92455c49925c7017f37b902837"
+        "source_closure_sha256": "f6a8291f24d8fc3c9f587403feb2bc03b6f613e34a5c24e36b168fccb7b5438d",
+        "recorded_source_closure_sha256": "f6a8291f24d8fc3c9f587403feb2bc03b6f613e34a5c24e36b168fccb7b5438d"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "1bffc5b7ad62292a776ac7a4b4e47f41ea8a6d52cdc5e6b1b7485ec2d10b6101"
+          "sha256": "163e41533c2f8ce0fd6f52d66a9a68cb6c22d4bc03d228c392bb83259adaaff6"
         }
       ]
     },
@@ -219,7 +219,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.required_part_fields",
-          "provenance": "manifest.json#assembly.required_part_fields@5985a5035bc2"
+          "provenance": "manifest.json#assembly.required_part_fields@78012bb03142"
         },
         "assembly.compared_part_fields": {
           "id": "assembly.compared_part_fields",
@@ -231,7 +231,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.compared_part_fields",
-          "provenance": "manifest.json#assembly.compared_part_fields@5985a5035bc2"
+          "provenance": "manifest.json#assembly.compared_part_fields@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -461,7 +461,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "artifacts.position_tolerance_mm",
-          "provenance": "manifest.json#artifacts.position_tolerance_mm@5985a5035bc2"
+          "provenance": "manifest.json#artifacts.position_tolerance_mm@78012bb03142"
         },
         "geometry.rotation_match_deg": {
           "id": "geometry.rotation_match_deg",
@@ -469,7 +469,7 @@
           "units": "deg",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.rotation_match_deg.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@78012bb03142"
         },
         "artifacts.cpl_origin": {
           "id": "artifacts.cpl_origin",
@@ -483,7 +483,7 @@
           "units": "frame",
           "kind": "policy",
           "manifest_key": "artifacts.cpl_origin",
-          "provenance": "manifest.json#artifacts.cpl_origin@5985a5035bc2"
+          "provenance": "manifest.json#artifacts.cpl_origin@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -511,7 +511,7 @@
       "gate": "DRC.AUTHORITATIVE",
       "title": "Fresh DRC on the exact final board",
       "status": "PASS",
-      "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source 797a2fdb30ab",
+      "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source d1a5a857bbc9",
       "measurements": {
         "command": "kicad-cli pcb drc --format json -o drc_authoritative.json --severity-all --severity-exclusions --all-track-errors --schematic-parity --refill-zones --save-board --exit-code-violations i2c_env_sensor.kicad_pcb",
         "command_sha256": "07967ec1e7313e7f04d4ccd57b75aa4d59f5b5fa88f5faa85c6325153bddbf4d",
@@ -527,15 +527,15 @@
         "exit_status": 0,
         "violations_exit_code": 5,
         "source": "i2c_env_sensor.kicad_pcb",
-        "source_sha256": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
-        "checked_copy_sha256": "811ebe93ffe339772e38eb8e5a2a3ab32d96a8c7126b72e96cf67553a38f4844",
+        "source_sha256": "d1a5a857bbc9aa71a86377cdb46b804895ee77531b7021273def9900ae73e4d3",
+        "checked_copy_sha256": "617b6f442ac0e60297327dc41df386e1491b31f47b8e9081b6f39d426060bbff",
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
-        "constraint_manifest_sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
+        "constraint_manifest_sha256": "78012bb03142e3e448d5ef1e6ecc3a42c8adf812badebb66a9efbfa5c8594902",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-06T01:10:49.755784+00:00",
+        "generated_utc": "2026-09-06T05:36:22.503633+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-05T19:10:49",
+          "date": "2026-09-05T23:36:22",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_pcb",
           "ignored_checks": [],
@@ -562,16 +562,16 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@78012bb03142"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T011046Z-2040ea48/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053620Z-70e3a66e/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "00408f6273fc40ecafcd59a585e045c98c1ff25e14e5f8672ff86f377b2d3cae"
+          "sha256": "7dbe31e353d1d21c732935d2b2f54e792573acaf5dffced143bc9f210a3a4bba"
         }
       ]
     },
@@ -591,7 +591,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@78012bb03142"
         },
         "drc.floor.min_copper_edge_clearance": {
           "id": "drc.floor.min_copper_edge_clearance",
@@ -599,7 +599,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_copper_edge_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@78012bb03142"
         },
         "drc.floor.min_hole_clearance": {
           "id": "drc.floor.min_hole_clearance",
@@ -607,7 +607,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@78012bb03142"
         },
         "drc.floor.min_hole_to_hole": {
           "id": "drc.floor.min_hole_to_hole",
@@ -615,7 +615,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_to_hole",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@78012bb03142"
         },
         "drc.floor.min_through_hole_diameter": {
           "id": "drc.floor.min_through_hole_diameter",
@@ -623,7 +623,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_through_hole_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@78012bb03142"
         },
         "drc.floor.min_track_width": {
           "id": "drc.floor.min_track_width",
@@ -631,7 +631,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@78012bb03142"
         },
         "drc.floor.min_via_annular_width": {
           "id": "drc.floor.min_via_annular_width",
@@ -639,7 +639,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_annular_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@78012bb03142"
         },
         "drc.floor.min_via_diameter": {
           "id": "drc.floor.min_via_diameter",
@@ -647,7 +647,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@78012bb03142"
         },
         "drc.floor.Default.clearance": {
           "id": "drc.floor.Default.clearance",
@@ -655,7 +655,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@78012bb03142"
         },
         "drc.floor.Default.track_width": {
           "id": "drc.floor.Default.track_width",
@@ -663,7 +663,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@78012bb03142"
         },
         "drc.floor.Default.via_diameter": {
           "id": "drc.floor.Default.via_diameter",
@@ -671,7 +671,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@78012bb03142"
         },
         "drc.floor.Default.via_drill": {
           "id": "drc.floor.Default.via_drill",
@@ -679,7 +679,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_drill",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -706,7 +706,7 @@
           "units": "severity",
           "kind": "policy",
           "manifest_key": "checks.drc.forbidden_severities",
-          "provenance": "manifest.json#checks.drc.forbidden_severities@5985a5035bc2"
+          "provenance": "manifest.json#checks.drc.forbidden_severities@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -738,12 +738,12 @@
         "source_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
         "checked_copy_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
         "rules_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
-        "constraint_manifest_sha256": "5985a5035bc2d2f4edec94dbe47c71af2f4fff7c963a66dff14be50f7cc9cf9a",
+        "constraint_manifest_sha256": "78012bb03142e3e448d5ef1e6ecc3a42c8adf812badebb66a9efbfa5c8594902",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-06T01:10:51.774262+00:00",
+        "generated_utc": "2026-09-06T05:36:24.132620+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-05T19:10:51",
+          "date": "2026-09-05T23:36:24",
           "kicad_version": "10.0.5",
           "source": "i2c_env_sensor.kicad_sch",
           "ignored_checks": [],
@@ -770,16 +770,16 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@78012bb03142"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T011046Z-2040ea48/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053620Z-70e3a66e/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "3e48e059507a7c79c13b621bfcab4f5f72bd0195e3175c123c219e4e3d07fea8"
+          "sha256": "772aed36aaf1e5c6b59ed3adf9edcd6f769a1cc88bbba22394fc7114e8bd9cd3"
         }
       ]
     },
@@ -878,7 +878,7 @@
                 "B.Cu",
                 "F.Cu"
               ],
-              "branch_points": 41,
+              "branch_points": 40,
               "total_track_copper_mm": 65.656
             }
           ],
@@ -892,7 +892,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@78012bb03142"
         },
         "net_topology.BUS_TO_SENSORS.max_vias_per_net": {
           "id": "net_topology.BUS_TO_SENSORS.max_vias_per_net",
@@ -900,7 +900,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.0.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@5985a5035bc2"
+          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@78012bb03142"
         },
         "net_topology.SUPPLY_TO_SENSORS.max_vias_per_net": {
           "id": "net_topology.SUPPLY_TO_SENSORS.max_vias_per_net",
@@ -908,7 +908,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.1.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@5985a5035bc2"
+          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1059,9 +1059,9 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 34 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 34,
-        "source_closure_sha256": "d7b45f463bfd082d8dc220678727d01c1f98bc92455c49925c7017f37b902837",
+        "source_closure_sha256": "f6a8291f24d8fc3c9f587403feb2bc03b6f613e34a5c24e36b168fccb7b5438d",
         "source_sha256": {
-          "pcb": "797a2fdb30abb233",
+          "pcb": "d1a5a857bbc9aa71",
           "schematic": "41ea2108eb7896cf"
         },
         "reports_required": [],
@@ -1089,7 +1089,7 @@
           "units": "path glob",
           "kind": "policy",
           "manifest_key": "reports.source_closure",
-          "provenance": "manifest.json#reports.source_closure@5985a5035bc2"
+          "provenance": "manifest.json#reports.source_closure@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1157,16 +1157,17 @@
       "gate": "ROUTE.PROVENANCE",
       "title": "The routed board in the tree is the candidate that was accepted",
       "status": "PASS",
-      "reason": "the adopted board is the accepted candidate of 2 recorded attempt(s), every attempt started from the same declared source, each of the 3 post-router transform(s) states what it changed, and every bound design input is unchanged",
+      "reason": "the adopted board is the accepted candidate of 1 recorded attempt(s), every attempt started from the same declared source, each of the 4 post-router transform(s) states what it changed, and every bound design input is unchanged",
       "measurements": {
         "bound_design_inputs": 9,
         "bound_acceptance_inputs": 18,
         "record": "generated/routing.json",
-        "board_sha256": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
-        "attempts": 2,
-        "accepted_attempt": 2,
+        "board_sha256": "d1a5a857bbc9aa71a86377cdb46b804895ee77531b7021273def9900ae73e4d3",
+        "attempts": 1,
+        "accepted_attempt": 1,
         "post_router_transforms": [
           "restore_reserved",
+          "unlock",
           "normalize",
           "canonicalize"
         ]
@@ -1180,11 +1181,11 @@
       "gate": "ROUTE.TINY_SEGMENTS",
       "title": "No unjustified sub-minimum track fragments",
       "status": "PASS",
-      "reason": "9 short fragments are all pad/via entry geometry",
+      "reason": "7 short fragments are all pad/via entry geometry",
       "measurements": {
-        "segments_total": 137,
-        "below_limit_total": 9,
-        "below_limit_justified_pad_or_via_entry": 9,
+        "segments_total": 135,
+        "below_limit_total": 7,
+        "below_limit_justified_pad_or_via_entry": 7,
         "below_limit_unjustified": 0
       },
       "limits": {
@@ -1194,7 +1195,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "routing.min_segment_mm",
-          "provenance": "manifest.json#routing.min_segment_mm@5985a5035bc2"
+          "provenance": "manifest.json#routing.min_segment_mm@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1253,7 +1254,7 @@
           "units": "stage name",
           "kind": "policy",
           "manifest_key": "simulation.required_stages",
-          "provenance": "manifest.json#simulation.required_stages@5985a5035bc2"
+          "provenance": "manifest.json#simulation.required_stages@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1266,7 +1267,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T011046Z-2040ea48/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T011046Z-2040ea48/work/design/i2c_env_sensor.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053620Z-70e3a66e/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053620Z-70e3a66e/work/design/i2c_env_sensor.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -1304,7 +1305,7 @@
           "units": "cli option",
           "kind": "policy",
           "manifest_key": "artifacts.gerber_export_flags",
-          "provenance": "manifest.json#artifacts.gerber_export_flags@5985a5035bc2"
+          "provenance": "manifest.json#artifacts.gerber_export_flags@78012bb03142"
         },
         "geometry.layer_symmetric_difference_mm2": {
           "id": "geometry.layer_symmetric_difference_mm2",
@@ -1312,7 +1313,7 @@
           "units": "mm2",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.layer_symmetric_difference_mm2.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1358,7 +1359,7 @@
           "units": "layer roles",
           "kind": "policy",
           "manifest_key": "stackup.expected",
-          "provenance": "manifest.json#stackup.expected@5985a5035bc2"
+          "provenance": "manifest.json#stackup.expected@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1383,7 +1384,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.contact_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@78012bb03142"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1391,7 +1392,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1421,7 +1422,7 @@
           "units": "pad attribute",
           "kind": "policy",
           "manifest_key": "via_mask.pad_contact.populated_pad_attributes",
-          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@5985a5035bc2"
+          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@78012bb03142"
         },
         "via_mask.mask_dam_rule": {
           "id": "via_mask.mask_dam_rule",
@@ -1429,7 +1430,7 @@
           "units": "policy",
           "kind": "policy",
           "manifest_key": "via_mask.mask_dam_rule",
-          "provenance": "manifest.json#via_mask.mask_dam_rule@5985a5035bc2"
+          "provenance": "manifest.json#via_mask.mask_dam_rule@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1463,7 +1464,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "via_mask.design_target_mm",
-          "provenance": "manifest.json#via_mask.design_target_mm@5985a5035bc2"
+          "provenance": "manifest.json#via_mask.design_target_mm@78012bb03142"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1471,7 +1472,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@5985a5035bc2"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@78012bb03142"
         },
         "via_mask.metric": {
           "id": "via_mask.metric",
@@ -1479,7 +1480,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "via_mask.metric",
-          "provenance": "manifest.json#via_mask.metric@5985a5035bc2"
+          "provenance": "manifest.json#via_mask.metric@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -1555,7 +1556,7 @@
           "units": "policy",
           "kind": "policy",
           "manifest_key": "timing.physical_stackup.require_complete",
-          "provenance": "manifest.json#timing.physical_stackup.require_complete@5985a5035bc2"
+          "provenance": "manifest.json#timing.physical_stackup.require_complete@78012bb03142"
         }
       },
       "finding_count": 1,
@@ -1711,7 +1712,7 @@
           "units": "paths",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_bus.expected_path_count",
-          "provenance": "manifest.json#timing.interfaces.island_bus.expected_path_count@5985a5035bc2"
+          "provenance": "manifest.json#timing.interfaces.island_bus.expected_path_count@78012bb03142"
         },
         "timing.island_bus.required_component_crossings": {
           "id": "timing.island_bus.required_component_crossings",
@@ -1719,7 +1720,7 @@
           "units": "component crossings per path",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_bus.required_component_crossings",
-          "provenance": "manifest.json#timing.interfaces.island_bus.required_component_crossings@5985a5035bc2"
+          "provenance": "manifest.json#timing.interfaces.island_bus.required_component_crossings@78012bb03142"
         },
         "timing.island_supply.expected_path_count": {
           "id": "timing.island_supply.expected_path_count",
@@ -1727,7 +1728,7 @@
           "units": "paths",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_supply.expected_path_count",
-          "provenance": "manifest.json#timing.interfaces.island_supply.expected_path_count@5985a5035bc2"
+          "provenance": "manifest.json#timing.interfaces.island_supply.expected_path_count@78012bb03142"
         },
         "timing.island_supply.required_component_crossings": {
           "id": "timing.island_supply.required_component_crossings",
@@ -1735,7 +1736,7 @@
           "units": "component crossings per path",
           "kind": "policy",
           "manifest_key": "timing.interfaces.island_supply.required_component_crossings",
-          "provenance": "manifest.json#timing.interfaces.island_supply.required_component_crossings@5985a5035bc2"
+          "provenance": "manifest.json#timing.interfaces.island_supply.required_component_crossings@78012bb03142"
         }
       },
       "finding_count": 0,
@@ -2132,10 +2133,357 @@
     {
       "gate": "PDN.DC_DROP",
       "title": "Every declared rail delivers inside its drop budget",
-      "status": "NOT_APPLICABLE",
-      "reason": "manifest does not declare pdn.copper_thickness_mm, pdn.fill_match_fraction, pdn.grid, pdn.rails, pdn.via_resistance_ohm; this board does not opt in to this gate",
-      "measurements": {},
-      "limits": {},
+      "status": "PASS",
+      "reason": "1 rail(s) deliver inside their declared drop budgets; worst solved drop 0.0002187 V",
+      "measurements": {
+        "rails": 1,
+        "loads_over_budget": 0,
+        "summaries": [
+          {
+            "rail": "sensor_supply",
+            "net": "3V3",
+            "worst_drop_v": 0.0002187053510910864,
+            "worst_load": "R2.1",
+            "busiest_via": {
+              "layers": [
+                "F.Cu",
+                "B.Cu"
+              ],
+              "row": 33,
+              "column": 16,
+              "current_a": 0.0012858329869671413,
+              "resistance_ohm": 0.001534
+            },
+            "thinnest_carrying_cell": {
+              "layer": "F.Cu",
+              "row": 54,
+              "column": 15,
+              "coverage": 2.9561100390875894e-05,
+              "gradient_v": 5.189816983440827e-06
+            },
+            "iterations": 14003
+          }
+        ],
+        "claims": [
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:R2.1"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.0002187053510910864
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "rail",
+                "requirement_source": "pdn.rails.sensor_supply.drop_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 14003,
+                "residual_v": 2.185751579730777e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.drop_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U1.3"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00021756565767957976
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "rail",
+                "requirement_source": "pdn.rails.sensor_supply.drop_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 14003,
+                "residual_v": 2.185751579730777e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.drop_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U3.1"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00015952042495617901
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "rail",
+                "requirement_source": "pdn.rails.sensor_supply.drop_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 14003,
+                "residual_v": 2.185751579730777e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.drop_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U2.1"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00014071698584313224
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "rail",
+                "requirement_source": "pdn.rails.sensor_supply.drop_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 14003,
+                "residual_v": 2.185751579730777e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.drop_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:R1.1"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 8.838502253136481e-05
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "rail",
+                "requirement_source": "pdn.rails.sensor_supply.drop_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 14003,
+                "residual_v": 2.185751579730777e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.drop_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          }
+        ]
+      },
+      "limits": {
+        "pdn.fill_match_fraction": {
+          "id": "pdn.fill_match_fraction",
+          "value": 0.02,
+          "units": "fraction",
+          "kind": "policy",
+          "manifest_key": "pdn.fill_match_fraction",
+          "provenance": "manifest.json#pdn.fill_match_fraction@78012bb03142"
+        },
+        "pdn.copper_thickness_mm": {
+          "id": "pdn.copper_thickness_mm",
+          "value": {
+            "F.Cu": 0.04064,
+            "B.Cu": 0.04064
+          },
+          "units": "mm",
+          "kind": "policy",
+          "manifest_key": "pdn.copper_thickness_mm",
+          "provenance": "manifest.json#pdn.copper_thickness_mm@78012bb03142"
+        },
+        "pdn.via_resistance_ohm": {
+          "id": "pdn.via_resistance_ohm",
+          "value": 0.001534,
+          "units": "ohm",
+          "kind": "policy",
+          "manifest_key": "pdn.via_resistance_ohm",
+          "provenance": "manifest.json#pdn.via_resistance_ohm@78012bb03142"
+        },
+        "pdn.rails.sensor_supply.drop_budget_v": {
+          "id": "pdn.rails.sensor_supply.drop_budget_v",
+          "value": 0.01,
+          "units": "V",
+          "kind": "policy",
+          "manifest_key": "pdn.rails.sensor_supply.drop_budget_v",
+          "provenance": "manifest.json#pdn.rails.sensor_supply.drop_budget_v@78012bb03142"
+        }
+      },
       "finding_count": 0,
       "findings": [],
       "evidence": []
@@ -2159,10 +2507,350 @@
     {
       "gate": "PDN.RETURN_PATH",
       "title": "Every declared rail's return carries its current back",
-      "status": "NOT_APPLICABLE",
-      "reason": "manifest does not declare pdn.copper_thickness_mm, pdn.fill_match_fraction, pdn.grid, pdn.rails, pdn.via_resistance_ohm; this board does not opt in to this gate",
-      "measurements": {},
-      "limits": {},
+      "status": "PASS",
+      "reason": "1 return path(s) carry their current back inside the declared budgets; worst solved return drop 0.0001481 V",
+      "measurements": {
+        "returns": 1,
+        "loads_over_budget": 0,
+        "summaries": [
+          {
+            "rail": "sensor_supply",
+            "return_net": "GND",
+            "worst_drop_v": 0.00014812869270005387,
+            "worst_load": "U1.4",
+            "busiest_via": {
+              "layers": [
+                "F.Cu",
+                "B.Cu"
+              ],
+              "row": 37,
+              "column": 15,
+              "current_a": 0.003966665993768891,
+              "resistance_ohm": 0.001534
+            },
+            "iterations": 4487
+          }
+        ],
+        "claims": [
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U1.4"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00014812869270005387
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "return",
+                "requirement_source": "pdn.rails.sensor_supply.return_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 4487,
+                "residual_v": 1.4787975531616038e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.return_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U1.4"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00014812869270005387
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "return",
+                "requirement_source": "pdn.rails.sensor_supply.return_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 4487,
+                "residual_v": 1.4787975531616038e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.return_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U1.4"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 0.00014812869270005387
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "return",
+                "requirement_source": "pdn.rails.sensor_supply.return_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 4487,
+                "residual_v": 1.4787975531616038e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.return_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U2.3"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 2.695732669767281e-06
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "return",
+                "requirement_source": "pdn.rails.sensor_supply.return_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 4487,
+                "residual_v": 1.4787975531616038e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.return_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          },
+          {
+            "kind": "claim",
+            "scope": {
+              "level": "net",
+              "identity": "sensor_supply:U3.3"
+            },
+            "units": "V",
+            "knowledge": "approximate",
+            "quantity": {
+              "value": 2.65528627667e-06
+            },
+            "evidence": {
+              "phenomenon": "power_integrity",
+              "evidence_class": "geometry-derived",
+              "provenance": {
+                "rail": "sensor_supply",
+                "kind": "return",
+                "requirement_source": "pdn.rails.sensor_supply.return_budget_v",
+                "source": "pcbqa.pdn nodal plane solve",
+                "grid": {
+                  "columns": 36,
+                  "rows": 80
+                },
+                "layers": [
+                  "B.Cu",
+                  "F.Cu"
+                ],
+                "solver": "Gauss-Seidel with over-relaxation",
+                "iterations": 4487,
+                "residual_v": 1.4787975531616038e-15
+              },
+              "applicability": {
+                "status": "applicable",
+                "detail": "model applies to this scope"
+              },
+              "assumptions": [
+                "the rail is discretised on a 36x80 mesh; a constriction narrower than one cell is represented by that cell's coverage and not by its shape",
+                "current crowding at pads and vias below the cell size is not resolved; the solve is two-dimensional per layer with plated barrels as explicit links, and a through-hole pad's barrel is charged the same declared resistance a via's is",
+                "the copper is at its declared finished thickness and at the resistivity of annealed copper at 20 C; a warm plane is more resistive than this"
+              ],
+              "omitted_contributions": []
+            },
+            "knowledge_basis": {
+              "kind": "derived",
+              "detail": "a nodal solve over a discretised mesh of the rail's copper"
+            },
+            "requirement": {
+              "name": "drop_within_the_declared_budget",
+              "source": "pdn.rails.sensor_supply.return_budget_v",
+              "assertion": {
+                "op": "<=",
+                "value": 0.01
+              }
+            },
+            "significance": "rail_margin"
+          }
+        ]
+      },
+      "limits": {
+        "pdn.fill_match_fraction": {
+          "id": "pdn.fill_match_fraction",
+          "value": 0.02,
+          "units": "fraction",
+          "kind": "policy",
+          "manifest_key": "pdn.fill_match_fraction",
+          "provenance": "manifest.json#pdn.fill_match_fraction@78012bb03142"
+        },
+        "pdn.copper_thickness_mm": {
+          "id": "pdn.copper_thickness_mm",
+          "value": {
+            "F.Cu": 0.04064,
+            "B.Cu": 0.04064
+          },
+          "units": "mm",
+          "kind": "policy",
+          "manifest_key": "pdn.copper_thickness_mm",
+          "provenance": "manifest.json#pdn.copper_thickness_mm@78012bb03142"
+        },
+        "pdn.via_resistance_ohm": {
+          "id": "pdn.via_resistance_ohm",
+          "value": 0.001534,
+          "units": "ohm",
+          "kind": "policy",
+          "manifest_key": "pdn.via_resistance_ohm",
+          "provenance": "manifest.json#pdn.via_resistance_ohm@78012bb03142"
+        },
+        "pdn.rails.sensor_supply.return_budget_v": {
+          "id": "pdn.rails.sensor_supply.return_budget_v",
+          "value": 0.01,
+          "units": "V",
+          "kind": "policy",
+          "manifest_key": "pdn.rails.sensor_supply.return_budget_v",
+          "provenance": "manifest.json#pdn.rails.sensor_supply.return_budget_v@78012bb03142"
+        }
+      },
       "finding_count": 0,
       "findings": [],
       "evidence": []
@@ -2203,10 +2891,42 @@
     {
       "gate": "NET.REFERENCE_CONTINUITY",
       "title": "Declared routes run over a reference conductor",
-      "status": "NOT_APPLICABLE",
-      "reason": "manifest does not declare reference_continuity.paths, reference_continuity.reference_nets; this board does not opt in to this gate",
-      "measurements": {},
-      "limits": {},
+      "status": "PASS",
+      "reason": "all 2 declared route(s) run over a reference conductor within the length this board accepts",
+      "measurements": {
+        "paths": 2,
+        "over_limit": 0,
+        "routes": [
+          {
+            "path": "connector_to_humidity_sensor_clock",
+            "worst_unreferenced_mm": 20.1979,
+            "max_unreferenced_mm": 21.0
+          },
+          {
+            "path": "connector_to_humidity_sensor_data",
+            "worst_unreferenced_mm": 16.8324,
+            "max_unreferenced_mm": 17.5
+          }
+        ]
+      },
+      "limits": {
+        "reference_continuity.paths.connector_to_humidity_sensor_clock.max_unreferenced_mm": {
+          "id": "reference_continuity.paths.connector_to_humidity_sensor_clock.max_unreferenced_mm",
+          "value": 21.0,
+          "units": "mm",
+          "kind": "policy",
+          "manifest_key": "reference_continuity.paths.connector_to_humidity_sensor_clock.max_unreferenced_mm",
+          "provenance": "manifest.json#reference_continuity.paths.connector_to_humidity_sensor_clock.max_unreferenced_mm@78012bb03142"
+        },
+        "reference_continuity.paths.connector_to_humidity_sensor_data.max_unreferenced_mm": {
+          "id": "reference_continuity.paths.connector_to_humidity_sensor_data.max_unreferenced_mm",
+          "value": 17.5,
+          "units": "mm",
+          "kind": "policy",
+          "manifest_key": "reference_continuity.paths.connector_to_humidity_sensor_data.max_unreferenced_mm",
+          "provenance": "manifest.json#reference_continuity.paths.connector_to_humidity_sensor_data.max_unreferenced_mm@78012bb03142"
+        }
+      },
       "finding_count": 0,
       "findings": [],
       "evidence": []
@@ -2224,20 +2944,17 @@
     }
   ],
   "policy": {
-    "state": "requires-additional-evidence",
+    "state": "fabrication-ready",
     "reasons": [
-      "the current_capacity domain is neither declared nor explicitly declined; silence is not a decision",
-      "the differential_pairs domain is neither declared nor explicitly declined; silence is not a decision",
-      "the power_integrity domain is neither declared nor explicitly declined; silence is not a decision",
-      "the reference_continuity domain is neither declared nor explicitly declined; silence is not a decision",
-      "the thermal domain is neither declared nor explicitly declined; silence is not a decision"
+      "every declared check ran clean; the release still names 5 open item(s) to close outside this toolkit"
     ],
     "domains": {
       "claims": {
         "status": "ran"
       },
       "current_capacity": {
-        "status": "absent"
+        "status": "declined",
+        "reason": "peak board current is 4.0 mA. IPC-2221's curve is fitted over cross-sections down to 1 mil2, and the section 4 mA demands at any rise inside the fitted window is about 0.008 mil2, so required_area_mm2 refuses it as an extrapolation. The requirement the domain would serve, that the board's current stays inside what the connector and host carry, is settled by the validated claim peak_board_supply_current against the connector's 2 A contact rating"
       },
       "derived_documents": {
         "status": "ran"
@@ -2247,7 +2964,8 @@
         "reason": "the parameters this board's claims rest on live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
       },
       "differential_pairs": {
-        "status": "absent"
+        "status": "declined",
+        "reason": "no differential pair is routed on this board; the only bus is single-ended I2C and the remaining nets are the supply and its return"
       },
       "evidence_integrity": {
         "status": "ran"
@@ -2260,10 +2978,10 @@
         "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
       },
       "power_integrity": {
-        "status": "absent"
+        "status": "ran"
       },
       "reference_continuity": {
-        "status": "absent"
+        "status": "ran"
       },
       "requirements": {
         "status": "declined",
@@ -2273,7 +2991,8 @@
         "status": "ran"
       },
       "thermal": {
-        "status": "absent"
+        "status": "declined",
+        "reason": "U2 publishes no junction-to-ambient thermal resistance in its frozen datasheet, so THERMAL.DERATING and THERMAL.JUNCTION refuse it, and declaring thermal.parts without U2 would state a dissipation inventory that omits a real source. The board's own thermal requirement is carried by the validated claim steady_rise_above_ambient_at_the_humidity_sensor, a 2.6 mK upper bound against a 50 mK budget, over a total board dissipation of 25.6 uW"
       },
       "timing": {
         "status": "ran"

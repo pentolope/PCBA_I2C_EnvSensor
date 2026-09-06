@@ -3,12 +3,12 @@
   "board_id": "i2c_env_sensor",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-06T02:11:48.021304+00:00",
-  "source_closure_sha256": "c3f886d0a01cd8a6f23c5ae26394fe1a51d57410c8fb2fa782e89a3cd51396cd",
+  "generated_utc": "2026-09-06T05:36:19.602656+00:00",
+  "source_closure_sha256": "f6a8291f24d8fc3c9f587403feb2bc03b6f613e34a5c24e36b168fccb7b5438d",
   "source_closure_files": 34,
   "source_closure": {
     "<configuration>": "08c6b907f82adf297000ae3d673307fe6b8f30d6f63b1d82c60ee9edb445012d",
-    "<toolkit>": "c17ebb505b5dc98c445b68b9d743047e7b1d59eb+clean",
+    "<toolkit>": "0130082a979a9a27959cc3410fefaa22fe329a51+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -29,7 +29,7 @@
     "fab/selection.json": "9c6e57cf271a009bf5402d49ab3f6761f6f8bd533427a0b47fad7b4bf495f2ac",
     "fp-lib-table": "87bb6bd2a525ddb6afa14db5b1f04999f3cca540652eff62ea28202794770de7",
     "generated/claims.json": "006639fe2603fe946b01ef5b2965f4ee7c637916873ebd0c3d17644b71ee0804",
-    "i2c_env_sensor.kicad_pcb": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
+    "i2c_env_sensor.kicad_pcb": "d1a5a857bbc9aa71a86377cdb46b804895ee77531b7021273def9900ae73e4d3",
     "i2c_env_sensor.kicad_prl": "36be0e1baad5df1026a77af595f2be054f6b48f7a5c1a35af798e3885bcb576d",
     "i2c_env_sensor.kicad_pro": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
     "i2c_env_sensor.kicad_sch": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
@@ -47,7 +47,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "c17ebb505b5dc98c445b68b9d743047e7b1d59eb",
+    "commit": "0130082a979a9a27959cc3410fefaa22fe329a51",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -64,20 +64,20 @@
   "artifacts": {
     "bom.csv": "67a9764146aa580649ff3c58b1c56f70d97075b61c6c1ac87aa4d4be00642aea",
     "cpl.csv": "6f171cfc9910fab4e4451f6308ec8c8dbd883894e8d046c2faacaf22d61fdca6",
-    "gerbers/i2c_env_sensor-B_Cu.gbr": "60171a689097d043cd518339223602bd5e00770ea24c2ec6945a6c99f07ebfa4",
+    "gerbers/i2c_env_sensor-B_Cu.gbr": "1aa409af537ed0c8511cdf2bfe8184c3a5e836884d67ed3c9caea4300d2fc4dc",
     "gerbers/i2c_env_sensor-B_Mask.gbr": "6d546607f9e2ec70bae08aeeb3bc08d8d7f1d979e1d88eb9fc733dcf68abae31",
     "gerbers/i2c_env_sensor-B_Silkscreen.gbr": "10a79e8732eb7a2c62b21637fc18670fb313a1c41607302844e33fe4fd2bc203",
     "gerbers/i2c_env_sensor-Edge_Cuts.gbr": "fdfcbc809bf247f1e3cb8ef68e0d9ccbc1f38506bb609287b12599f4efafaa34",
-    "gerbers/i2c_env_sensor-F_Cu.gbr": "d45fa9cfda62fb37fca7058f1a5a08f7a5aa9f44f4825bd6b11a535679bcb8c4",
+    "gerbers/i2c_env_sensor-F_Cu.gbr": "987f59029a3a03d1696facb9e98f57fe1ae3a0449f157bb29e41123518b95a61",
     "gerbers/i2c_env_sensor-F_Mask.gbr": "a6c9308e52909b322fa6daaf2cc209f88b21e82f3dada100953c9d638638836d",
     "gerbers/i2c_env_sensor-F_Paste.gbr": "4008d980853cb149b418c2d6a72141fb659113694f16c5892c1ce7454a82cfc7",
     "gerbers/i2c_env_sensor-F_Silkscreen.gbr": "10b4a436a8139d10d67b2b08e64d830ffa360f03ed5f33d51912f4904e8d5a2e",
     "gerbers/i2c_env_sensor-NPTH.drl": "c5833351e5d12c9c2a08d7a20060c8f1d9d18699c4d7c5bf833e546601f4710b",
     "gerbers/i2c_env_sensor-PTH.drl": "8ec94c7a995b0925b2380a17aac6f27bf58e5465ede67ba42337f69f5e176419",
     "gerbers/i2c_env_sensor-job.gbrjob": "8a2b8ca4f15170acf1d64ced3589d1c2e89fa8f82d45f2a5403f8cc4c2c5e59c",
-    "i2c_env_sensor-fabrication.zip": "ad22aa3f0f52fbbc3e591b1549580ce85087c8611c782ad0d1e606063c7c69d1",
-    "reports/drc.json": "7a2a7c09a63d54c04d821c6de3cb22a6d216ae5a5b1cd18a399e5e4f1fdccacd",
-    "reports/erc.json": "ed40619051f0e6512a9da700a640b6d21592c35ef01222ba66d09d389769c28f"
+    "i2c_env_sensor-fabrication.zip": "566af512d2dc7e1d92c8e5de70520ff610d4783191cbd7502142e3fbe504b734",
+    "reports/drc.json": "978976e844a3287871108825246946df50c20d052398cee0c340f02cf6704024",
+    "reports/erc.json": "cf9e45364452fa0e1e62c6f8dbf2613279b36688677f98346bf6dea75d85d77e"
   },
   "excluded_layers": []
 }
