@@ -363,7 +363,84 @@
       "LCSC",
       "MPN",
       "Manufacturer"
+    ],
+    "part_number_field": "MPN",
+    "process": {
+      "reflow_passes": 1,
+      "peak_temp_c": 245.0,
+      "sides": [
+        "top"
+      ],
+      "cleaning": "no_clean",
+      "hand_solder": [
+        "J1"
+      ]
+    },
+    "parts": {
+      "0402WGF2701TCE": {
+        "peak_temp_max_c": 260.0,
+        "note": "uniroyal_0402wgf 4.18: resistance to soldering heat, 260 +/- 5 C bath for 10 +/- 1 s"
+      },
+      "0402WGF470KTCE": {
+        "peak_temp_max_c": 260.0,
+        "note": "uniroyal_0402wgf 4.18: resistance to soldering heat, 260 +/- 5 C bath for 10 +/- 1 s"
+      },
+      "CL05B104KO5NNNC": {
+        "peak_temp_max_c": 260.0,
+        "note": "samsung_mlcc_cl_series 6-2-1: reflow soldering temperature 260 +0/-5 C"
+      },
+      "CL10A105KB8NNNC": {
+        "peak_temp_max_c": 260.0,
+        "note": "samsung_mlcc_cl_series 6-2-1: reflow soldering temperature 260 +0/-5 C"
+      },
+      "LPS22HBTR": {
+        "note": "lps22hb_st 6.1: qualified for soldering heat resistance to JEDEC J-STD-020, which the document names without stating a peak"
+      },
+      "OPT3001DNPR": {
+        "peak_temp_max_c": 260.0,
+        "cleaning": "recommended",
+        "note": "opt3001_ti packaging table: Level-3-260C-168 HR. 12.1: solder flux and debris must be cleaned after soldering, for best optical performance"
+      },
+      "S4B-PH-K-S(LF)(SN)": {
+        "process": "hand_solder_only",
+        "note": "s4b_ph_k_s_jst: through-hole side-entry post. The catalogue states no reflow profile, and a through-hole post takes no stencil paste"
+      },
+      "SHT40-AD1B-R3": {
+        "cleaning": "prohibited",
+        "note": "sht40_sensirion 5.1: open-cavity DFN with the humidity opening on the top face, so a wash reaches the sensing element. MSL 1 to IPC/JEDEC J-STD-020, stated without a peak"
+      },
+      "TPD1E10B06DPYR": {
+        "peak_temp_max_c": 260.0,
+        "note": "tpd1e10b06_ti packaging table: Level-1-260C-UNLIM"
+      },
+      "TPD2E2U06DRLR": {
+        "peak_temp_max_c": 260.0,
+        "note": "tpd2e2u06_ti packaging table: Level-1-260C-UNLIM"
+      }
+    },
+    "furniture": {
+      "H1": {},
+      "H2": {},
+      "TP1": {},
+      "TP2": {},
+      "TP3": {},
+      "TP4": {}
+    },
+    "process_waivers": [
+      {
+        "part": "OPT3001DNPR",
+        "requirement": "cleaning",
+        "reason": "the no-wash side wins, because U1 is an open-cavity humidity sensor whose opening faces the stencil side and a wash would reach its sensing element, which is unrecoverable, while U3's statement is a recommendation for best optical performance rather than a functional limit. No-clean flux is used, U3's aperture takes no paste of its own, and the residue that would sit on it is what the open jlcpcb-assembly-preview review inspects",
+        "accepted_by": "pentolope",
+        "review_by": "2027-09-01"
+      }
     ]
+  },
+  "lifecycle": {
+    "snapshot": "fab/lifecycle.json",
+    "part_number_field": "LCSC",
+    "low_stock_floor": 1000,
+    "review_by": "2027-09-01"
   },
   "release_generation": {
     "lock_file_globs": [

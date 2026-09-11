@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.kicad.org/erc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-06T20:39:05",
+  "date": "2026-09-10T20:22:11",
   "ignored_checks": [],
   "included_severities": [
     "error",
     "warning",
     "exclusion"
   ],
-  "kicad_version": "10.0.5",
+  "kicad_version": "10.0.6",
   "sheets": [
     {
       "path": "/",
@@ -18,10 +18,10 @@
   ],
   "source": "i2c_env_sensor.kicad_sch",
   "source_sha256": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
-  "source_closure_sha256": "e343bd97cdf157be01c3a9468869549c4843ddd2697f3c7a5e224545807241c6",
+  "source_closure_sha256": "37aecc0e4ea8d13e326fbaae56dc5759bb67aacb89cd7a2b955388c0b8981cf3",
   "source_closure": {
-    "<configuration>": "08c6b907f82adf297000ae3d673307fe6b8f30d6f63b1d82c60ee9edb445012d",
-    "<toolkit>": "7e75b0c8f0e7fd09376e1b71b223a8b8efdffc08+clean",
+    "<configuration>": "ef90c7feca120b7f0dcc448ca69b6d01f5f9d202de884dc1b6d898d1e0dd6ce8",
+    "<toolkit>": "225152338acde8ebaf2b7272c3a47d6a660342fa+clean",
     "board/floorplan.json": "741dddd0adce95465b32ce9cc3e03a7db69ed173f9ef70f0d91d3e191d0dd87b",
     "components/jlcpcb.json": "f5b5931f6c43c8a408973534dbac4e0de740fceee21644c725ce808437c84e9b",
     "components/parameters.json": "dffaafa189ded88d296c22fed9250dbe0f04e036ea5ad30aee8eb32b4ef3871c",
@@ -36,8 +36,9 @@
     "evidence/datasheets/tpd2e2u06_ti.pdf": "a133b86ea3d3c3d34667339b92d3b5e98d541d10e9775d63e7cdfa153794f4ed",
     "evidence/datasheets/uniroyal_0402wgf.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
     "evidence/index.json": "61c163aaf152b94b3d78030125620f2e42cdedbc36cb9ff4804fb1ab7cc051eb",
-    "fab/dielectric.json": "8d246dedf9fdd8286d25d922dbde7897c476fdc2e6ad1f9c8c07817f33382415",
-    "fab/physical_inputs.json": "e70a05eb65b78f70bae108c450556158be2978f6c1acc1c0266f19971b1e34e9",
+    "fab/dielectric.json": "ead15db47c3742dee05f9bad508a2d2969b745a1e4ec222c05d9da2b4a6776cd",
+    "fab/lifecycle.json": "a888f4f5b75208347ecf4ff125c0902002328975eae726be8c321994750fc2c7",
+    "fab/physical_inputs.json": "a298e3e88b60bdfb8997e7c530e88485e70c8de74c375b717bb3cbf2a0dcbda7",
     "fab/requirements.json": "a1ce772006bc179dd7c7923704fe9d11898baea1fe457387032cc9708bcc8cbf",
     "fab/selection.json": "9c6e57cf271a009bf5402d49ab3f6761f6f8bd533427a0b47fad7b4bf495f2ac",
     "fp-lib-table": "87bb6bd2a525ddb6afa14db5b1f04999f3cca540652eff62ea28202794770de7",
