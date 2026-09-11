@@ -2,6 +2,16 @@
   "fabricator": "JLCPCB",
   "kind": "part-lifecycle-snapshot",
   "parts": {
+    "C138017": {
+      "raw_file": "raw/C138017.json",
+      "raw_sha256": "56bc32fbde905bd9c3e5e901776f2e5034d77fd88b8bd897d996865168e4cf1e",
+      "retrieved_utc": "2026-09-11T02:40:02+00:00",
+      "status": "active",
+      "status_basis": "the Digi-Key catalogue record 726556 for RC0402FR-072K7L states Part Status: Active - the distributor field that carries YAGEO's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/yageo/RC0402FR-072K7L/726556",
+      "stock": 55300,
+      "stock_field": "result.szlcsc.stock"
+    },
     "C1525": {
       "raw_file": "raw/C1525.json",
       "raw_sha256": "54638afda4d63517b8c7c738f8bb2ccf3af6f776b1009e35b56c8e3276abc2f1",
@@ -40,26 +50,6 @@
       "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SLLSEG9C (tpd2e2u06_ti) lists the ordering part number TPD2E2U06DRLR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
       "status_source_url": "https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf"
     },
-    "C25121": {
-      "raw_file": "raw/C25121.json",
-      "raw_sha256": "af802e5078d8a946d035c3ebaf5daca1ceb062967cc19c4800287ba65fd52408",
-      "retrieved_utc": "2026-09-11T01:58:01+00:00",
-      "status": "unestablished",
-      "status_basis": "looked and could not establish it: UNI-ROYAL publishes no lifecycle designation for 0402WGF470KTCE. Its own site (https://www.uni-royal.cn/en/) carries a product catalogue with no status field; the part sells through LCSC/JLCPCB, whose pages (https://jlcpcb.com/partdetail/C25121 and https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_4-7R-4R70-1_C25121.html) state stock and price and no status; and no distributor carrying a Part Status field lists this part number. Checked 2026-09-11. Every other fitted part on this board has an established record",
-      "status_source_url": "https://jlcpcb.com/partdetail/C25121",
-      "stock": 215900,
-      "stock_field": "result.szlcsc.stock"
-    },
-    "C25885": {
-      "raw_file": "raw/C25885.json",
-      "raw_sha256": "e1fb24f44470428e0071956056142c16632e282362d853e46c82b92d1b9d18ee",
-      "retrieved_utc": "2026-09-11T01:58:01+00:00",
-      "status": "unestablished",
-      "status_basis": "looked and could not establish it: UNI-ROYAL publishes no lifecycle designation for 0402WGF2701TCE. Its own site (https://www.uni-royal.cn/en/) carries a product catalogue with no status field; the part sells through LCSC/JLCPCB, whose pages (https://jlcpcb.com/partdetail/C25885 and https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_2-7KR-2701-1_C25885.html) state stock and price and no status; and no distributor carrying a Part Status field lists this part number. Checked 2026-09-11. Every other fitted part on this board has an established record",
-      "status_source_url": "https://jlcpcb.com/partdetail/C25885",
-      "stock": 310200,
-      "stock_field": "result.szlcsc.stock"
-    },
     "C2848306": {
       "raw_file": "raw/C2848306.json",
       "raw_sha256": "814114e7d77b2078ba57a613fba1b1490f18b1a9573274c1b9459690b38f04ed",
@@ -67,6 +57,16 @@
       "status": "active",
       "status_basis": "the Digi-Key catalogue record 14322709 for SHT40-AD1B-R3 states Part Status: Active - the distributor field that carries Sensirion's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
       "status_source_url": "https://www.digikey.com/en/products/detail/sensirion-ag/SHT40-AD1B-R3/14322709"
+    },
+    "C482197": {
+      "raw_file": "raw/C482197.json",
+      "raw_sha256": "8e50471a2973c1f0af56c043d82ba3264e43dcbe744832fac734c2ce9158bbb7",
+      "retrieved_utc": "2026-09-11T02:40:02+00:00",
+      "status": "active",
+      "status_basis": "the Digi-Key catalogue record 1961499 for CRCW04024R70FKED states Part Status: Active - the distributor field that carries Vishay Dale's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW04024R70FKED/1961499",
+      "stock": 0,
+      "stock_field": "result.szlcsc.stock"
     },
     "C48260": {
       "raw_file": "raw/C48260.json",

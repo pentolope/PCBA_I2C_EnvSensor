@@ -1,6 +1,6 @@
 {
   "accepted_attempt": 1,
-  "adopted_sha256": "d1a5a857bbc9aa71a86377cdb46b804895ee77531b7021273def9900ae73e4d3",
+  "adopted_sha256": "d7658dab64f47e528c34945b8a394ec53374f7d62a02bd80de2b453c8d2bc634",
   "attempts": [
     {
       "accepted": true,
@@ -10,9 +10,9 @@
           "stderr": "attempt-01/router-stderr.txt",
           "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
           "stdout": "attempt-01/router-stdout.txt",
-          "stdout_sha256": "2726c38b157c7b801edf525f58634158d8faf435437d3ed25d5fdca50977da10",
+          "stdout_sha256": "4338ed33bc7a32483273760fa828e19d3f082290b9175f29486ce6266a69431c",
           "summary": "attempt-01/summary.json",
-          "summary_sha256": "5b8c83008ed4b6d4381bbeecb67b5b96bbd40277826a6e54dc5b910206ffc06d"
+          "summary_sha256": "8c8e57344b9e4a08dcf66540117381974d78d48686d2bf64fdfceb42955fae0f"
         },
         "exit": 0,
         "expected_project_writes": [
@@ -26,40 +26,13 @@
           },
           {
             "changed_paths": [
-              "board.design_settings.rule_severities.annular_width",
-              "board.design_settings.rule_severities.courtyards_overlap",
-              "board.design_settings.rule_severities.lib_footprint_issues",
-              "board.design_settings.rule_severities.lib_footprint_mismatch",
-              "board.design_settings.rule_severities.malformed_courtyard",
-              "board.design_settings.rule_severities.npth_inside_courtyard",
-              "board.design_settings.rule_severities.pth_inside_courtyard",
-              "board.design_settings.rule_severities.solder_mask_bridge",
-              "board.design_settings.rule_severities.starved_thermal",
               "board.design_settings.rules.min_hole_clearance",
               "board.design_settings.rules.min_via_drill",
               "kicad_routing_tools",
-              "net_settings.classes",
               "net_settings.meta"
             ],
             "finding": "router rewrote the output project",
             "meaning": "expected of the pinned router: floors lowered to routed values, severities gagged, its own namespace added. The authoritative project is out of reach and the candidate is judged beside the tree's own project"
-          },
-          {
-            "finding": "unprotected source copper reworked",
-            "items": [
-              {
-                "candidate_count": 0,
-                "item": "[\"track\", \"3V3\", 0, 250000, [[99000000, 88400000], [99000000, 88400000]]]",
-                "source_count": 1
-              },
-              {
-                "candidate_count": 0,
-                "item": "[\"track\", \"SDA\", 0, 250000, [[103900000, 80200000], [103900000, 80200000]]]",
-                "source_count": 1
-              }
-            ],
-            "meaning": "in-scope copper the search legitimately replaced; reported per item, judged by the gates",
-            "total": 2
           }
         ],
         "locked_protected_items": 37,
@@ -71,18 +44,28 @@
           "clearance_mm": 0.2,
           "ordering": "mps"
         },
-        "runtime_s": 0.6,
+        "runtime_s": 0.7,
         "verdict": {
           "accepted": true,
           "counters": {
             "errors": 0,
             "excluded": 0,
-            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053510Z-05e18cef/attempt-01/gatework/candidate-drc.json",
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/gatework/candidate-drc.json",
             "schematic_parity": 0,
             "unconnected": 0,
             "warnings": 0
           },
           "gates": [
+            {
+              "gate": "ASM.PROCESS",
+              "reason": "all 10 placed parts have records compatible with the declared process; 1 conflict(s) waived, owned and expiring",
+              "status": "PASS"
+            },
+            {
+              "gate": "BOM.LIFECYCLE",
+              "reason": "all 10 fitted parts have reviewed lifecycle records; stock covers 0 board(s)",
+              "status": "PASS"
+            },
             {
               "gate": "CLAIM.MATRIX",
               "reason": "21 claim(s) validated; every recorded verdict and the summary are exactly what the claims' own knowledge supports (18 PASS, 3 UNKNOWN)",
@@ -104,8 +87,28 @@
               "status": "PASS"
             },
             {
+              "gate": "DFA.COURTYARD_SPACING",
+              "reason": "manifest does not declare assembly.courtyard_spacing; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "DFA.HEIGHT",
+              "reason": "manifest does not declare assembly.height_regions; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "DFA.MATING_KEEPOUT",
+              "reason": "no connector contract declares a mating_keepout envelope",
+              "status": "NOT_APPLICABLE"
+            },
+            {
+              "gate": "DFA.PASTE",
+              "reason": "manifest does not declare assembly.paste; this board does not opt in to this gate",
+              "status": "NOT_APPLICABLE"
+            },
+            {
               "gate": "DRC.AUTHORITATIVE",
-              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source d1a5a857bbc9",
+              "reason": "DRC clean: exit 0, schema https://schemas.kicad.org/drc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 7 required options used, source d7658dab64f4",
               "status": "PASS"
             },
             {
@@ -120,7 +123,7 @@
             },
             {
               "gate": "ERC.AUTHORITATIVE",
-              "reason": "ERC clean: exit 0, schema https://schemas.kicad.org/erc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 3 required options used, source 41ea2108eb78",
+              "reason": "ERC clean: exit 0, schema https://schemas.kicad.org/erc.v1.json validated, no ignored checks, severities ['error', 'warning', 'exclusion'], all 3 required options used, source e43d66b8e8c0",
               "status": "PASS"
             },
             {
@@ -150,7 +153,7 @@
             },
             {
               "gate": "PROV.EVIDENCE_INTEGRITY",
-              "reason": "10 frozen document(s) verified against their recorded digests inside the source closure; 30 citation(s) all resolve",
+              "reason": "11 frozen document(s) verified against their recorded digests inside the source closure; 30 citation(s) all resolve",
               "status": "PASS"
             },
             {
@@ -308,16 +311,16 @@
           "problems": []
         }
       },
-      "source_sha256": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
+      "source_sha256": "d7658dab64f47e528c34945b8a394ec53374f7d62a02bd80de2b453c8d2bc634",
       "stages": [
         {
           "context": {
             "argv": [
               "/usr/bin/python3",
               "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053510Z-05e18cef/attempt-01/i2c_env_sensor.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/i2c_env_sensor.kicad_pcb",
               "--output",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053510Z-05e18cef/attempt-01/routed.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/routed.kicad_pcb",
               "--nets",
               "3V3",
               "3V3_IN",
@@ -338,19 +341,19 @@
               "--same-net-pad-clearance",
               "0.3",
               "--fab-overrides",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053510Z-05e18cef/attempt-01/fab-floor.txt",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/fab-floor.txt",
               "--json-out",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260906T053510Z-05e18cef/attempt-01/summary.json",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/summary.json",
               "--board-edge-clearance",
               "0.3",
               "--hole-to-hole-clearance",
               "0.3"
             ],
             "exit": 0,
-            "runtime_s": 0.6
+            "runtime_s": 0.7
           },
           "produced_by": "router",
-          "sha256": "8057f427cd79435b96f5ac7ef11c814afa5adc36f01d368a39a409f130c9875a",
+          "sha256": "46f303e7898b5b37a8af4a275b00dcf644c300c47264729195645194c3fd381e",
           "stage": "route"
         },
         {
@@ -359,7 +362,7 @@
             "reserved_restored": 29
           },
           "produced_by": "transform",
-          "sha256": "4ec12367660cba175fcfb112e0ecd4453b0943ef05f0764dbe305d053f0095dd",
+          "sha256": "4b818f3614c561532ea5111037c8be2cf88dcf807e924c6d320a5ff076517160",
           "stage": "restore_reserved",
           "transform": "restore_reserved"
         },
@@ -368,13 +371,13 @@
             "unlocked": 8
           },
           "produced_by": "transform",
-          "sha256": "40cc4064227549e7c5b0c66df81392df60575209d754d160b3d0a638ef694ba2",
+          "sha256": "d1c4efd57633c4e9d4be8eb3b5e0993e637ca95f7d20e9fed018e18d306b5c83",
           "stage": "unlock",
           "transform": "unlock"
         },
         {
           "effects": {
-            "collapsed_tracks_removed": 2,
+            "collapsed_tracks_removed": 0,
             "dangling_ends_trimmed": 0,
             "dangling_tracks_removed": 0,
             "duplicate_segments_removed": 0,
@@ -388,7 +391,7 @@
             "zones_refilled": 2
           },
           "produced_by": "transform",
-          "sha256": "4f949f439c54d6792c770661bf60f8a6c39b3e1aa4a346535c72caea0a954288",
+          "sha256": "58c4b10a46b669da876fbbace2639f5a09e299e5f3ed5d0eecc2658a81d3fd35",
           "stage": "normalize",
           "transform": "normalize"
         },
@@ -399,7 +402,7 @@
             "uuids_rederived": 535
           },
           "produced_by": "transform",
-          "sha256": "d1a5a857bbc9aa71a86377cdb46b804895ee77531b7021273def9900ae73e4d3",
+          "sha256": "d7658dab64f47e528c34945b8a394ec53374f7d62a02bd80de2b453c8d2bc634",
           "stage": "canonicalize",
           "transform": "canonicalize"
         }
@@ -433,9 +436,11 @@
         "evidence/datasheets/sht40_sensirion.pdf": "1e488c7fdea67cd4f6ebfdc068a2c8a3da61a914abc56a3514cdc8a4838f5065",
         "evidence/datasheets/tpd1e10b06_ti.pdf": "6ffe72cb5f5e607fcafd05eef9809632402241eb44cd859a3652f43a35323da9",
         "evidence/datasheets/tpd2e2u06_ti.pdf": "a133b86ea3d3c3d34667339b92d3b5e98d541d10e9775d63e7cdfa153794f4ed",
-        "evidence/datasheets/uniroyal_0402wgf.pdf": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
-        "evidence/index.json": "61c163aaf152b94b3d78030125620f2e42cdedbc36cb9ff4804fb1ab7cc051eb",
-        "fab/physical_inputs.json": "e70a05eb65b78f70bae108c450556158be2978f6c1acc1c0266f19971b1e34e9",
+        "evidence/datasheets/vishay_crcw_e3.pdf": "6e5917a701b76d7ebba2af411b8057db9a3a565589b2ad92588991b0e909586d",
+        "evidence/datasheets/yageo_rc_series.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+        "evidence/index.json": "e304e21784bf08cc9c707f8528b7647af1cbea0cd54f26a3d316b74b2134042a",
+        "fab/lifecycle.json": "4f956221daa6d04e995f9313b5797bb9c088e104e8f8920ac863e1d9d2c569e9",
+        "fab/physical_inputs.json": "a298e3e88b60bdfb8997e7c530e88485e70c8de74c375b717bb3cbf2a0dcbda7",
         "generated/claims.json": "006639fe2603fe946b01ef5b2965f4ee7c637916873ebd0c3d17644b71ee0804",
         "sim/post_layout_rail_mating.json": "ebc152cbf3748253c4905108d18145983c5860bc0c12d2214402363b9ddad749",
         "sim/pre_layout_bus_rise_time.json": "e9360a12c73eb5d5b0bf9ac57ea81fdb19eb6d9ed644dcfa80c20906fce176c8",
@@ -444,26 +449,27 @@
       },
       "design_inputs": {
         "fp-lib-table": "87bb6bd2a525ddb6afa14db5b1f04999f3cca540652eff62ea28202794770de7",
-        "i2c_env_sensor.kicad_pcb": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9",
+        "i2c_env_sensor.kicad_pcb": "d7658dab64f47e528c34945b8a394ec53374f7d62a02bd80de2b453c8d2bc634",
         "i2c_env_sensor.kicad_prl": "36be0e1baad5df1026a77af595f2be054f6b48f7a5c1a35af798e3885bcb576d",
         "i2c_env_sensor.kicad_pro": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
-        "i2c_env_sensor.kicad_sch": "41ea2108eb7896cf41e6bad67ea6ca3b90a29d504c1e0235d71083d358a4ec7c",
+        "i2c_env_sensor.kicad_sch": "e43d66b8e8c0099a5c850ee93714d05b13041dc5d2fd38242f8599e20fd3af0a",
         "library/EnvSensorPod.kicad_sym": "52606ca35708d833c5f429015c9cd8a39daece49a636819577aca9fb84975d52",
         "library/EnvSensorPod.pretty/Texas_USON-6-1EP_2x2mm_P0.65mm_EP0.65x1.35mm.kicad_mod": "27695ec1b7cec7df47c83f003c2b8cae4d4fe1cd5516bac4e18817195a3f7c72",
         "library/EnvSensorPod.pretty/Texas_X1SON-2_1.1x0.7mm_P0.7mm.kicad_mod": "fd08840b7228cf44b4968dbfdb42f9cfa2f6cd5e853e5dcc4dfbc9241af55799",
         "sym-lib-table": "f3196a70f37920683e7f932db684733bcf91d62098a99d5294e8092ff5f42228"
       },
-      "design_inputs_sha256": "94c0931a3148c37c67a5208a18910d467971ea00337724a3f148acec542a6fb9",
+      "design_inputs_sha256": "90331f8564e2c6840bb046efc055972bce8912d4d4c90b6fc3ece67cdc49fc99",
       "dru_sha256": null,
-      "manifest_sans_transforms_sha256": "ec0856a25e45c6354c693831f8d568f0cabeb79be387a8b15243175a5439a025",
-      "manifest_sha256": "78012bb03142e3e448d5ef1e6ecc3a42c8adf812badebb66a9efbfa5c8594902",
-      "pcbnew_version": "10.0.5-10.0.5~ubuntu24.04.1",
+      "manifest_sans_transforms_sha256": "be8cf6f5d4d56972e41a7368a742640566fb30b41d487b38093d6f1d30deae3e",
+      "manifest_sha256": "fbf1afc22024c01f0a3e1202168045cb93df905601f62fdc2e57e0a03a1d3438",
+      "pcbnew_version": "10.0.6-10.0.6~ubuntu24.04.1",
       "project_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
       "python_version": "3.12.3"
     },
     "environment": {
       "KICAD_FINALIZE_RIP": "1",
       "KICAD_PLANE_FINALIZE": "1",
+      "KICAD_PLANE_FRAGILITY_COST": "0",
       "KICAD_RIP_PREEXISTING": "0"
     },
     "environment_cleared": [
@@ -567,17 +573,17 @@
     "router": {
       "git": {
         "dirty": false,
-        "sha": "b3f960beb38800ecd080ab575a8bb4dd1a8f8cb0",
+        "sha": "58430d491873c561e0996df84918ec90800559f9",
         "upstream_base": null
       },
       "grid_router": {
         "kind": "native-binary",
         "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/rust_router/grid_router.so",
-        "sha256": "bac20f431312bdf6ab2e585295cb320e2b634a9f28a0c6286b6ae170a51b3cf2",
-        "version": "0.21.4"
+        "sha256": "a2609c0f3d37ab886f643663327d03669c0ba374d4d2196752caa6cafd5442d3",
+        "version": "0.22.0"
       },
       "kicad_cli": "/usr/bin/kicad-cli",
-      "kicad_version": "10.0.5",
+      "kicad_version": "10.0.6",
       "kind": "krt-provenance",
       "meaning": "the routing implementation identity for this run; a different sha, dirty state or native hash is a different router, and downstream routing-derived artifacts must go stale with it",
       "python": {
@@ -585,7 +591,7 @@
         "version": "3.12.3"
       },
       "source_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools",
-      "version": "0.21.5"
+      "version": "0.22.0"
     },
     "splice_nets": [
       "GND",
@@ -596,5 +602,5 @@
     ]
   },
   "kind": "routing-run",
-  "source_sha256": "797a2fdb30abb233e924f4fe9c11fa0d3f103b3d79a7ef1e734e34896fffe1d9"
+  "source_sha256": "d7658dab64f47e528c34945b8a394ec53374f7d62a02bd80de2b453c8d2bc634"
 }

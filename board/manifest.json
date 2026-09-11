@@ -377,14 +377,6 @@
       ]
     },
     "parts": {
-      "0402WGF2701TCE": {
-        "peak_temp_max_c": 260.0,
-        "note": "uniroyal_0402wgf 4.18: resistance to soldering heat, 260 +/- 5 C bath for 10 +/- 1 s"
-      },
-      "0402WGF470KTCE": {
-        "peak_temp_max_c": 260.0,
-        "note": "uniroyal_0402wgf 4.18: resistance to soldering heat, 260 +/- 5 C bath for 10 +/- 1 s"
-      },
       "CL05B104KO5NNNC": {
         "peak_temp_max_c": 260.0,
         "note": "samsung_mlcc_cl_series 6-2-1: reflow soldering temperature 260 +0/-5 C"
@@ -393,6 +385,10 @@
         "peak_temp_max_c": 260.0,
         "note": "samsung_mlcc_cl_series 6-2-1: reflow soldering temperature 260 +0/-5 C"
       },
+      "CRCW04024R70FKED": {
+        "peak_temp_max_c": 260.0,
+        "note": "vishay_crcw_e3 table 11.2: resistance to soldering heat, solder bath 260 +/- 5 C for 10 +/- 1 s"
+      },
       "LPS22HBTR": {
         "note": "lps22hb_st 6.1: qualified for soldering heat resistance to JEDEC J-STD-020, which the document names without stating a peak"
       },
@@ -400,6 +396,10 @@
         "peak_temp_max_c": 260.0,
         "cleaning": "recommended",
         "note": "opt3001_ti packaging table: Level-3-260C-168 HR. 12.1: solder flux and debris must be cleaned after soldering, for best optical performance"
+      },
+      "RC0402FR-072K7L": {
+        "peak_temp_max_c": 260.0,
+        "note": "yageo_rc_series: resistance to soldering heat, MIL-STD-202 method 210 condition B, lead-free solder 260 +/- 5 C for 10 +/- 1 s"
       },
       "S4B-PH-K-S(LF)(SN)": {
         "process": "hand_solder_only",
@@ -439,7 +439,6 @@
   "lifecycle": {
     "snapshot": "fab/lifecycle.json",
     "part_number_field": "LCSC",
-    "low_stock_floor": 1000,
     "review_by": "2027-09-01"
   },
   "release_generation": {

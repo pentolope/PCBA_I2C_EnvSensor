@@ -69,14 +69,22 @@ SOURCES = {
         "document_id": "NXP UM10204 Rev. 7.0, 1 October 2021",
         "applies_to": ["SHT40-AD1B-R3", "LPS22HBTR", "OPT3001DNPR"],
     },
-    "uniroyal_0402wgf": {
-        "file": "datasheets/uniroyal_0402wgf.pdf",
-        "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/"
-               "2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF2201TCE_"
-               "C25879.pdf",
-        "retrieved": "2026-09-01",
-        "document_id": "Uniroyal thick film chip resistor specification",
-        "applies_to": ["0402WGF2701TCE", "0402WGF470KTCE"],
+    "yageo_rc_series": {
+        "file": "datasheets/yageo_rc_series.pdf",
+        "url": "https://yageogroup.com/content/datasheet/asset/file/"
+               "PYU-RC_GROUP_51_ROHS_L",
+        "retrieved": "2026-09-11",
+        "document_id": "YAGEO RC_L series product specification, "
+                       "November 14, 2025 V.14",
+        "applies_to": ["RC0402FR-072K7L"],
+    },
+    "vishay_crcw_e3": {
+        "file": "datasheets/vishay_crcw_e3.pdf",
+        "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+        "retrieved": "2026-09-11",
+        "document_id": "Vishay CRCW e3 standard thick film chip resistors, "
+                       "document number 20035, revision 14-Apr-2026",
+        "applies_to": ["CRCW04024R70FKED"],
     },
     "samsung_mlcc_cl_series": {
         "file": "datasheets/samsung_mlcc_cl_series.pdf",

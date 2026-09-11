@@ -2843,7 +2843,7 @@
 		"Resistor_SMD:R_0402_1005Metric"
 		(locked yes)
 		(layer "F.Cu")
-		(uuid "a87dd34e-e8e3-53b5-bcba-280dd67d902e")
+		(uuid "54ea6497-82df-5e0e-9414-e1cda714595b")
 		(at 100.6 83.5 90)
 		(descr
 			"Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)"
@@ -2917,11 +2917,11 @@
 		)
 		(property
 			"MPN"
-			"0402WGF2701TCE"
+			"RC0402FR-072K7L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "743f84c9-76a7-5dbe-99b9-f86a0359c9e6")
+			(uuid "23f43182-3de0-5dd8-a0a2-af53d0cddd70")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2931,11 +2931,11 @@
 		)
 		(property
 			"LCSC"
-			"C25885"
+			"C138017"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9f9aaf0c-dd51-51de-a246-52e3e4719c4b")
+			(uuid "a796c7aa-1d01-51de-8aca-86cb7f7e6145")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2945,11 +2945,11 @@
 		)
 		(property
 			"Manufacturer"
-			"UNI-ROYAL(Uniroyal Elec)"
+			"YAGEO"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "25b17c1e-e30b-571e-9ab6-f6f4bd44a17e")
+			(uuid "04206c18-e124-5366-918d-1350bc1dfc26")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3054,7 +3054,7 @@
 		"Resistor_SMD:R_0402_1005Metric"
 		(locked yes)
 		(layer "F.Cu")
-		(uuid "2d7ffa8c-a240-5dd2-82c2-0e7396ca9ab9")
+		(uuid "ad9adcb7-00ad-5b10-adb4-2aff708f5771")
 		(at 102 83.5 90)
 		(descr
 			"Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)"
@@ -3128,11 +3128,11 @@
 		)
 		(property
 			"MPN"
-			"0402WGF2701TCE"
+			"RC0402FR-072K7L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "178896df-093a-5d0f-90eb-a3b9a2c2a375")
+			(uuid "718294d9-b833-58eb-b2d2-2018ec284158")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3142,11 +3142,11 @@
 		)
 		(property
 			"LCSC"
-			"C25885"
+			"C138017"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "51a58b0e-c699-51ff-a30e-d5747c23f3d3")
+			(uuid "682c3b91-f94c-53ec-8b58-923bd25cfb9b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3156,11 +3156,11 @@
 		)
 		(property
 			"Manufacturer"
-			"UNI-ROYAL(Uniroyal Elec)"
+			"YAGEO"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9cd00a14-65de-5a68-b407-616f1a65b3c2")
+			(uuid "91ec0ef4-8ed8-5db3-8a7b-b5250a378be5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3265,7 +3265,7 @@
 		"Resistor_SMD:R_0402_1005Metric"
 		(locked yes)
 		(layer "F.Cu")
-		(uuid "0be2ad92-8e4a-55c5-be15-f954f3bd1668")
+		(uuid "f13c8270-1fd5-5fa6-b445-68ddfdd60509")
 		(at 99 90.6 90)
 		(descr
 			"Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)"
@@ -3339,11 +3339,11 @@
 		)
 		(property
 			"MPN"
-			"0402WGF470KTCE"
+			"CRCW04024R70FKED"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d830850b-7dc9-59e9-83e1-497290a70a53")
+			(uuid "ba13839c-79f5-5176-bb4a-ebc932fe3c27")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3353,11 +3353,11 @@
 		)
 		(property
 			"LCSC"
-			"C25121"
+			"C482197"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a7ad3dc5-a3ae-5e2c-8e8b-7bf5a867a474")
+			(uuid "9a19c9e1-da97-5f09-8f3d-8cd362d54284")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3367,11 +3367,11 @@
 		)
 		(property
 			"Manufacturer"
-			"UNI-ROYAL(Uniroyal Elec)"
+			"Vishay Intertech"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2ed4ef16-d269-50b8-a44e-0a450872514f")
+			(uuid "edb23a21-137d-5284-b98c-99a27638c6d9")
 			(effects
 				(font
 					(size 1.27 1.27)

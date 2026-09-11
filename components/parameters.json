@@ -60,124 +60,6 @@
     }
   },
   "parts": {
-    "0402WGF2701TCE": {
-      "ground_pins": [],
-      "kind": "resistor",
-      "land_pattern": {
-        "document": "uniroyal_0402wgf",
-        "recommended": null,
-        "terminal_basis": "direct",
-        "terminals": null
-      },
-      "package": {
-        "body_mm": {
-          "basis": "direct",
-          "document": "uniroyal_0402wgf",
-          "value": [
-            1.0,
-            0.5
-          ]
-        },
-        "height_max_mm": {
-          "basis": "direct",
-          "document": "uniroyal_0402wgf",
-          "value": 0.45
-        }
-      },
-      "power_rating_w": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.0625
-      },
-      "resistance_ohms": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 2700.0
-      },
-      "resistance_tolerance": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.01
-      },
-      "supply_current_max_a": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.0
-      },
-      "supply_pins": [],
-      "temperature_range_c": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": [
-          -55.0,
-          155.0
-        ]
-      },
-      "working_voltage_max_v": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 50.0
-      }
-    },
-    "0402WGF470KTCE": {
-      "ground_pins": [],
-      "kind": "resistor",
-      "land_pattern": {
-        "document": "uniroyal_0402wgf",
-        "recommended": null,
-        "terminal_basis": "direct",
-        "terminals": null
-      },
-      "package": {
-        "body_mm": {
-          "basis": "direct",
-          "document": "uniroyal_0402wgf",
-          "value": [
-            1.0,
-            0.5
-          ]
-        },
-        "height_max_mm": {
-          "basis": "direct",
-          "document": "uniroyal_0402wgf",
-          "value": 0.45
-        }
-      },
-      "power_rating_w": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.0625
-      },
-      "resistance_ohms": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 4.7
-      },
-      "resistance_tolerance": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.01
-      },
-      "supply_current_max_a": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 0.0
-      },
-      "supply_pins": [],
-      "temperature_range_c": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": [
-          -55.0,
-          155.0
-        ]
-      },
-      "working_voltage_max_v": {
-        "basis": "direct",
-        "document": "uniroyal_0402wgf",
-        "value": 50.0
-      }
-    },
     "CL05B104KO5NNNC": {
       "capacitance_f": {
         "basis": "direct",
@@ -279,6 +161,65 @@
         "value": 0.0
       },
       "supply_pins": []
+    },
+    "CRCW04024R70FKED": {
+      "ground_pins": [],
+      "kind": "resistor",
+      "land_pattern": {
+        "document": "vishay_crcw_e3",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "vishay_crcw_e3",
+          "value": [
+            1.0,
+            0.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "vishay_crcw_e3",
+          "value": 0.4
+        }
+      },
+      "power_rating_w": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": 0.063
+      },
+      "resistance_ohms": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": 4.7
+      },
+      "resistance_tolerance": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": 0.01
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": 0.0
+      },
+      "supply_pins": [],
+      "temperature_range_c": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": [
+          -55.0,
+          155.0
+        ]
+      },
+      "working_voltage_max_v": {
+        "basis": "direct",
+        "document": "vishay_crcw_e3",
+        "value": 50.0
+      }
     },
     "LPS22HBTR": {
       "copper_keepout_under_body": {
@@ -880,6 +821,65 @@
           "document": "opt3001_ti",
           "value": 71.2
         }
+      }
+    },
+    "RC0402FR-072K7L": {
+      "ground_pins": [],
+      "kind": "resistor",
+      "land_pattern": {
+        "document": "yageo_rc_series",
+        "recommended": null,
+        "terminal_basis": "direct",
+        "terminals": null
+      },
+      "package": {
+        "body_mm": {
+          "basis": "direct",
+          "document": "yageo_rc_series",
+          "value": [
+            1.0,
+            0.5
+          ]
+        },
+        "height_max_mm": {
+          "basis": "direct",
+          "document": "yageo_rc_series",
+          "value": 0.4
+        }
+      },
+      "power_rating_w": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": 0.0625
+      },
+      "resistance_ohms": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": 2700.0
+      },
+      "resistance_tolerance": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": 0.01
+      },
+      "supply_current_max_a": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": 0.0
+      },
+      "supply_pins": [],
+      "temperature_range_c": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": [
+          -55.0,
+          155.0
+        ]
+      },
+      "working_voltage_max_v": {
+        "basis": "direct",
+        "document": "yageo_rc_series",
+        "value": 50.0
       }
     },
     "S4B-PH-K-S(LF)(SN)": {

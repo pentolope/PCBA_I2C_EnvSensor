@@ -1,6 +1,45 @@
 {
   "currency": "USD",
   "parts": {
+    "C138017": {
+      "library_type": "expand",
+      "manufacturer": "YAGEO",
+      "mpn": "RC0402FR-072K7L",
+      "package": "0402",
+      "price_breaks": [
+        {
+          "max_qty": 999,
+          "min_qty": 1,
+          "unit_usd": 0.0041
+        },
+        {
+          "max_qty": 2999,
+          "min_qty": 1000,
+          "unit_usd": 0.0033
+        },
+        {
+          "max_qty": 9999,
+          "min_qty": 3000,
+          "unit_usd": 0.0029
+        },
+        {
+          "max_qty": 49999,
+          "min_qty": 10000,
+          "unit_usd": 0.0028
+        },
+        {
+          "max_qty": 50199,
+          "min_qty": 50000,
+          "unit_usd": 0.0025
+        },
+        {
+          "max_qty": null,
+          "min_qty": 50200,
+          "unit_usd": 0.0025
+        }
+      ],
+      "stock": 404034
+    },
     "C1525": {
       "library_type": "base",
       "manufacturer": "Samsung Electro-Mechanics",
@@ -10,35 +49,35 @@
         {
           "max_qty": 999,
           "min_qty": 1,
-          "unit_usd": 0.0051
+          "unit_usd": 0.0045
         },
         {
           "max_qty": 2999,
           "min_qty": 1000,
-          "unit_usd": 0.0038
+          "unit_usd": 0.0034
         },
         {
           "max_qty": 9999,
           "min_qty": 3000,
-          "unit_usd": 0.0033
+          "unit_usd": 0.0029
         },
         {
           "max_qty": 49999,
           "min_qty": 10000,
-          "unit_usd": 0.0029
+          "unit_usd": 0.0025
         },
         {
           "max_qty": 99999,
           "min_qty": 50000,
-          "unit_usd": 0.0027
+          "unit_usd": 0.0024
         },
         {
           "max_qty": null,
           "min_qty": 100000,
-          "unit_usd": 0.0026
+          "unit_usd": 0.0023
         }
       ],
-      "stock": 35671959
+      "stock": 34570885
     },
     "C157926": {
       "library_type": "expand",
@@ -49,35 +88,35 @@
         {
           "max_qty": 99,
           "min_qty": 1,
-          "unit_usd": 0.0683
+          "unit_usd": 0.0741
         },
         {
           "max_qty": 499,
           "min_qty": 100,
-          "unit_usd": 0.0575
+          "unit_usd": 0.0623
         },
         {
           "max_qty": 999,
           "min_qty": 500,
-          "unit_usd": 0.0505
+          "unit_usd": 0.0549
         },
         {
           "max_qty": 4999,
           "min_qty": 1000,
-          "unit_usd": 0.0464
+          "unit_usd": 0.0503
         },
         {
           "max_qty": 9999,
           "min_qty": 5000,
-          "unit_usd": 0.0432
+          "unit_usd": 0.0469
         },
         {
           "max_qty": null,
           "min_qty": 10000,
-          "unit_usd": 0.0416
+          "unit_usd": 0.0451
         }
       ],
-      "stock": 7845
+      "stock": 24436
     },
     "C15849": {
       "library_type": "base",
@@ -88,35 +127,35 @@
         {
           "max_qty": 499,
           "min_qty": 1,
-          "unit_usd": 0.0058
+          "unit_usd": 0.0175
         },
         {
           "max_qty": 1499,
           "min_qty": 500,
-          "unit_usd": 0.0046
+          "unit_usd": 0.0137
         },
         {
           "max_qty": 3999,
           "min_qty": 1500,
-          "unit_usd": 0.004
+          "unit_usd": 0.012
         },
         {
           "max_qty": 23999,
           "min_qty": 4000,
-          "unit_usd": 0.0036
+          "unit_usd": 0.0107
         },
         {
           "max_qty": 47999,
           "min_qty": 24000,
-          "unit_usd": 0.0034
+          "unit_usd": 0.0102
         },
         {
           "max_qty": null,
           "min_qty": 48000,
-          "unit_usd": 0.0033
+          "unit_usd": 0.0099
         }
       ],
-      "stock": 9969330
+      "stock": 8432662
     },
     "C1972959": {
       "library_type": "expand",
@@ -127,113 +166,35 @@
         {
           "max_qty": 49,
           "min_qty": 1,
-          "unit_usd": 0.3218
+          "unit_usd": 0.3226
         },
         {
           "max_qty": 149,
           "min_qty": 50,
-          "unit_usd": 0.2565
+          "unit_usd": 0.2572
         },
         {
           "max_qty": 499,
           "min_qty": 150,
-          "unit_usd": 0.2284
+          "unit_usd": 0.229
         },
         {
           "max_qty": 2499,
           "min_qty": 500,
-          "unit_usd": 0.1936
+          "unit_usd": 0.1941
         },
         {
           "max_qty": 3999,
           "min_qty": 2500,
-          "unit_usd": 0.1779
+          "unit_usd": 0.1784
         },
         {
           "max_qty": null,
           "min_qty": 4000,
-          "unit_usd": 0.1686
+          "unit_usd": 0.169
         }
       ],
-      "stock": 10068
-    },
-    "C25121": {
-      "library_type": "expand",
-      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
-      "mpn": "0402WGF470KTCE",
-      "package": "0402",
-      "price_breaks": [
-        {
-          "max_qty": 999,
-          "min_qty": 1,
-          "unit_usd": 0.0033
-        },
-        {
-          "max_qty": 2999,
-          "min_qty": 1000,
-          "unit_usd": 0.0028
-        },
-        {
-          "max_qty": 9999,
-          "min_qty": 3000,
-          "unit_usd": 0.0025
-        },
-        {
-          "max_qty": 49999,
-          "min_qty": 10000,
-          "unit_usd": 0.0024
-        },
-        {
-          "max_qty": 50199,
-          "min_qty": 50000,
-          "unit_usd": 0.0023
-        },
-        {
-          "max_qty": null,
-          "min_qty": 50200,
-          "unit_usd": 0.0023
-        }
-      ],
-      "stock": 145054
-    },
-    "C25885": {
-      "library_type": "expand",
-      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
-      "mpn": "0402WGF2701TCE",
-      "package": "0402",
-      "price_breaks": [
-        {
-          "max_qty": 999,
-          "min_qty": 1,
-          "unit_usd": 0.0025
-        },
-        {
-          "max_qty": 2999,
-          "min_qty": 1000,
-          "unit_usd": 0.0019
-        },
-        {
-          "max_qty": 9999,
-          "min_qty": 3000,
-          "unit_usd": 0.0017
-        },
-        {
-          "max_qty": 49999,
-          "min_qty": 10000,
-          "unit_usd": 0.0016
-        },
-        {
-          "max_qty": 50199,
-          "min_qty": 50000,
-          "unit_usd": 0.0014
-        },
-        {
-          "max_qty": null,
-          "min_qty": 50200,
-          "unit_usd": 0.0014
-        }
-      ],
-      "stock": 339258
+      "stock": 9358
     },
     "C2848306": {
       "library_type": "expand",
@@ -244,35 +205,74 @@
         {
           "max_qty": 9,
           "min_qty": 1,
-          "unit_usd": 1.7404
+          "unit_usd": 1.7452
         },
         {
           "max_qty": 29,
           "min_qty": 10,
-          "unit_usd": 1.4712
+          "unit_usd": 1.4752
         },
         {
           "max_qty": 99,
           "min_qty": 30,
-          "unit_usd": 1.3025
+          "unit_usd": 1.306
         },
         {
           "max_qty": 499,
           "min_qty": 100,
-          "unit_usd": 1.1289
+          "unit_usd": 1.132
         },
         {
           "max_qty": 999,
           "min_qty": 500,
-          "unit_usd": 1.0511
+          "unit_usd": 1.0539
         },
         {
           "max_qty": null,
           "min_qty": 1000,
-          "unit_usd": 1.017
+          "unit_usd": 1.0198
         }
       ],
-      "stock": 13622
+      "stock": 12205
+    },
+    "C482197": {
+      "library_type": "expand",
+      "manufacturer": "Vishay Intertech",
+      "mpn": "CRCW04024R70FKED",
+      "package": "0402",
+      "price_breaks": [
+        {
+          "max_qty": 499,
+          "min_qty": 1,
+          "unit_usd": 0.0149
+        },
+        {
+          "max_qty": 1499,
+          "min_qty": 500,
+          "unit_usd": 0.0119
+        },
+        {
+          "max_qty": 9999,
+          "min_qty": 1500,
+          "unit_usd": 0.0103
+        },
+        {
+          "max_qty": 19999,
+          "min_qty": 10000,
+          "unit_usd": 0.0093
+        },
+        {
+          "max_qty": 49999,
+          "min_qty": 20000,
+          "unit_usd": 0.0084
+        },
+        {
+          "max_qty": null,
+          "min_qty": 50000,
+          "unit_usd": 0.008
+        }
+      ],
+      "stock": 8562
     },
     "C48260": {
       "library_type": "expand",
@@ -283,7 +283,7 @@
         {
           "max_qty": 199,
           "min_qty": 1,
-          "unit_usd": 0.0421
+          "unit_usd": 0.042
         },
         {
           "max_qty": 599,
@@ -293,25 +293,25 @@
         {
           "max_qty": 1999,
           "min_qty": 600,
-          "unit_usd": 0.0299
+          "unit_usd": 0.0298
         },
         {
           "max_qty": 9999,
           "min_qty": 2000,
-          "unit_usd": 0.0271
+          "unit_usd": 0.027
         },
         {
           "max_qty": 19999,
           "min_qty": 10000,
-          "unit_usd": 0.026
+          "unit_usd": 0.0259
         },
         {
           "max_qty": null,
           "min_qty": 20000,
-          "unit_usd": 0.0252
+          "unit_usd": 0.0253
         }
       ],
-      "stock": 95921
+      "stock": 96935
     },
     "C90462": {
       "library_type": "expand",
@@ -322,35 +322,35 @@
         {
           "max_qty": 9,
           "min_qty": 1,
-          "unit_usd": 1.5571
+          "unit_usd": 1.5614
         },
         {
           "max_qty": 29,
           "min_qty": 10,
-          "unit_usd": 1.3268
+          "unit_usd": 1.3304
         },
         {
           "max_qty": 99,
           "min_qty": 30,
-          "unit_usd": 1.1987
+          "unit_usd": 1.2019
         },
         {
           "max_qty": 499,
           "min_qty": 100,
-          "unit_usd": 1.056
+          "unit_usd": 1.0588
         },
         {
           "max_qty": 999,
           "min_qty": 500,
-          "unit_usd": 0.9213
+          "unit_usd": 0.9238
         },
         {
           "max_qty": null,
           "min_qty": 1000,
-          "unit_usd": 0.8921
+          "unit_usd": 0.8946
         }
       ],
-      "stock": 3316
+      "stock": 3160
     },
     "C94049": {
       "library_type": "expand",
@@ -361,38 +361,38 @@
         {
           "max_qty": 9,
           "min_qty": 1,
-          "unit_usd": 3.1175
+          "unit_usd": 3.126
         },
         {
           "max_qty": 29,
           "min_qty": 10,
-          "unit_usd": 2.639
+          "unit_usd": 2.6462
         },
         {
           "max_qty": 99,
           "min_qty": 30,
-          "unit_usd": 2.3389
+          "unit_usd": 2.3453
         },
         {
           "max_qty": 499,
           "min_qty": 100,
-          "unit_usd": 2.0324
+          "unit_usd": 2.0379
         },
         {
           "max_qty": 999,
           "min_qty": 500,
-          "unit_usd": 1.8945
+          "unit_usd": 1.8997
         },
         {
           "max_qty": null,
           "min_qty": 1000,
-          "unit_usd": 1.8329
+          "unit_usd": 1.8379
         }
       ],
-      "stock": 5157
+      "stock": 4528
     }
   },
-  "retrieved": "2026-09-02",
+  "retrieved": "2026-09-11",
   "schema_version": 1,
   "source": "jlcpcb.com parts library"
 }

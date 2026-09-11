@@ -102,17 +102,27 @@
       "sha256": "a133b86ea3d3c3d34667339b92d3b5e98d541d10e9775d63e7cdfa153794f4ed",
       "url": "https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf"
     },
-    "uniroyal_0402wgf": {
+    "vishay_crcw_e3": {
       "applies_to": [
-        "0402WGF2701TCE",
-        "0402WGF470KTCE"
+        "CRCW04024R70FKED"
       ],
-      "bytes": 467557,
-      "document_id": "Uniroyal thick film chip resistor specification",
-      "file": "datasheets/uniroyal_0402wgf.pdf",
-      "retrieved": "2026-09-01",
-      "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
-      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF2201TCE_C25879.pdf"
+      "bytes": 150402,
+      "document_id": "Vishay CRCW e3 standard thick film chip resistors, document number 20035, revision 14-Apr-2026",
+      "file": "datasheets/vishay_crcw_e3.pdf",
+      "retrieved": "2026-09-11",
+      "sha256": "6e5917a701b76d7ebba2af411b8057db9a3a565589b2ad92588991b0e909586d",
+      "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+    },
+    "yageo_rc_series": {
+      "applies_to": [
+        "RC0402FR-072K7L"
+      ],
+      "bytes": 542969,
+      "document_id": "YAGEO RC_L series product specification, November 14, 2025 V.14",
+      "file": "datasheets/yageo_rc_series.pdf",
+      "retrieved": "2026-09-11",
+      "sha256": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+      "url": "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
     }
   },
   "schema_version": 1
