@@ -198,6 +198,10 @@
       "canonicalize": true
     }
   },
+  "repeatability": {
+    "document": "generated/repeatability.json",
+    "runs": 5
+  },
   "placement": {
     "courtyard": {
       "sides": [
@@ -546,7 +550,8 @@
       "evidence/index.json",
       "fab/*.json",
       "sim/*.json",
-      "generated/claims.json"
+      "generated/claims.json",
+      "generated/repeatability.json"
     ],
     "source_hash_field": "source_sha256",
     "closure_field": "source_closure_sha256"

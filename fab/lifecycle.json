@@ -7,47 +7,39 @@
       "raw_sha256": "56bc32fbde905bd9c3e5e901776f2e5034d77fd88b8bd897d996865168e4cf1e",
       "retrieved_utc": "2026-09-11T02:40:02+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 726556 for RC0402FR-072K7L states Part Status: Active - the distributor field that carries YAGEO's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.digikey.com/en/products/detail/yageo/RC0402FR-072K7L/726556",
-      "stock": 55300,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 726556 for RC0402FR-072K7L states Part Status: Active - the distributor field that carries YAGEO's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/yageo/RC0402FR-072K7L/726556"
     },
     "C1525": {
       "raw_file": "raw/C1525.json",
       "raw_sha256": "54638afda4d63517b8c7c738f8bb2ccf3af6f776b1009e35b56c8e3276abc2f1",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 3886659 for CL05B104KO5NNNC states Part Status: Active - the distributor field that carries Samsung Electro-Mechanics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL05B104KO5NNNC/3886659",
-      "stock": 4941800,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 3886659 for CL05B104KO5NNNC states Part Status: Active - the distributor field that carries Samsung Electro-Mechanics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL05B104KO5NNNC/3886659"
     },
     "C157926": {
       "raw_file": "raw/C157926.json",
       "raw_sha256": "e3bbca6649218b3434010df982a7a534312d33c248ce86be3d1831d6dee344fe",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 926628 for S4B-PH-K-S(LF)(SN) states Part Status: Active - the distributor field that carries JST's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle. Digi-Key titles the record S4B-PH-K-S and carries S4B-PH-K-S(LF)(SN) as the same product number 926628; (LF)(SN) is the lead-free tin-plating designator, not a different part",
-      "status_source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/S4B-PH-K-S/926628",
-      "stock": 63750,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 926628 for S4B-PH-K-S(LF)(SN) states Part Status: Active - the distributor field that carries JST's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle. Digi-Key titles the record S4B-PH-K-S and carries S4B-PH-K-S(LF)(SN) as the same product number 926628; (LF)(SN) is the lead-free tin-plating designator, not a different part",
+      "status_source_url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/S4B-PH-K-S/926628"
     },
     "C15849": {
       "raw_file": "raw/C15849.json",
       "raw_sha256": "bd08fe540e4fee190f637da3b092fa2ce7e3c24fdc7c72203528bd2d6cdb0a10",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 3887518 for CL10A105KB8NNNC states Part Status: Active - the distributor field that carries Samsung Electro-Mechanics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KB8NNNC/3887518",
-      "stock": 123450,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 3887518 for CL10A105KB8NNNC states Part Status: Active - the distributor field that carries Samsung Electro-Mechanics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A105KB8NNNC/3887518"
     },
     "C1972959": {
       "raw_file": "raw/C1972959.json",
       "raw_sha256": "f10866569b98fe99e32235f8425166047b6d7ba551fd8a04a009235177d1f3b2",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SLLSEG9C (tpd2e2u06_ti) lists the ordering part number TPD2E2U06DRLR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
+      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SLLSEG9C (tpd2e2u06_ti) lists the ordering part number TPD2E2U06DRLR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which states no lifecycle",
       "status_source_url": "https://www.ti.com/lit/ds/symlink/tpd2e2u06.pdf"
     },
     "C2848306": {
@@ -55,7 +47,7 @@
       "raw_sha256": "814114e7d77b2078ba57a613fba1b1490f18b1a9573274c1b9459690b38f04ed",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 14322709 for SHT40-AD1B-R3 states Part Status: Active - the distributor field that carries Sensirion's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
+      "status_basis": "the Digi-Key catalogue record 14322709 for SHT40-AD1B-R3 states Part Status: Active - the distributor field that carries Sensirion's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle",
       "status_source_url": "https://www.digikey.com/en/products/detail/sensirion-ag/SHT40-AD1B-R3/14322709"
     },
     "C482197": {
@@ -63,40 +55,32 @@
       "raw_sha256": "8e50471a2973c1f0af56c043d82ba3264e43dcbe744832fac734c2ce9158bbb7",
       "retrieved_utc": "2026-09-11T02:40:02+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 1961499 for CRCW04024R70FKED states Part Status: Active - the distributor field that carries Vishay Dale's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW04024R70FKED/1961499",
-      "stock": 0,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 1961499 for CRCW04024R70FKED states Part Status: Active - the distributor field that carries Vishay Dale's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW04024R70FKED/1961499"
     },
     "C48260": {
       "raw_file": "raw/C48260.json",
       "raw_sha256": "4ea6f22322a5296582573adf66c210ea00cc6ea949138d1825f9eb389a72f2c7",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SLLSEB1 (tpd1e10b06_ti) lists the ordering part number TPD1E10B06DPYR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf",
-      "stock": 0,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SLLSEB1 (tpd1e10b06_ti) lists the ordering part number TPD1E10B06DPYR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
     },
     "C90462": {
       "raw_file": "raw/C90462.json",
       "raw_sha256": "d5cda17580001243b69a1a62d0fa0cd649bedb13668767a66ea203e46a00369e",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SBOS681C (opt3001_ti) lists the ordering part number OPT3001DNPR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle",
-      "status_source_url": "https://www.ti.com/lit/ds/symlink/opt3001.pdf",
-      "stock": 1710,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the PACKAGING INFORMATION table of the frozen datasheet SBOS681C (opt3001_ti) lists the ordering part number OPT3001DNPR with marketing status Active and Production, which is the manufacturer's own lifecycle statement; that document is registered in evidence/index.json and re-hashed by PROV.EVIDENCE_INTEGRITY. raw_file stays the fabricator response, which states no lifecycle",
+      "status_source_url": "https://www.ti.com/lit/ds/symlink/opt3001.pdf"
     },
     "C94049": {
       "raw_file": "raw/C94049.json",
       "raw_sha256": "a222ab90f1f736736e926ca298d95aafa2534807e0893983b3f1f59cc1e9106b",
       "retrieved_utc": "2026-09-11T01:58:01+00:00",
       "status": "active",
-      "status_basis": "the Digi-Key catalogue record 5799917 for LPS22HBTR states Part Status: Active - the distributor field that carries STMicroelectronics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which evidences the stock figure and states no lifecycle. The frozen datasheet lps22hb_st names www.st.com as where product status lives rather than stating it",
-      "status_source_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/LPS22HBTR/5799917",
-      "stock": 2462,
-      "stock_field": "result.szlcsc.stock"
+      "status_basis": "the Digi-Key catalogue record 5799917 for LPS22HBTR states Part Status: Active - the distributor field that carries STMicroelectronics's lifecycle designation, meaning in production and orderable for new designs. Read 2026-09-11. raw_file stays the fabricator response, which states no lifecycle. The frozen datasheet lps22hb_st names www.st.com as where product status lives rather than stating it",
+      "status_source_url": "https://www.digikey.com/en/products/detail/stmicroelectronics/LPS22HBTR/5799917"
     }
   },
   "schema_version": 1

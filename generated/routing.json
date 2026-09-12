@@ -10,7 +10,7 @@
           "stderr": "attempt-01/router-stderr.txt",
           "stderr_sha256": "ecfdabc9a488fbdbeb42728b58080ecf903a12f0cabcb48d0622d8aa9f2d1a1e",
           "stdout": "attempt-01/router-stdout.txt",
-          "stdout_sha256": "4338ed33bc7a32483273760fa828e19d3f082290b9175f29486ce6266a69431c",
+          "stdout_sha256": "52b6e1963338cbdfa54b41a7476f8c1e16bcb8c7f8e0f03e85edea449017cdc2",
           "summary": "attempt-01/summary.json",
           "summary_sha256": "8c8e57344b9e4a08dcf66540117381974d78d48686d2bf64fdfceb42955fae0f"
         },
@@ -50,7 +50,7 @@
           "counters": {
             "errors": 0,
             "excluded": 0,
-            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/gatework/candidate-drc.json",
+            "report_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260912T000603Z-c3cece5a/attempt-01/gatework/candidate-drc.json",
             "schematic_parity": 0,
             "unconnected": 0,
             "warnings": 0
@@ -63,7 +63,7 @@
             },
             {
               "gate": "BOM.LIFECYCLE",
-              "reason": "all 10 fitted parts have reviewed lifecycle records; stock covers 0 board(s)",
+              "reason": "all 10 fitted parts have reviewed lifecycle records",
               "status": "PASS"
             },
             {
@@ -114,6 +114,11 @@
             {
               "gate": "DRC.CONSTRAINT_FLOOR",
               "reason": "every one of the 12 declared design-rule floors is still carried by the project",
+              "status": "PASS"
+            },
+            {
+              "gate": "DRC.NETCLASS_COHERENCE",
+              "reason": "the project declares no netclass beyond Default; there is no membership to mis-bind",
               "status": "PASS"
             },
             {
@@ -318,9 +323,9 @@
             "argv": [
               "/usr/bin/python3",
               "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/py_router/route.py",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/i2c_env_sensor.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260912T000603Z-c3cece5a/attempt-01/i2c_env_sensor.kicad_pcb",
               "--output",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/routed.kicad_pcb",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260912T000603Z-c3cece5a/attempt-01/routed.kicad_pcb",
               "--nets",
               "3V3",
               "3V3_IN",
@@ -341,9 +346,9 @@
               "--same-net-pad-clearance",
               "0.3",
               "--fab-overrides",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/fab-floor.txt",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260912T000603Z-c3cece5a/attempt-01/fab-floor.txt",
               "--json-out",
-              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260911T024621Z-94267c8f/attempt-01/summary.json",
+              "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/02_PCBA_I2C_EnvSensor/out/i2c_env_sensor/20260912T000603Z-c3cece5a/attempt-01/summary.json",
               "--board-edge-clearance",
               "0.3",
               "--hole-to-hole-clearance",
@@ -439,7 +444,7 @@
         "evidence/datasheets/vishay_crcw_e3.pdf": "6e5917a701b76d7ebba2af411b8057db9a3a565589b2ad92588991b0e909586d",
         "evidence/datasheets/yageo_rc_series.pdf": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
         "evidence/index.json": "e304e21784bf08cc9c707f8528b7647af1cbea0cd54f26a3d316b74b2134042a",
-        "fab/lifecycle.json": "4f956221daa6d04e995f9313b5797bb9c088e104e8f8920ac863e1d9d2c569e9",
+        "fab/lifecycle.json": "8d0955b97a8008f49a825de6ca225a040cb648dded61cd4d45367690e10c4c58",
         "fab/physical_inputs.json": "a298e3e88b60bdfb8997e7c530e88485e70c8de74c375b717bb3cbf2a0dcbda7",
         "generated/claims.json": "006639fe2603fe946b01ef5b2965f4ee7c637916873ebd0c3d17644b71ee0804",
         "sim/post_layout_rail_mating.json": "ebc152cbf3748253c4905108d18145983c5860bc0c12d2214402363b9ddad749",
@@ -460,8 +465,8 @@
       },
       "design_inputs_sha256": "90331f8564e2c6840bb046efc055972bce8912d4d4c90b6fc3ece67cdc49fc99",
       "dru_sha256": null,
-      "manifest_sans_transforms_sha256": "be8cf6f5d4d56972e41a7368a742640566fb30b41d487b38093d6f1d30deae3e",
-      "manifest_sha256": "fbf1afc22024c01f0a3e1202168045cb93df905601f62fdc2e57e0a03a1d3438",
+      "manifest_sans_transforms_sha256": "6af6aa62dd46b19fe0dd918628ef5161bb1f4fb068baa2360d76d755b492cff4",
+      "manifest_sha256": "47a5f4aea3dc49b78eb9f4bada52b828d1f1ac03a81153cbb61bd7808eb458d7",
       "pcbnew_version": "10.0.6-10.0.6~ubuntu24.04.1",
       "project_sha256": "767a42b73b32c9a6cef3a8617b79f4befae7103971ff1df2374fb95152e890f8",
       "python_version": "3.12.3"
